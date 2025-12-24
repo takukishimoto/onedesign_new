@@ -1,5 +1,5 @@
-const Services = () => {
-  const services = [
+const Features = () => {
+  const features = [
     {
       number: "01",
       title: "信頼を生むWEBデザイン",
@@ -21,11 +21,10 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-32 bg-background">
+    <section id="features" className="py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20 text-center">
-            <p className="text-minimal text-muted-foreground mb-4">SERVICES</p>
 
             <h3 className="text-lg md:text-2xl font-light text-black/90 mb-6 mx-auto">
               俯瞰して見る、もう「ひとつ」の目。
@@ -35,18 +34,18 @@ const Services = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
-            {services.map((service, index) => (
+            {features.map((feature, index) => (
               <div key={index} className="group">
                 <div className="flex items-start space-x-6">
                   <span className="text-minimal text-muted-foreground font-medium">
-                    {service.number}
+                    {feature.number}
                   </span>
                   <div>
                     <h4 className="text-2xl font-light mb-4 text-architectural group-hover:text-muted-foreground transition-colors duration-500">
-                      {service.title}
+                      {feature.title}
                     </h4>
                     <p className="text-muted-foreground leading-relaxed">
-                      {service.description}
+                      {feature.description}
                     </p>
                   </div>
                 </div>
@@ -59,4 +58,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Features;

@@ -5,14 +5,36 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-20">
             <div>
-              <h2 className="text-minimal text-muted-foreground mb-4">GET IN TOUCH</h2>
-              <h3 className="text-4xl md:text-6xl font-light text-architectural mb-12">
-                Let's Create Something
-                <br />
-                Extraordinary
+              <h2 className="text-minimal text-muted-foreground mb-4">お問い合わせ</h2>
+              <h3 className="text-base md:text-lg font-light text-architectural mb-12">
+                「ホームページ制作って何から始めればいいの？」 <br />
+「昔作ったホームページをリニューアルしたい」 <br />
+「WEBを活用してもっと集客したい」 <br />
+「ロゴやブランドイメージを一新したい」 <br />
+「農業の魅力を発信してブランディングしたい」 <br /> <br />
+
+こんなお悩みやアイデアがある方は、ぜひ一度お話ししてみませんか？ <br />
+「何を相談したらいいかわからない」という状態でも大丈夫です。 <br />
+お客様の疑問や課題を一緒に整理し、最適な解決策を共に考えます。<br />
+まずは気軽にお問い合わせください。
+
               </h3>
               
-              <div className="space-y-8">
+             
+            </div>
+            
+            <div className="space-y-8">
+              <div>
+                
+                <h4 className="text-minimal text-muted-foreground mb-2">SNS</h4>
+                <div className="">
+                  <a href="#" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
+                    Instagram
+                  </a>
+              
+                </div>
+              </div>
+               <div className="space-y-8">
                 <div>
                   <h4 className="text-minimal text-muted-foreground mb-2">EMAIL</h4>
                   <a href="mailto:hello@archstudio.com" className="text-xl hover:text-muted-foreground transition-colors duration-300">
@@ -20,45 +42,13 @@ const Contact = () => {
                   </a>
                 </div>
                 
-                <div>
-                  <h4 className="text-minimal text-muted-foreground mb-2">PHONE</h4>
-                  <a href="tel:+1234567890" className="text-xl hover:text-muted-foreground transition-colors duration-300">
-                    +1 (234) 567-8900
-                  </a>
-                </div>
-                
-                <div>
-                  <h4 className="text-minimal text-muted-foreground mb-2">STUDIO</h4>
-                  <address className="text-xl not-italic">
-                    123 Design Avenue
-                    <br />
-                    New York, NY 10001
-                  </address>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-8">
-              <div>
-                <h4 className="text-minimal text-muted-foreground mb-6">FOLLOW US</h4>
-                <div className="space-y-4">
-                  <a href="#" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
-                    Instagram
-                  </a>
-                  <a href="#" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
-                    LinkedIn
-                  </a>
-                  <a href="#" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
-                    Behance
-                  </a>
-                </div>
+               
+               
               </div>
               
               <div className="pt-12 border-t border-border">
                 <p className="text-muted-foreground">
-                  We approach each project with curiosity, rigor, and a commitment to excellence. 
-                  Our process begins with listening, understanding your vision, and translating 
-                  it into spaces that exceed expectations.
+                 ONE DESIGNは諏訪市や茅野市,原村,富士見町,北杜市,韮崎市といった八ヶ岳地域を中心に活動するホームページ制作、WEBマーケティング、ロゴデザイン等のグラフィックデザイン、ブランディング、写真撮影（出張撮影）などをおこなう個人事務所です。
                 </p>
               </div>
             </div>

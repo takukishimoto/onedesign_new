@@ -1,26 +1,33 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import project1 from "@/assets/project1.jpg";
+import project2 from "@/assets/project2.png";
+import project3 from "@/assets/project3.jpg";
+import project4 from "@/assets/project4.jpg";
 
 const Portfolio = () => {
   const projects = [
     {
       image: project1,
-      title: "MINIMAL RESIDENCE",
-      location: "NEW YORK, 2024",
-      description: "A contemporary home focusing on light, space, and material honesty"
+      title: "宮澤悠維教育研究所",
+      location: "諏訪郡原村",
+      description: "ランディングページ制作,運用管理"
     },
     {
       image: project2,
-      title: "CORPORATE HEADQUARTERS",
-      location: "LONDON, 2023",
-      description: "Modern office space emphasizing collaboration and natural elements"
+      title: "風の森建築",
+      location: "諏訪郡原村",
+      description: "HPリニューアル,Branding,運用管理"
     },
     {
       image: project3,
-      title: "CULTURAL CENTER",
-      location: "TOKYO, 2023",
-      description: "Public architecture that bridges tradition with contemporary design"
+      title: "韮崎東ケ丘病院",
+      location: "韮崎市",
+      description: "HPリニューアル,運用管理"
+    }, 
+     {
+      image: project4,
+      title: "ONE DESING",
+      location: "富士見町",
+      description: "HPリニューアル"
     }
   ];
 
@@ -31,23 +38,23 @@ const Portfolio = () => {
           <div className="mb-20">
             <h2 className="text-minimal text-muted-foreground mb-4">SELECTED WORK</h2>
             <h3 className="text-4xl md:text-6xl font-light text-architectural">
-              Our Projects
+              Projects
             </h3>
           </div>
           
-          <div className="space-y-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32">
             {projects.map((project, index) => (
-              <div key={index} className="group">
+            <div key={index} className="group">
                 <div className="relative overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-[70vh] object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[50vh] md:h-[55vh] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 
-                <div className="mt-8 grid md:grid-cols-3 gap-8">
+                <div className="mt-8 grid md:grid-cols-2 gap-8">
                   <div>
                     <h4 className="text-2xl font-light text-architectural mb-2">
                       {project.title}
@@ -57,7 +64,7 @@ const Portfolio = () => {
                     </p>
                   </div>
                   
-                  <div className="md:col-span-2">
+                  <div className="">
                     <p className="text-muted-foreground leading-relaxed">
                       {project.description}
                     </p>
