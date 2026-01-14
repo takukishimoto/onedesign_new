@@ -29,20 +29,37 @@ const Hero = () => {
       {/* ===== コンテンツ ===== */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 text-white">
         {/* Logo */}
-       
+        <div className="flex justify-center mb-4 mt-20">
+          <img
+            src="/images/logo_mark.svg"
+            alt="ホームページ制作 ONE DESIGN ロゴ"
+            className="h-[48px] md:h-[56px] w-auto animate-[subtleFloat_6.5s_ease-in-out_infinite]"
+            style={{ willChange: "transform" }}
+          />
+        </div>
 
         {/* Main Heading */}
-        {/* SEO用 h1（画面には表示しない） */}
-<h1 className="sr-only">
-  八ヶ岳・諏訪市・茅野市・富士見町・原村・北杜市・韮崎市の
-  ホームページ制作・WEBデザイン
-</h1>
+        <h1 className="text-xl md:text-2xl lg:text-2xl font-light leading-tight mb-6 text-white/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
+          八ヶ岳・諏訪市・茅野市・富士見町・原村・北杜市・韮崎市の
+          <br />
+          ホームページ制作・WEBデザイン
+        </h1>
 
-      {/* 左下コピー */}
-
+        {/* Description */}
+        <h2 className="text-sm md:text-base lg:text-base font-light text-white/80 leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.20)]">
+          長野県（諏訪市・茅野市・原村・富士見町）、山梨県（北杜市）を中心に、
+          <br />
+          中小企業や個人事業のホームページ制作・リニューアルをお手伝いしています。
+          <br />
+          工務店・農園・サロンなどローカルビジネスの制作実績は40件以上。
+          <br />
+          理念の言語化、写真撮影、SEO、デザインを一貫して行い、
+          <br />
+          「集客や売上アップにつながるホームページ制作」を大切にしています。
+        </h2>
 
         {/* Buttons ※ここ重要：+ を消す */}
-        {/* <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
           <a
             href="/contact"
             className="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-white/30 bg-white/10 backdrop-blur hover:bg-white/20 transition"
@@ -56,14 +73,8 @@ const Hero = () => {
           >
             制作実績を見る
           </a>
-        </div> */}
+        </div>
       </div>
-      <div className="absolute left-8 bottom-8 md:left-24 md:bottom-24 z-10 text-left">
-  <p className="font-serif text-xl md:text-3xl !leading-[1.7] text-white/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.35)]">
-    俯瞰して見る、もう「ひとつ」の目。<br />
-    事業の本質をとらえ、価値を伝えるデザイン。
-  </p>
-</div>
     </section>
   );
 };

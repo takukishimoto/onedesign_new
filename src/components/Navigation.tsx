@@ -1,91 +1,83 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Link } from "react-router-dom";
+import { Instagram } from "lucide-react";
 
-const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+type NavigationProps = {
+  isHero?: boolean; // Hero上なら true（白系）、それ以外は false（黒系）
+};
+
+const Navigation = ({ isHero = false }: NavigationProps) => {
+  // Hero上：白文字 / それ以外：黒文字
+  const navText = isHero ? "text-white" : "text-foreground";
+  const border = isHero ? "border-white/70" : "border-foreground/70";
+  const btnHover = isHero
+    ? "hover:bg-white hover:text-black"
+    : "hover:bg-foreground hover:text-background";
+
+  // ロゴ：Hero上は白ロゴ、それ以外は黒ロゴ（ファイル名は必要に応じて調整OK）
+  const logoSrc = isHero ? "/images/logo_dark.svg" : "/images/logo_light.svg";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-       <div className="text-minimal text-foreground">
-  <a href="/" className="block">
-    {/* light */}
-    <img
-      src="/images/logo_light.svg"
-      alt="ホームページ制作 ONE DESIGN ロゴ"
-      className="w-[180px] block dark:hidden"
-    />
-
-    {/* dark */}
-    <img
-      src="/images/logo_dark.svg"
-      alt="ホームページ制作 ONE DESIGN ロゴ"
-      className="w-[180px] hidden dark:block"
-    />
-  </a>
-</div>
-        
-        <div className="hidden md:flex items-center space-x-12">
-          <a href="/work" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-            WORK
-          </a>
-          <a href="/services" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-            SERVICES
-          </a>
-          <a href="/about" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-            ABOUT
-          </a>
-          <a href="/blog" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-            BLOG
-          </a>
-          <a href="/contact" className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-            CONTACT
-          </a>
+    <>
+      {/* 左ロゴ（常時fixed） */}
+      <header className="fixed top-0 left-0 right-0 z-50 pointer-events-none">
+        <div className="container mx-auto px-4 py-8 flex items-start justify-between">
+          <Link to="/" className="pointer-events-auto">
+            <img
+              src={logoSrc}
+              alt="ホームページ制作 ONE DESIGN ロゴ"
+              className="w-[220px] block"
+            />
+          </Link>
         </div>
+      </header>
 
-        <div className="hidden md:flex items-center space-x-4">
-          <ThemeToggle />
-        </div>
+      {/* 右ナビ（常時fixed） */}
+      <div className="fixed top-0 right-0 z-[60] pointer-events-none">
+        <div className="pointer-events-auto px-8 py-8">
+          <nav className={`flex items-center gap-10 text-sm ${navText}`}>
+            <Link to="/work" className="hover:opacity-70 transition whitespace-nowrap">
+              制作実績
+            </Link>
 
-        <Button
-          variant="ghost"
-          size="sm"
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? '✕' : '☰'}
-        </Button>
-      </div>
+            {/* 「特徴」は /services に飛ばす想定（ページ名が違うならここだけ直してOK） */}
+            <Link to="/services" className="hover:opacity-70 transition whitespace-nowrap">
+              特徴
+            </Link>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border">
-          <div className="container mx-auto px-6 py-6 space-y-4">
-            <a href="/work" className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-              WORK
-            </a>
-            <a href="/services" className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-              SERVICES
-            </a>
-            <a href="/about" className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-              ABOUT
-            </a>
-            <a href="/blog" className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-              BLOG
-            </a>
-            <a href="/contact" className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300">
-              CONTACT
-            </a>
-            
-            {/* Mobile Theme Toggle */}
-            <div className="pt-4 border-t border-border">
-              <ThemeToggle />
+            <Link to="/price" className="hover:opacity-70 transition whitespace-nowrap">
+              料金
+            </Link>
+
+            <Link to="/about" className="hover:opacity-70 transition whitespace-nowrap">
+              私について
+            </Link>
+
+            <div className="flex items-center gap-6">
+              <Link to="/blog" className="hover:opacity-70 transition whitespace-nowrap">
+                日記
+              </Link>
+
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="hover:opacity-70 transition"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
             </div>
-          </div>
+
+            <Link
+              to="/contact"
+              className={`whitespace-nowrap border px-4 py-2 rounded-full transition ${border} ${btnHover}`}
+            >
+              連絡する
+            </Link>
+          </nav>
         </div>
-      )}
-    </nav>
+      </div>
+    </>
   );
 };
 

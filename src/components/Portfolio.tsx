@@ -36,9 +36,9 @@ const Portfolio = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <h2 className="text-minimal text-muted-foreground mb-4">SELECTED WORK</h2>
-            <h3 className="text-4xl md:text-6xl font-light text-architectural">
-              Projects
+            <h2 className="text-minimal text-muted-foreground mb-4">制作実績</h2>
+            <h3 className="text-4xl md:text-6xl font-light text-architectural about-philosophy">
+              Works
             </h3>
           </div>
           

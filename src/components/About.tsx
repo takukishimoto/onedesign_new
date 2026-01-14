@@ -7,9 +7,9 @@ const About = () => {
             {/* Left */}
             <div>
               <h2 className="text-minimal text-muted-foreground mb-4">SERVICE</h2>
-              <h3 className="text-4xl md:text-6xl font-light text-architectural mb-12">
-                Design Philosophy
-              </h3>
+            <h2 className="about-philosophy mb-16">
+              Design as Thinking
+            </h2>
 
               <div className="space-y-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">

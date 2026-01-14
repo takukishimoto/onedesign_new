@@ -24,14 +24,20 @@ const Services = () => {
     <section id="services" className="py-32 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-20 text-center">
-            <p className="text-minimal text-muted-foreground mb-4">SERVICES</p>
+          <div className="mb-32 text-center">
+            {/* <p className="text-minimal text-muted-foreground mb-4">SERVICES</p> */}
 
-            <h3 className="text-lg md:text-2xl font-light text-black/90 mb-6 mx-auto">
-              俯瞰して見る、もう「ひとつ」の目。
-              <br />
-              事業の本質をとらえ、価値を伝えるデザイン。
-            </h3>
+            <h2 className="font-serif text-xl md:text-xl lg:text-xl font-light leading-relaxed ">
+          長野県（諏訪市・茅野市・原村・富士見町）、山梨県（北杜市）を中心に、
+          <br />
+          中小企業や個人事業のホームページ制作・リニューアルをお手伝いしています。
+          <br />
+          工務店・農園・サロンなどローカルビジネスの制作実績は40件以上。
+          <br />
+          理念の言語化、写真撮影、SEO、デザインを一貫して行い、
+          <br />
+          「集客や売上アップにつながるホームページ制作」を大切にしています。
+        </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
