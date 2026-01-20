@@ -72,7 +72,7 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
               to="/contact"
               className={`whitespace-nowrap border px-4 py-2 rounded-full transition ${border} ${btnHover}`}
             >
-              連絡する
+              相談する
             </Link>
           </nav>
         </div>

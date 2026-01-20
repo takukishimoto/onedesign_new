@@ -1,32 +1,36 @@
+import TextLinkCTA from "@/components/TextLinkCTA";
 import { Link } from "react-router-dom";
 
 const PriceIntro = () => {
   return (
     <section className="py-28 bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto">
 
-          {/* Label */}
-          <p className="text-minimal text-muted-foreground mb-4">
-            PRICE
-          </p>
+          {/* ===== Title Area ===== */}
+          <div className="mb-16">
+            {/* Label */}
+            <p className="text-minimal text-muted-foreground mb-3">
+              料金
+            </p>
 
-          {/* Heading */}
-          <h2 className="font-serif text-2xl md:text-3xl font-light text-foreground mb-8">
-            料金について
-          </h2>
+            {/* Main Title */}
+            <h2 className="font-serif text-4xl md:text-5xl font-light text-foreground">
+              Pricing
+            </h2>
+          </div>
 
-          {/* Concept */}
-          <p className="text-muted-foreground leading-relaxed mb-12">
+          {/* ===== Concept ===== */}
+          <p className="max-w-3xl text-muted-foreground leading-relaxed mb-16">
             ONE DESIGNでは、制作内容や目的に応じて
             <br />
             一律ではなく、最適な設計と料金をご提案しています。
             <br />
-            まずは目安として、よくあるケースをご紹介します。
+            料金についての目安として、よくあるケースをご紹介します。
           </p>
 
-          {/* Price Examples */}
-          <div className="grid md:grid-cols-3 gap-8 text-left mb-14">
+          {/* ===== Price Examples ===== */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="border border-border p-6">
               <p className="text-xs text-muted-foreground mb-2">
                 小規模サイト
@@ -69,20 +73,8 @@ const PriceIntro = () => {
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="flex justify-center">
-            <Link
-              to="/price"
-              className="inline-flex items-center px-8 py-4 border border-foreground/60
-                         text-sm tracking-wide transition
-                         hover:bg-foreground hover:text-background"
-            >
-              料金の詳細を見る
-              <span className="ml-3 transition-transform group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
-          </div>
+         {/* ===== CTA ===== */}
+<TextLinkCTA to="/price" label="料金の詳細を見る" />
 
         </div>
       </div>

@@ -8,6 +8,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
 import PriceIntro from "@/components/PriceIntro";
+import { motion } from "framer-motion";
+
 
 const Index = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -40,9 +42,21 @@ const Index = () => {
       <Navigation isHero={isHero} />
 
       {/* Heroの“観測対象” */}
+      <motion.section
+  initial={{ opacity: 0, y: 16 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.9,
+    ease: [0.22, 1, 0.36, 1], // 上品なイージング
+  }}
+>
+
+
       <div ref={heroRef}>
-        <Hero />
+        <Hero />  {/* Heroの中身 */}
       </div>
+</motion.section>
+
 
       {/* 以降はいつも通り */}
       <Services />      

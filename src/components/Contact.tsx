@@ -1,3 +1,6 @@
+import TextLinkCTA from "@/components/TextLinkCTA";
+import { Instagram } from "lucide-react";
+
 const Contact = () => {
   return (
     <section id="contact" className="py-32 bg-background">
@@ -25,13 +28,42 @@ const Contact = () => {
             </div>
             
             <div className="space-y-8">
+              {/* 補助金案内 */}
+<div className="space-y-4 pb-10 border-b border-border">
+  <h4 className="text-minimal text-muted-foreground">
+    補助金を活用したホームページ制作
+  </h4>
+
+  <p className="text-sm text-muted-foreground leading-relaxed">
+    条件が合えば、ホームページ制作費の一部を
+    補助金でまかなえる場合があります。
+    <br />
+    「使えるか分からない」という段階でも大丈夫です。
+    ご相談時に一緒に確認します。
+  </p>
+
+<div className="flex justify-start">
+  <TextLinkCTA to="/hojyokin" label="補助金について詳しく見る" />
+</div>
+</div>
               <div>
                 
                 <h4 className="text-minimal text-muted-foreground mb-2">SNS</h4>
                 <div className="">
-                  <a href="https://www.instagram.com/onedesign_photo/" className="block text-xl hover:text-muted-foreground transition-colors duration-300" target="_blank">
-                    Instagram
-                  </a>
+                 <a
+  href="https://www.instagram.com/onedesign_photo/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    group inline-flex items-center gap-3
+    text-xl
+    transition-colors duration-300
+    hover:text-muted-foreground
+  "
+>
+  <Instagram className="w-5 h-5 opacity-70 transition-transform duration-300 group-hover:scale-110" />
+  <span>Instagram</span>
+</a>
               
                 </div>
               </div>
@@ -47,31 +79,23 @@ const Contact = () => {
                
               </div> */}
               
-              <div className="pt-12 border-t border-border">
+              {/* <div className="pt-12 border-t border-border">
                 <p className="text-muted-foreground">
                  ONE DESIGNは諏訪市や茅野市,原村,富士見町,北杜市,韮崎市といった八ヶ岳地域を中心に活動するホームページ制作、WEBマーケティング、ロゴデザイン等のグラフィックデザイン、ブランディング、写真撮影（出張撮影）などをおこなう個人事務所です。
                 </p>
-              </div>
+              </div> */}
 
              
             </div>
           </div>
 
-  <div className="mt-10 flex justify-center">
-              {/* ボタンを“高級感”寄りに */}
-              <a
-                href="/contact"
-                className="group inline-flex items-center justify-center px-10 py-4 border border-foreground/60 bg-background text-foreground transition
-                           hover:bg-foreground hover:text-background hover:border-foreground"
-              >
-                <span className="text-sm tracking-wide">連絡する</span>
-                <span className="ml-3 inline-block transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
-            </div>
 
-            <p className="mt-6 text-xs text-muted-foreground text-center">
+
+           <TextLinkCTA to="/contact" label="無料で相談する" />
+            
+
+
+            <p className="mt-10 text-xs text-muted-foreground text-center">
               ※ 24時間以内に返信します（繁忙期は翌営業日）
             </p>
 
