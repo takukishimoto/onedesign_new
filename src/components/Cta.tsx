@@ -1,3 +1,5 @@
+import TextLinkCTA from "@/components/TextLinkCTA";
+
 const Cta = () => {
   return (
       <section className="py-28 bg-muted/25">
@@ -12,18 +14,7 @@ const Cta = () => {
               目的・現状・優先順位を整理して、最短で成果につながる進め方をご提案します。
             </p>
 
-            <div className="mt-10 flex justify-center">
-              <a
-                href="/contact"
-                className="group inline-flex items-center justify-center px-10 py-4 border border-foreground/60 bg-background text-foreground transition
-                           hover:bg-foreground hover:text-background hover:border-foreground"
-              >
-                <span className="text-sm tracking-wide">連絡する</span>
-                <span className="ml-3 inline-block transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
-            </div>
+                <TextLinkCTA to="/contact" label="無料で相談する" />
 
             <p className="mt-6 text-xs text-muted-foreground">
               ※ 24時間以内に返信します（繁忙期は翌営業日）
