@@ -1,0 +1,33 @@
+# =========================================================
+# ONE DESIGN - Cloudflare Pages _redirects (Complete)
+# 301 Redirects + SPA fallback
+# Keep folders as-is: /shitara-kominka-chintai /portfolio /photographer
+# =========================================================
+
+# --- Old .html -> New SPA routes (SEO 301) ---
+/index.html                 /                       301
+/work.html                  /work                   301
+/works.html                 /work                   301
+/services.html              /services               301
+/about.html                 /about                  301
+/contact.html               /contact                301
+/price.html                 /price                  301
+/nagano_web_design.html     /blog                   301
+/hojyokin.html              /hojyokin               301
+
+# --- Trailing slash normalize (optional but neat) ---
+/work/                      /work                   301
+/services/                  /services               301
+/about/                     /about                  301
+/contact/                   /contact                301
+/blog/                      /blog                   301
+/price/                     /price                  301
+/hojyokin/                  /hojyokin               301
+
+# --- Keep legacy folders as-is (do not SPA fallback) ---
+/shitara-kominka-chintai/*  /shitara-kominka-chintai/:splat  200
+/portfolio/*                /portfolio/:splat                200
+/photographer/*             /photographer/:splat             200
+
+# --- SPA fallback (React Router) ---
+/*                          /index.html              200
