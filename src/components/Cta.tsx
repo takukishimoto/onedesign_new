@@ -13,9 +13,9 @@ const Cta = () => {
               「何から相談していいかわからない」段階でも大丈夫です。<br />
               目的・現状・優先順位を整理して、最短で成果につながる進め方をご提案します。
             </p>
-
+                <div className="mt-10">
                 <TextLinkCTA to="/contact" label="無料で相談する" />
-
+</div>
             <p className="mt-6 text-xs text-muted-foreground">
               ※ 24時間以内に返信します（繁忙期は翌営業日）
             </p>

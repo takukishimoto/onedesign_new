@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import Cta from "@/components/Cta";
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
       />
 
       {/* CONTENT */}
-      <section className="pb-32 bg-background">
+      <section className="bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-20 items-start">
@@ -117,14 +118,16 @@ const About = () => {
                     </div>
                   </div>
 
-                  <p className="text-sm text-muted-foreground mt-6">
-                    まずはお気軽にご相談ください。課題に寄り添い、最適な解決策をご提案します。
-                  </p>
+                  
                 </div>
               </div>
               {/* /Right */}
+  
+
             </div>
+              
           </div>
+           <Cta />
         </div>
       </section>
 
