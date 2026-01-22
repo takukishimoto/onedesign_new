@@ -35,17 +35,16 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
           <div className="fixed top-0 right-0 z-[60] pointer-events-none">
             <div className="pointer-events-auto px-8 py-8">
               <nav className={`flex items-center gap-10 text-sm ${navText}`}>
-                <Link to="/work" className="hover:opacity-70 transition whitespace-nowrap">
-                  制作実績
-                </Link>
-
-                {/* 「特徴」は /services に飛ばす想定（ページ名が違うならここだけ直してOK） */}
                 <Link to="/services" className="hover:opacity-70 transition whitespace-nowrap">
                   特徴
                 </Link>
 
                 <Link to="/price" className="hover:opacity-70 transition whitespace-nowrap">
                   料金
+                </Link>
+
+                <Link to="/work" className="hover:opacity-70 transition whitespace-nowrap">
+                  制作実績
                 </Link>
 
                 <Link to="/about" className="hover:opacity-70 transition whitespace-nowrap">
