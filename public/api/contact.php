@@ -1,17 +1,16 @@
 <?php
 /**
  * ONE DESIGN Contact API (JSON)
- * - Cloudflare Pages (front) -> Xserver PHP (this file)
- * - Returns JSON: { ok: true } / { ok: false, message: "..." }
+ * Cloudflare Pages (front) -> Xserver PHP (this file)
+ * Returns JSON: { ok: true } / { ok: false, message: "..." }
  */
 
 header("Content-Type: application/json; charset=utf-8");
 
-// ====== CORS（Cloudflare Pages から叩けるように） ======
+// ====== CORS ======
 $allowedOrigins = [
   "https://onedesign-new.pages.dev",
-  // カスタムドメインへ移す時はここにも追加
-  // "https://onedesign.xyz",
+  // "https://onedesign.xyz", // カスタムドメインに移行したら追加
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
@@ -23,7 +22,6 @@ if ($origin && in_array($origin, $allowedOrigins, true)) {
   header("Access-Control-Allow-Methods: POST, OPTIONS");
 }
 
-// Preflight
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'OPTIONS') {
   http_response_code(204);
   exit;
@@ -35,28 +33,25 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
   exit;
 }
 
-// ====== 設定（ここだけ基本触ればOK） ======
-$to   = "info@one-design.xyz";          // 管理者宛
-$from = "info@one-design.xyz";          // 送信元（設置ドメイン推奨）
+// ====== 設定 ======
+$to   = "info@one-design.xyz";
+$from = "info@one-design.xyz"; // 送信元は設置ドメイン推奨
 $siteName = "ONE DESIGN";
 $adminSubject = "ONE DESIGNホームページからのお問い合わせ";
 $replySubject = "お問い合わせありがとうございます。";
-
-// 自動返信を送るか
 $sendAutoReply = true;
 
 // ====== JSON受け取り ======
 $raw = file_get_contents("php://input");
 $data = json_decode($raw, true);
 
-// JSONが壊れてる/空
 if (!is_array($data)) {
   http_response_code(400);
   echo json_encode(["ok" => false, "message" => "Invalid JSON"], JSON_UNESCAPED_UNICODE);
   exit;
 }
 
-// ====== 入力取り出し（Contact.tsx で送ってるキーに合わせる） ======
+// ====== 入力取り出し ======
 $name    = trim((string)($data["お名前"] ?? ""));
 $email   = trim((string)($data["Email"] ?? ""));
 $subject = trim((string)($data["件名"] ?? ""));
@@ -69,19 +64,16 @@ $errors = [];
 if ($name === "")  $errors[] = "お名前は必須です";
 if ($email === "") $errors[] = "メールアドレスは必須です";
 if ($body === "")  $errors[] = "お問い合わせ内容は必須です";
-
 if ($email !== "" && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $errors[] = "メールアドレスの形式が正しくありません";
 }
-
 if (!empty($errors)) {
   http_response_code(400);
   echo json_encode(["ok" => false, "message" => implode(" / ", $errors)], JSON_UNESCAPED_UNICODE);
   exit;
 }
 
-// ====== 簡易スパム対策（軽め） ======
-// 送信間隔を制限（同一IPで30秒以内連投をブロック）
+// ====== 簡易レート制限 ======
 $ip = $_SERVER["REMOTE_ADDR"] ?? "unknown";
 $rateFile = sys_get_temp_dir() . "/onedesign_contact_" . md5($ip) . ".txt";
 $now = time();
@@ -95,7 +87,21 @@ if (file_exists($rateFile)) {
 }
 @file_put_contents($rateFile, (string)$now);
 
-// ====== メール本文（管理者宛） ======
+// ====== 文字コード（日本のメールで確実にする） ======
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
+
+function toJis($str) {
+  return mb_convert_encoding($str, "ISO-2022-JP-MS", "UTF-8");
+}
+function encSubject($str) {
+  return mb_encode_mimeheader($str, "ISO-2022-JP-MS");
+}
+function encFromName($str) {
+  return mb_encode_mimeheader($str, "ISO-2022-JP-MS");
+}
+
+// ====== 管理者宛本文 ======
 $adminBody = [];
 $adminBody[] = "お問い合わせが届きました";
 $adminBody[] = "＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝";
@@ -109,23 +115,28 @@ $adminBody[] = "送信日時：" . date("Y/m/d (D) H:i:s");
 $adminBody[] = "＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝";
 $adminBody[] = "お問い合わせ内容：";
 $adminBody[] = $body;
-$adminBodyText = implode("\n", $adminBody);
 
-// ====== 管理者宛ヘッダ（Reply-To はユーザー） ======
+$adminBodyJis = toJis(implode("\n", $adminBody));
+
+// ====== 管理者宛ヘッダ ======
 $headers = [];
-$headers[] = "From: {$siteName} <{$from}>";
+$headers[] = "MIME-Version: 1.0";
+$headers[] = "From: " . encFromName($siteName) . " <{$from}>";
 $headers[] = "Reply-To: {$email}";
-$headers[] = "Content-Type: text/plain; charset=UTF-8";
+$headers[] = "Content-Type: text/plain; charset=ISO-2022-JP";
+$headers[] = "Content-Transfer-Encoding: 7bit";
 $headersText = implode("\r\n", $headers);
 
-// ====== 送信（mb_send_mail 推奨） ======
-mb_language("Japanese");
-mb_internal_encoding("UTF-8");
+// ====== 送信（管理者宛） ======
+$adminOk = @mb_send_mail($to, encSubject($adminSubject), $adminBodyJis, $headersText);
 
-$adminOk = @mb_send_mail($to, $adminSubject, $adminBodyText, $headersText);
+if (!$adminOk) {
+  http_response_code(500);
+  echo json_encode(["ok" => false, "message" => "メール送信に失敗しました（サーバー設定をご確認ください）"], JSON_UNESCAPED_UNICODE);
+  exit;
+}
 
-// 自動返信（ユーザー宛）
-$replyOk = true;
+// ====== 自動返信 ======
 if ($sendAutoReply) {
   $replyBody = [];
   $replyBody[] = "{$name} 様";
@@ -147,19 +158,16 @@ if ($sendAutoReply) {
   $replyBody[] = "――――――――――――――――――";
 
   $replyHeaders = [];
-  $replyHeaders[] = "From: {$siteName} <{$from}>";
+  $replyHeaders[] = "MIME-Version: 1.0";
+  $replyHeaders[] = "From: " . encFromName($siteName) . " <{$from}>";
   $replyHeaders[] = "Reply-To: {$from}";
-  $replyHeaders[] = "Content-Type: text/plain; charset=UTF-8";
+  $replyHeaders[] = "Content-Type: text/plain; charset=ISO-2022-JP";
+  $replyHeaders[] = "Content-Transfer-Encoding: 7bit";
   $replyHeadersText = implode("\r\n", $replyHeaders);
 
-  $replyOk = @mb_send_mail($email, $replySubject, implode("\n", $replyBody), $replyHeadersText);
-}
-
-if (!$adminOk) {
-  http_response_code(500);
-  echo json_encode(["ok" => false, "message" => "メール送信に失敗しました（サーバー設定をご確認ください）"], JSON_UNESCAPED_UNICODE);
-  exit;
+  @mb_send_mail($email, encSubject($replySubject), toJis(implode("\n", $replyBody)), $replyHeadersText);
 }
 
 // ====== 成功 ======
 echo json_encode(["ok" => true], JSON_UNESCAPED_UNICODE);
+exit;

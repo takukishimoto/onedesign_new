@@ -173,13 +173,25 @@ const Contact = () => {
 
                 {/* メッセージ */}
                 {error && (
-                  <p className="text-xs text-red-500 mt-2">{error}</p>
+                  <div
+                    className="mt-4 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm md:text-base text-red-600"
+                    role="alert"
+                  >
+                    {error}
+                  </div>
                 )}
                 {success && (
-                  <p className="text-xs text-green-600 mt-2">
-                    送信が完了しました。確認次第ご連絡します。
-                  </p>
-                )}
+                <div
+                  className="mt-4 rounded-xl border border-foreground/20 bg-foreground/5 px-4 py-3 text-sm md:text-base text-foreground"
+                  role="status"
+                  aria-live="polite"
+                >
+                  <div className="font-medium">送信が完了しました。</div>
+                  <div className="mt-1 text-muted-foreground">
+                    確認次第ご連絡します（目安：1〜2営業日）
+                  </div>
+                </div>
+              )}
               </form>
             </div>
           </div>
