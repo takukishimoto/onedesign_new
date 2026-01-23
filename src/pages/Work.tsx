@@ -180,14 +180,7 @@ const Work = () => {
 
       <Cta />
 
-      <div className="fixed bottom-6 right-6 z-50">
-        <a
-          href="#top"
-          className="inline-flex items-center justify-center px-4 py-2 rounded-full border border-border bg-background/80 backdrop-blur text-sm text-muted-foreground hover:text-foreground hover:bg-background transition shadow-sm"
-        >
-          ↑ 上へ
-        </a>
-      </div>
+   
 
       <Footer />
     </div>
