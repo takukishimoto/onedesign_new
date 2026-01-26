@@ -10,6 +10,8 @@ header("Content-Type: application/json; charset=utf-8");
 // ====== CORS ======
 $allowedOrigins = [
   "https://onedesign-new.pages.dev",
+  "https://one-design.xyz",
+  "https://www.one-design.xyz",
   // "https://onedesign.xyz", // カスタムドメインに移行したら追加
 ];
 
