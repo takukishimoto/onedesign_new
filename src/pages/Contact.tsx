@@ -27,7 +27,7 @@
       setError("");
 
       try {
-        const endpoint = "https://one-design.xyz/api/contact.php";
+        const endpoint = "/api/contact.php";
 
         const res = await fetch(endpoint, {
           method: "POST",
