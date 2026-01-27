@@ -20,48 +20,64 @@
       setError("");
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-      setLoading(true);
-      setSuccess(false);
-      setError("");
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setLoading(true);
+  setSuccess(false);
+  setError("");
 
-      try {
-        const endpoint = "https://one-design.xyz/api/contact.php";
+     try {
+    const endpoint = "/api/contact.php";
 
-        const res = await fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            "お名前": name,
-            Email: email,
-            "件名": subject,
-            "お問い合わせ内容": message,
-            "当サイトをしったきっかけ": source,
-            pageUrl: typeof window !== "undefined" ? window.location.href : "",
-          }),
-        });
-
-        const data = await res.json().catch(() => ({} as any));
-
-        if (!res.ok || !data?.ok) {
-          throw new Error(data?.message || "送信に失敗しました");
-        }
-
-        setSuccess(true);
-
-        // 入力クリア（成功時）
-        setName("");
-        setEmail("");
-        setSubject("");
-        setMessage("");
-        setSource("");
-      } catch (err: any) {
-        setError(err?.message || "送信に失敗しました。時間をおいて再度お試しください。");
-      } finally {
-        setLoading(false);
-      }
+    const payload = {
+      "お名前": name,
+      Email: email,
+      "件名": subject,
+      "お問い合わせ内容": message,
+      "当サイトをしったきっかけ": source,
+      pageUrl: typeof window !== "undefined" ? window.location.href : "",
     };
+
+    const res = await fetch(endpoint, {
+      method: "POST",
+      // ★ preflight回避：ヘッダーを付けない or text/plain にする
+      // headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "text/plain; charset=UTF-8" },
+      body: JSON.stringify(payload),
+      cache: "no-store",
+    });
+
+    const raw = await res.text(); // ★まず文字列で受ける
+    let data: any = {};
+    try {
+      data = JSON.parse(raw);
+    } catch {
+      // JSONじゃない返却（HTML等）の場合も握りつぶして詳細表示に回す
+      data = {};
+    }
+
+    if (!res.ok || !data?.ok) {
+      // ★原因が見えるように status と raw を出す
+      const detail = raw ? `\n---\n${raw.slice(0, 800)}` : "";
+      throw new Error(
+        `送信に失敗しました（HTTP ${res.status}）` +
+          (data?.message ? `：${data.message}` : "") +
+          detail
+      );
+    }
+
+    setSuccess(true);
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+    setSource("");
+  } catch (err: any) {
+    setError(err?.message || "送信に失敗しました。");
+  } finally {
+    setLoading(false);
+  }
+};
 
     return (
       <div className="min-h-screen bg-background">
