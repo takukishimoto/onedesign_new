@@ -99,15 +99,31 @@ const Hero = () => {
 
       {/* 左下コピー：幕が開いた“直後”に乗せる（おおっが増す） */}
       <motion.div
-        className="absolute left-8 bottom-8 md:left-24 md:bottom-24 z-10 text-left"
+        className="
+                    absolute left-6 bottom-29
+                    sm:bottom-32
+                    md:left-24 md:bottom-24
+                    z-10 text-left
+                  "
         initial={{ opacity: 0, y: 36, filter: "blur(10px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 1.0, delay: 0.55, ease }}
       >
-        <p className="font-serif text-xl md:text-3xl !leading-[1.7] text-white/95 drop-shadow-[0_1px_10px_rgba(0,0,0,0.45)]">
+        <p className="
+  font-serif
+  text-xl
+  md:text-3xl
+  !leading-[1.7]
+  text-white/95
+  drop-shadow-[0_1px_10px_rgba(0,0,0,0.45)]
+">
           <AnimatedText text="俯瞰して見る、もう「ひとつ」の目。" delay={0.72} />
           <br />
-          <AnimatedText text="事業の本質をとらえ、価値を伝えるデザイン。" delay={1.05} />
+            <span className="block md:inline">
+            <AnimatedText text="事業の本質をとらえ、" delay={1.05} />
+            <span className="md:hidden"><br /></span>
+            <AnimatedText text="価値を伝えるデザイン。" delay={1.15} />
+          </span>
         </p>
       </motion.div>
     </section>
