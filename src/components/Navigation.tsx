@@ -92,27 +92,27 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
                 私について
               </Link>
 
-              <div className="flex items-center gap-6">
-                <Link to="/blog" className="hover:opacity-70 transition whitespace-nowrap">
-                  日記
-                </Link>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Instagram"
-                  className="hover:opacity-70 transition"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-              </div>
-
+              <div className="flex items-center justify-between mt-10">
+              {/* 左：相談する */}
               <Link
                 to="/contact"
-                className={`whitespace-nowrap border px-4 py-2 rounded-full transition ${border} ${btnHover}`}
+                onClick={() => setMenuOpen(false)}
+                className="border border-white/70 rounded-full px-6 py-3 tracking-widest"
               >
                 相談する
               </Link>
+
+              {/* 右：Instagram */}
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                className="opacity-80 hover:opacity-100 transition"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
             </nav>
           </div>
         </div>
