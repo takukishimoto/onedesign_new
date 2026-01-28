@@ -78,7 +78,7 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/yatsugatake01.jpg", alt: "八ヶ岳自然文化園の風景" },
+        { src: "/images/nagano/yatsugatake01.jpg", alt: "八ヶ岳自然文化園の風景" },
       ],
       // 旧ページに地図は無かったので無し（必要なら後で追加OK）
     },
@@ -93,7 +93,7 @@ const Blog = () => {
           </p>
         </>
       ),
-      photos: [{ src: "https://one-design.xyz/nagano/ine.jpg", alt: "原村の稲" }],
+      photos: [{ src: "/images/nagano/ine.jpg", alt: "原村の稲" }],
     },
 
     {
@@ -107,7 +107,7 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/yatsu01.jpg", alt: "八ヶ岳の風景（富士見町）" },
+        { src: "/images/nagano/yatsu01.jpg", alt: "八ヶ岳の風景（富士見町）" },
       ],
     },
 
@@ -127,8 +127,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/koke01.jpg", alt: "白駒の池（苔の森）" },
-        { src: "https://one-design.xyz/nagano/koke03.jpg", alt: "白駒の池（苔の森）" },
+        { src: "/images/nagano/koke01.jpg", alt: "白駒の池（苔の森）" },
+        { src: "/images/nagano/koke03.jpg", alt: "白駒の池（苔の森）" },
       ],
       maps: [
         {
@@ -150,8 +150,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/tino01.jpg", alt: "茅野市 高過庵" },
-        { src: "https://one-design.xyz/nagano/tino02.jpg", alt: "茅野市 高過庵" },
+        { src: "/images/nagano/tino01.jpg", alt: "茅野市 高過庵" },
+        { src: "/images/nagano/tino02.jpg", alt: "茅野市 高過庵" },
       ],
       maps: [
         {
@@ -174,8 +174,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/chinoshi01.jpg", alt: "茅野市 高部公民館" },
-        { src: "https://one-design.xyz/nagano/chinoshi02.jpg", alt: "茅野市 高部公民館" },
+        { src: "/images/nagano/chinoshi01.jpg", alt: "茅野市 高部公民館" },
+        { src: "/images/nagano/chinoshi02.jpg", alt: "茅野市 高部公民館" },
       ],
       maps: [
         {
@@ -204,8 +204,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/suwa05.jpg", alt: "諏訪大社 下社 春宮" },
-        { src: "https://one-design.xyz/nagano/suwa03.jpg", alt: "万治の石仏" },
+        { src: "/images/nagano/suwa05.jpg", alt: "諏訪大社 下社 春宮" },
+        { src: "/images/nagano/suwa03.jpg", alt: "万治の石仏" },
       ],
       maps: [
         {
@@ -237,8 +237,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/suwa04.jpg", alt: "諏訪大社 上社 本宮" },
-        { src: "https://one-design.xyz/nagano/nagano_web_design.jpg", alt: "諏訪大社 上社 本宮（風景）" },
+        { src: "/images/nagano/suwa04.jpg", alt: "諏訪大社 上社 本宮" },
+        { src: "/images/nagano/nagano_web_design.jpg", alt: "諏訪大社 上社 本宮（風景）" },
       ],
       maps: [
         {
@@ -261,8 +261,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/fuji01.jpg", alt: "八ヶ岳エリアから見る富士山" },
-        { src: "https://one-design.xyz/nagano/fuji02.jpg", alt: "八ヶ岳エリアから見る富士山" },
+        { src: "/images/nagano/fuji01.jpg", alt: "八ヶ岳エリアから見る富士山" },
+        { src: "/images/nagano/fuji02.jpg", alt: "八ヶ岳エリアから見る富士山" },
       ],
       maps: [
         {
@@ -294,8 +294,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/kuruma01.jpg", alt: "車山の風景" },
-        { src: "https://one-design.xyz/nagano/kuruma02.jpg", alt: "車山の風景" },
+        { src: "/images/nagano/kuruma01.jpg", alt: "車山の風景" },
+        { src: "/images/nagano/kuruma02.jpg", alt: "車山の風景" },
       ],
       maps: [
         {
@@ -321,7 +321,7 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/nagano_web04.jpg", alt: "田中本家博物館" },
+        { src: "/images/nagano/nagano_web04.jpg", alt: "田中本家博物館" },
       ],
     },
 
@@ -339,8 +339,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/nagano_web07.JPG", alt: "松本民藝館" },
-        { src: "https://one-design.xyz/nagano/nagano_web08.JPG", alt: "松本民藝館" },
+        { src: "/images/nagano/nagano_web07.JPG", alt: "松本民藝館" },
+        { src: "/images/nagano/nagano_web08.JPG", alt: "松本民藝館" },
       ],
       maps: [
         {
@@ -368,8 +368,8 @@ const Blog = () => {
         </>
       ),
       photos: [
-        { src: "https://one-design.xyz/nagano/nagano_web09.jpg", alt: "木曽の町並み" },
-        { src: "https://one-design.xyz/nagano/nagano_web10.jpg", alt: "木曽の町並み" },
+        { src: "/images/nagano/nagano_web09.jpg", alt: "木曽の町並み" },
+        { src: "/images/nagano/nagano_web10.jpg", alt: "木曽の町並み" },
       ],
     },
   ];
