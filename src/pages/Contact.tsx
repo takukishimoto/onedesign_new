@@ -26,13 +26,8 @@
   setSuccess(false);
   setError("");
 
-<<<<<<< HEAD
-     try {
+  try {
     const endpoint = "/api/contact.php";
-=======
-      try {
-        const endpoint = "https://one-design.xyz/api/contact.php";
->>>>>>> 6f66c9c (k2)
 
     const payload = {
       "お名前": name,
@@ -45,24 +40,21 @@
 
     const res = await fetch(endpoint, {
       method: "POST",
-      // ★ preflight回避：ヘッダーを付けない or text/plain にする
-      // headers: { "Content-Type": "application/json" },
+      // ★ preflight回避
       headers: { "Content-Type": "text/plain; charset=UTF-8" },
       body: JSON.stringify(payload),
       cache: "no-store",
     });
 
-    const raw = await res.text(); // ★まず文字列で受ける
+    const raw = await res.text();
     let data: any = {};
     try {
       data = JSON.parse(raw);
     } catch {
-      // JSONじゃない返却（HTML等）の場合も握りつぶして詳細表示に回す
       data = {};
     }
 
     if (!res.ok || !data?.ok) {
-      // ★原因が見えるように status と raw を出す
       const detail = raw ? `\n---\n${raw.slice(0, 800)}` : "";
       throw new Error(
         `送信に失敗しました（HTTP ${res.status}）` +
