@@ -31,3 +31,10 @@
 
 # --- SPA fallback (React Router) ---
 /*                          /index.html              200
+
+# 静的ファイルはそのまま配信（先に書く）
+/images/*  /images/:splat  200
+/assets/*  /assets/:splat  200
+
+# SPA fallback（最後に書く）
+/*         /index.html     200
