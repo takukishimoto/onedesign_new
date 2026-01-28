@@ -7,7 +7,8 @@
 /assets/*      /assets/:splat      200
 /favicon.ico   /favicon.ico        200
 /robots.txt    /robots.txt         200
-/ogp.jpg       /ogp.jpg             200
+/sitemap.xml   /sitemap.xml        200
+/ogp.jpg       /ogp.jpg            200
 
 # --- Old .html -> New SPA routes (SEO 301) ---
 /index.html                 /                       301
