@@ -1,7 +1,13 @@
 # =========================================================
-# ONE DESIGN - Cloudflare Pages _redirects
-# 301 Redirects + SPA fallback
+# ONE DESIGN - Cloudflare Pages _redirects (FIXED)
 # =========================================================
+
+# --- 静的ファイル（最優先） ---
+/images/*      /images/:splat      200
+/assets/*      /assets/:splat      200
+/favicon.ico   /favicon.ico        200
+/robots.txt    /robots.txt         200
+/ogp.jpg       /ogp.jpg             200
 
 # --- Old .html -> New SPA routes (SEO 301) ---
 /index.html                 /                       301
@@ -14,23 +20,10 @@
 /nagano_web_design.html     /blog                   301
 /hojyokin.html              /hojyokin               301
 
-# --- Trailing slash normalize ---
-/work/                      /work                   301
-/services/                  /services               301
-/about/                     /about                  301
-/contact/                   /contact                301
-/blog/                      /blog                   301
-/price/                     /price                  301
-/hojyokin/                  /hojyokin               301
-
-# --- Keep legacy folders as-is (do not SPA fallback) ---
+# --- Keep legacy folders ---
 /shitara-kominka-chintai/*  /shitara-kominka-chintai/:splat  200
 /portfolio/*                /portfolio/:splat                200
 /photographer/*             /photographer/:splat             200
 
-# --- Static files (MUST be before SPA fallback) ---
-/images/*                   /images/:splat          200
-/assets/*                   /assets/:splat          200
-
-# --- SPA fallback (React Router) ---
-/*                          /index.html             200
+# --- SPA fallback（最後に1回だけ） ---
+/*                          /index.html              200
