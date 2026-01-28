@@ -26,8 +26,13 @@
   setSuccess(false);
   setError("");
 
+<<<<<<< HEAD
      try {
     const endpoint = "/api/contact.php";
+=======
+      try {
+        const endpoint = "https://one-design.xyz/api/contact.php";
+>>>>>>> 6f66c9c (k2)
 
     const payload = {
       "お名前": name,
