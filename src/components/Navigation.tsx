@@ -135,7 +135,7 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
           className={`absolute right-0 top-0 h-full w-[86%] max-w-sm
             bg-neutral-950/70 backdrop-blur-xl border-l border-white/10
             shadow-[-20px_0_60px_rgba(0,0,0,0.35)]
-            transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+            transition-transform duration-500 ease-\[cubic-bezier(0.22,1,0.36,1)\]
             ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           {/* Close */}

@@ -22,6 +22,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Price from "./pages/Price";
 import Hojyokin from "./pages/Hojyokin";
+import FreeDiagnosis from "./pages/FreeDiagnosis";
 import NotFound from "./pages/NotFound";
 
 // ▼ React Query 初期化
@@ -133,6 +134,15 @@ const AnimatedRoutes = () => {
           element={
             <PageTransition>
               <Hojyokin />
+            </PageTransition>
+          }
+        />
+
+        <Route
+          path="/freediagnosis"
+          element={
+            <PageTransition>
+              <FreeDiagnosis />
             </PageTransition>
           }
         />
