@@ -3,25 +3,25 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 type Concern =
-  | "予約につながらない"
+  | "サイトが集客につながらない"
   | "サイトが古く見える"
   | "スマホで見づらい"
   | "導線が分かりにくい"
   | "写真の印象を整えたい"
   | "SEOが不安"
-  | "メニュー/料金が伝わりにくい"
+  | "お問い合わせがこない"
   | "その他";
 
 type Method = "オンライン" | "対面（長野・山梨中心）";
 
 const CONCERNS: Concern[] = [
-  "予約につながらない",
+  "サイトが集客につながらない",
   "サイトが古く見える",
   "スマホで見づらい",
   "導線が分かりにくい",
   "写真の印象を整えたい",
   "SEOが不安",
-  "メニュー/料金が伝わりにくい",
+  "お問い合わせがこない",
   "その他",
 ];
 
@@ -29,7 +29,7 @@ export default function SalonFreeDiagnosisPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [brand, setBrand] = useState("");
-  const [job, setJob] = useState("エステ / リラク / 美容室 / ネイル など");
+  const [job, setJob] = useState("工務店 / 教育関係 / 美容室 / 病院 など");
   const [siteUrl, setSiteUrl] = useState("");
   const [method, setMethod] = useState<Method>("オンライン");
   const [concerns, setConcerns] = useState<Concern[]>([]);
@@ -39,6 +39,7 @@ export default function SalonFreeDiagnosisPage() {
   const [touched, setTouched] = useState<{ [k: string]: boolean }>({});
   // 送信UI状態（追加）
     const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
     const [error, setError] = useState("");
 
   const emailOk = useMemo(() => {
@@ -67,6 +68,7 @@ export default function SalonFreeDiagnosisPage() {
 const onSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
+  // まず必須チェック（今のロジックを維持）
   setTouched((t) => ({
     ...t,
     name: true,
@@ -78,50 +80,39 @@ const onSubmit = async (e: React.FormEvent) => {
   if (!requiredOk) return;
 
   setLoading(true);
+  setSuccess(false);
   setError("");
+  setLoading(false);
 
   try {
-    // ✅ 本番は /api/contact.php（通常お問い合わせと同じ）
-    // ✅ ローカル(dev)は https://one-design.xyz/api/contact.php に送る（ローカルでも動く）
-    const endpoint = import.meta.env.DEV
-      ? "https://one-design.xyz/api/contact.php"
-      : "/api/contact.php";
+    const endpoint = "/api/contact.php";
 
-    // 件名（フォーム側の入力が空なら自動で固定文）
-    const finalSubject = (brand || "").trim()
-      ? `HP無料診断（ONE DESIGN）｜${brand.trim()}`
-      : "HP無料診断（ONE DESIGN）";
-
-    // お問い合わせ内容にまとめて入れる（通常お問い合わせと同じ contact.php で受け取れる形）
-    const lines = [
-      "【無料診断 申込】",
+    // FreeDiagnosisの内容を「お問い合わせ内容」にまとめて送る
+    const messageBody = [
+      "【無料診断フォーム】",
       "",
-      `■ お名前：${name}`,
-      `■ メール：${email}`,
-      brand.trim() ? `■ 屋号・サロン名：${brand.trim()}` : "",
-      `■ 業種：${job}`,
-      `■ 現在のサイトURL：${siteUrl}`,
-      `■ 診断方法：${method}`,
-      `■ 困っていること：${concerns.join(" / ")}`,
-      phone.trim() ? `■ 電話番号：${phone.trim()}` : "",
-      note.trim() ? "" : "",
-      note.trim() ? "■ 補足：" : "",
-      note.trim() ? note.trim() : "",
-    ].filter(Boolean);
+      `屋号・店舗名：${brand || "-"}`,
+      `業種：${job || "-"}`,
+      `現在のサイトURL：${siteUrl || "-"}`,
+      `診断方法：${method || "-"}`,
+      `困っていること：${concerns.join(" / ") || "-"}`,
+      "",
+      `補足：${note || "-"}`,
+      `電話番号：${phone || "-"}`,
+    ].join("\n");
 
     const payload = {
       "お名前": name,
       Email: email,
-      "件名": finalSubject,
-      "お問い合わせ内容": lines.join("\n"),
-      "当サイトをしったきっかけ": "HP無料診断（freediagnosis）",
+      "件名": "ホームページ無料診断（15分）",
+      "お問い合わせ内容": messageBody,
+      "当サイトをしったきっかけ": "無料診断（freediagnosis）",
       pageUrl: typeof window !== "undefined" ? window.location.href : "",
     };
 
     const res = await fetch(endpoint, {
       method: "POST",
-      // ✅ これが重要：preflight回避（あなたのContactと同じ）
-      headers: { "Content-Type": "text/plain; charset=UTF-8" },
+      headers: { "Content-Type": "text/plain; charset=UTF-8" }, // ← 今の安定方式
       body: JSON.stringify(payload),
       cache: "no-store",
     });
@@ -130,22 +121,24 @@ const onSubmit = async (e: React.FormEvent) => {
     let data: any = {};
     try {
       data = JSON.parse(raw);
-    } catch {
-      data = {};
-    }
+    } catch {}
 
     if (!res.ok || !data?.ok) {
+      const detail = raw ? `\n---\n${raw.slice(0, 800)}` : "";
       throw new Error(
         `送信に失敗しました（HTTP ${res.status}）` +
-          (data?.message ? `：${data.message}` : "")
+          (data?.message ? `：${data.message}` : "") +
+          detail
       );
     }
 
-    // 成功
+    setSuccess(true);
     setSubmitted(true);
+
+    // 送信後リセット（任意）
+    // setName(""); setEmail(""); ... etc
   } catch (err: any) {
     setError(err?.message || "送信に失敗しました。");
-    setSubmitted(false);
   } finally {
     setLoading(false);
   }
@@ -156,7 +149,7 @@ const onSubmit = async (e: React.FormEvent) => {
     setName("");
     setEmail("");
     setBrand("");
-    setJob("エステ / リラク / 美容室 / ネイル など");
+    setJob("工務店 / 教育関係 / 美容室 / 病院 など");
     setSiteUrl("");
     setMethod("オンライン");
     setConcerns([]);
