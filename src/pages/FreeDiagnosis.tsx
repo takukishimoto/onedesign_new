@@ -82,7 +82,7 @@ const onSubmit = async (e: React.FormEvent) => {
   setLoading(true);
   setSuccess(false);
   setError("");
-  setLoading(false);
+
 
   try {
     const endpoint = "/api/contact.php";
