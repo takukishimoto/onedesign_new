@@ -77,7 +77,10 @@ const onSubmit = async (e: React.FormEvent) => {
     siteUrl: true,
     concerns: true,
   }));
-  if (!requiredOk) return;
+  if (!requiredOk) {
+    setError("必須項目を確認してください（URL形式・お悩みの選択など）");
+   return;
+ }
 
   setLoading(true);
   setSuccess(false);
@@ -503,7 +506,7 @@ const onSubmit = async (e: React.FormEvent) => {
 
                     <button
   type="submit"
-  disabled={loading || !requiredOk}
+  disabled={loading}
   className={[
     "   rounded-2xl px-5 py-3 text-sm font-semibold transition shadow-sm",
     requiredOk ? "bg-foreground text-background hover:opacity-90" : "bg-slate-200 text-slate-500",
