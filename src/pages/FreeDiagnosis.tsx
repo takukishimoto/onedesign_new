@@ -231,14 +231,14 @@ const onSubmit = async (e: React.FormEvent) => {
       <Navigation />
 
       {/* HERO（ONE DESIGNの他ページと同系） */}
-      <section className="pt-28 pb-16">
-        <div className="container mx-auto px-6">
+      <section className="pt-28 pb-16 ">
+        <div className="container mx-auto px-6 ">
           <div className="rounded-3xl overflow-hidden border border-border">
             <div className="relative px-6 py-16 md:px-12 md:py-20">
               <div className="absolute inset-0 animated-gradient" />
               <div className="absolute -inset-24 blob-layer" />
               <div className="absolute inset-0 bg-black/10 dark:bg-black/35" />
-              <div className="relative z-10">
+              <div className="relative z-10 mx-auto max-w-4xl text-center flex flex-col items-center">
                 <div className="max-w-3xl">
                   <p className="text-minimal tracking-[0.22em] text-white/80 mb-4">
                     FREE DIAGNOSIS
@@ -254,7 +254,7 @@ const onSubmit = async (e: React.FormEvent) => {
                     その場で契約を迫ることはありません。まずは気軽にどうぞ。
                   </p>
 
-                  <div className="mt-7 flex flex-wrap gap-3">
+                  <div className="mt-7 flex flex-wrap justify-center gap-3">
                     <a
                       href="#apply"
                       className="inline-flex items-center justify-center rounded-xl border border-foreground/20 border-white/40 bg-white/10 px-6 py-3 text-sm text-background t
@@ -278,7 +278,7 @@ const onSubmit = async (e: React.FormEvent) => {
 
       {/* CONTENT */}
       <section className="pb-24">
-        <div className="container mx-auto px-6">
+        <div className="mx-auto w-full md:w-[80%] md:max-w-5xl px-6">
           <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
             {/* Left */}
             <div className="col-span-1 md:col-span-1 space-y-8">
