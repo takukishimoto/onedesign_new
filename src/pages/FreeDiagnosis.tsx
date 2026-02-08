@@ -367,14 +367,29 @@ const onSubmit = async (e: React.FormEvent) => {
             </div>
 
             {/* Right / Form */}
+
+            
             <div className="col-span-1">
-              <div id="apply" className="md:static sticky top-6 rounded-3xl border border-border bg-background shadow-sm">
-                <div className="p-6">
+                <div className="rounded-3xl border-border bg-muted/20 ">
+                   
+                <div
+  id="apply"
+  className="md:static sticky top-6 overflow-hidden rounded-3xl border border-white/10 bg-white/60 backdrop-blur-xl shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)] dark:bg-black/30"
+>
+  {/* 上部のアクセントバー */}
+  <div className="h-1 w-full bg-gradient-to-r from-foreground/70 via-foreground/40 to-foreground/10" />
+
+  <div className="p-7 md:p-8">
+    {/* 見出し */}
+    <div className="mb-6">
+      <p className="text-xs tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
+      <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断フォーム</h2>
+      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+        必須項目を入力して送信してください。内容を確認後、日程候補を2〜3つお送りします。
+      </p>
+    </div>
                  
-                  <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断フォーム</h2>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                    必須項目を入力して送信してください。内容を確認後、日程候補を2〜3つお送りします。
-                  </p>
+                 
 
                   <form onSubmit={onSubmit} className="mt-6 space-y-5">
                     <Field
@@ -458,6 +473,7 @@ const onSubmit = async (e: React.FormEvent) => {
       </button>
     );
   })}
+
 </div>
                     </Field>
 
@@ -538,6 +554,7 @@ const onSubmit = async (e: React.FormEvent) => {
                     </button>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>
