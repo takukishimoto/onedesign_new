@@ -33,10 +33,10 @@ const PriceIntro = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="border border-border p-6">
               <p className="text-xs text-muted-foreground mb-2">
-                小規模サイト
+                小規模サイト(プランA)
               </p>
               <p className="text-lg font-light text-foreground mb-2">
-                30万円台〜
+                15万円〜
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 個人事業主・小規模事業向け。
@@ -47,10 +47,10 @@ const PriceIntro = () => {
 
             <div className="border border-border p-6">
               <p className="text-xs text-muted-foreground mb-2">
-                企業サイト
+                企業サイト(プランB)
               </p>
               <p className="text-lg font-light text-foreground mb-2">
-                50万円台〜
+                30万円台〜
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 中小企業向けの標準構成。
