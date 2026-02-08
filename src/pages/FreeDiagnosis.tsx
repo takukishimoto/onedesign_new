@@ -448,7 +448,7 @@ const onSubmit = async (e: React.FormEvent) => {
                         onChange={(e) => setSiteUrl(e.target.value)}
                         onBlur={() => setTouched((t) => ({ ...t, siteUrl: true }))}
                         className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-foreground/20"
-                        placeholder="例：https://example.com"
+                        placeholder="例：https://example.com、ない場合は「なし」"
                         inputMode="url"
                       />
                     </Field>
