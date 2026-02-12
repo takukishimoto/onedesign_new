@@ -33,13 +33,28 @@ const About = () => {
               <div>
              <p className="text-minimal text-muted-foreground mb-4">ABOUT</p>
 
-<h2 className="mb-10 flex items-center">
-  <img
-    src="/images/logo_onedesign.svg"
-    alt="ONE DESIGN"
-    className="max-h-[28px] md:max-h-[34px] w-auto dark:invert dark:brightness-0"
-  />
-</h2>
+              <h2 className="mb-10 flex items-center">
+                <img
+                  src="/images/logo_onedesign.svg"
+                  alt="ONE DESIGN"
+                  className="max-h-[28px] md:max-h-[34px] w-auto dark:invert dark:brightness-0"
+                />
+              </h2>
+
+              {/* プロフィール（写真） */}
+              <div className="mb-10 flex items-center gap-4">
+                <img
+                  src="/images/photo.jpg"
+                  alt="ONE DESIGN"
+                  className="h-20 w-20 rounded-full object-cover border border-border shadow-sm"
+                />
+                <div>
+                  <p className="text-base font-medium text-foreground">KISHIMOTO</p>
+                  <p className="text-sm text-muted-foreground">
+                    ONE DESIGN｜Web制作・デザイン・写真撮影
+                  </p>
+                </div>
+              </div>
 
                 <div className="space-y-8">
                   <p className="text-lg text-muted-foreground leading-relaxed">
@@ -56,6 +71,8 @@ const About = () => {
                     </ul>
                   </div>
                 </div>
+
+
               </div>
 
               {/* Right */}
