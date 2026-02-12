@@ -157,7 +157,7 @@ const Services = () => {
           </p>
 
           <h3 className="text-xl md:text-2xl font-medium text-foreground">
-            無料診断（15分）で今のホームページを一度整理しませんか
+            無料診断（15分）で今のホームページを整理しませんか
           </h3>
 
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
