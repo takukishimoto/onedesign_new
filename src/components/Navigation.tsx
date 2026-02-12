@@ -61,7 +61,6 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
         >
           <span className="sr-only">Menu</span>
 
-          {/* ちょい高級感：hoverで微妙に間隔が変わる */}
           <div className="relative w-full h-full">
             <span
               className={`absolute left-3 right-3 top-[15px] h-px transition-all ${burgerLine}`}
@@ -107,12 +106,36 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
                 </a>
               </div>
 
-              <Link
-                to="/contact"
-                className={`whitespace-nowrap border px-4 py-2 rounded-full transition ${border} ${btnHover}`}
-              >
-                相談する
-              </Link>
+             {/* ✅ PC：無料診断（控えめ） → 相談する（主役） */}
+              <div className="flex items-center gap-4">
+                  {/* 無料診断（サブ） */}
+                <Link
+                  to="/freediagnosis"
+                  className={[
+                    "whitespace-nowrap rounded-full px-4 py-2 text-sm transition",
+                    "border backdrop-blur-md",
+                    isHero
+                      ? "border-white/40 bg-white/10 text-white hover:bg-white/20"
+                      : "border-foreground/20 bg-foreground/5 text-foreground hover:bg-foreground/10",
+                  ].join(" ")}
+                >
+                  無料診断
+                </Link>
+
+                  {/* 相談する（メイン） */}
+                  <Link
+                    to="/contact"
+                    className={[
+                      "whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition",
+                      "border", // ← 枠線
+                      isHero
+                        ? "border-white text-white hover:bg-white hover:text-black"
+                        : "border-foreground text-foreground hover:bg-foreground hover:text-background",
+                    ].join(" ")}
+                  >
+                    相談する
+                  </Link>
+                </div>
             </nav>
           </div>
         </div>
@@ -124,7 +147,7 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
         className={`fixed inset-0 z-[80] transition-opacity duration-300
           ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
       >
-        {/* 背景（高級感：暗幕＋blur） */}
+        {/* 背景 */}
         <div
           className="absolute inset-0 bg-black/45 backdrop-blur-md"
           onClick={() => setMenuOpen(false)}
@@ -135,7 +158,7 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
           className={`absolute right-0 top-0 h-full w-[86%] max-w-sm
             bg-neutral-950/70 backdrop-blur-xl border-l border-white/10
             shadow-[-20px_0_60px_rgba(0,0,0,0.35)]
-            transition-transform duration-500 ease-\[cubic-bezier(0.22,1,0.36,1)\]
+            transition-transform duration-500 ease-$begin:math:display$cubic\-bezier\(0\.22\,1\,0\.36\,1\)$end:math:display$
             ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           {/* Close */}
@@ -189,28 +212,35 @@ const Navigation = ({ isHero = false }: NavigationProps) => {
               </Link>
             </nav>
 
-            <div className="mt-8 flex items-center justify-between">
-              <div className="flex items-center justify-between gap-6 mt-10">
-                {/* 左：相談する */}
+            {/* ✅ Mobile CTA */}
+            <div className="mt-10 space-y-3">
+              {/* 1) 無料診断（目立つ） */}
+              <Link
+                to="/freediagnosis"
+                onClick={() => setMenuOpen(false)}
+                className="block text-center rounded-2xl bg-white text-black px-6 py-3 font-medium tracking-widest"
+              >
+                無料診断
+              </Link>
+
+              {/* 2) 相談する（左） + Instagram（右） */}
+              <div className="flex items-center gap-3">
                 <Link
                   to="/contact"
                   onClick={() => setMenuOpen(false)}
-                  className="border border-white/70 rounded-full px-6 py-3 tracking-widest whitespace-nowrap"
+                  className="flex-1 text-center border border-white/70 rounded-2xl px-6 py-3 tracking-widest whitespace-nowrap"
                 >
                   相談する
                 </Link>
 
-                {/* 右：Instagram（アイコン＋文字） */}
                 <a
                   href="https://www.instagram.com/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
-                  className="flex items-center gap-2 text-sm text-white/90
-                            hover:text-white transition whitespace-nowrap"
+                  className="w-14 h-12 grid place-items-center rounded-2xl border border-white/20 bg-white/5 hover:bg-white/10 transition"
                 >
-                  <Instagram className="w-4 h-4" />
-                  <span>Instagram</span>
+                  <Instagram className="w-5 h-5 text-white" />
                 </a>
               </div>
             </div>

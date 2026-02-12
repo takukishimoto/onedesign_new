@@ -247,7 +247,7 @@ const onSubmit = async (e: React.FormEvent) => {
                     <br className="hidden md:block" />
                     改善ポイントを<strong className="font-medium text-white">3つ</strong>に整理してお伝えします。
                     <br />
-                    その場で契約を迫ることはありません。まずは気軽にどうぞ。
+                    無料診断は「診断のみ」です。営業は行いませんので、ご安心ください。
                   </p>
 
                   <div className="mt-7 flex flex-wrap justify-center gap-3">

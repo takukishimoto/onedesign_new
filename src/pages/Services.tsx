@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import Seo from "@/components/Seo";
 import Cta from "@/components/Cta";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const flow = [
@@ -142,6 +143,50 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+
+
+      {/* ===== Free Diagnosis CTA（FLOWの前） ===== */}
+<section className="py-10 bg-background">
+  <div className="container mx-auto px-6 max-w-6xl">
+    <div className="rounded-3xl border border-border bg-foreground/5 backdrop-blur-md p-6 md:p-8">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <p className="text-xs tracking-[0.22em] text-muted-foreground mb-2">
+            FREE DIAGNOSIS
+          </p>
+
+          <h3 className="text-xl md:text-2xl font-medium text-foreground">
+            無料診断（15分）で今のホームページを一度整理しませんか
+          </h3>
+
+          <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+            今のサイトを一緒に見ながら、改善ポイントを3つに整理してお伝えします。
+            <br className="hidden md:block" />
+            診断のみです。営業はしないのでご安心ください。
+          </p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link
+            to="/freediagnosis"
+            className="inline-flex items-center justify-center rounded-xl border border-foreground/20 bg-foreground px-6 py-3 text-sm text-background hover:opacity-90 transition whitespace-nowrap"
+          >
+            無料診断を申し込む
+          </Link>
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center rounded-xl border border-border bg-background/60 px-6 py-3 text-sm text-foreground hover:bg-muted/40 transition whitespace-nowrap"
+          >
+            通常の相談はこちら
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
 
       {/* ===== FLOW ===== */}
       <section className="py-28 bg-background">

@@ -25,6 +25,30 @@ const About = () => {
                     <li>既存サイトをリニューアルして成果を高めたい方</li>
                   </ul>
                 </div>
+
+                {/* 無料診断 */}
+                <div className="mt-10 rounded-2xl border border-border bg-muted/20 p-6 md:p-8">
+  <p className="text-sm tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
+
+  <h3 className="mt-2 text-xl md:text-2xl font-medium text-foreground">
+    ホームページ無料診断（15分）
+  </h3>
+
+  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+    いまのサイトを一緒に見ながら、改善ポイントを3つに整理してお伝えします。
+    <br />
+    まずは現状を整理するところから、ご一緒します。
+  </p>
+
+  <div className="mt-6">
+    <a
+      href="/freediagnosis#apply"
+      className="inline-flex items-center justify-center rounded-xl bg-foreground px-6 py-3 text-sm font-semibold text-background hover:opacity-90 transition whitespace-nowrap"
+    >
+      無料診断へ
+    </a>
+  </div>
+</div>
               </div>
             </div>
 
