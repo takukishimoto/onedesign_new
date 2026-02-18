@@ -1,0 +1,364 @@
+body,
+html {
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+    /*font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;*/
+    font-weight: normal;
+    font-style: normal;
+    color: #1a1a1a
+}
+.logo{
+    font-family: 'Inter', sans-serif;
+font-family: 'Shippori Mincho B1', serif;
+  letter-spacing: 0.8px;
+  font-size: 28px;
+  width: 280px;
+}
+.tit{
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 400;
+}
+.nav-wrapper {
+  margin-right: 5%;
+}
+.nav-text {
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-weight: 200;
+letter-spacing: 0.016em;
+font-size: 1.0rem;
+}
+
+.font-blo {
+    font-family: 'Inter', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+.hero {
+    /* height: 100vh;*/
+    background: linear-gradient(
+        /*複数グラデーションを用意*/
+        45deg,
+        rgba(181, 202, 228, 0.6),
+        rgba(100, 216, 243, 0.6),
+        rgba(234, 236, 198, 0.6),
+        rgba(234, 235, 176, 0.6),
+        rgba(219, 222, 193, 0.6)) 0 0 / 1000% no-repeat,
+        url(https://one-design.xyz/ngo/images/haikei2.jpeg) 0 0 / cover no-repeat;
+    animation: gradientAnimation 60s ease infinite;
+}
+
+@keyframes gradientAnimation {
+
+    /*アニメーションで位置を移動させる*/
+    0% {
+        background-position: 0% 30%, 0 0;
+    }
+
+    50% {
+        background-position: 100% 70%, 0 0;
+    }
+
+    100% {
+        background-position: 0% 30%, 0 0;
+    }
+}
+
+
+.bg-sky-700 {
+    --tw-bg-opacity: 1;
+    background-color: #ccc;
+}
+
+.text-sky-700 {
+    --tw-text-opacity: 1;
+    color: #3169c1;
+}
+
+
+.button {
+    background: #3c3c48;
+}
+.button2 {
+    background: #92929c;
+}
+
+
+#page-top {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 90%;
+    line-height: 1.5rem;
+    color: #171717;
+    padding: 5px 0 0 0;
+    border-top: solid 1px;
+    font-family: Lato;
+    font-weight: 200;
+    letter-spacing: 1px
+}
+
+#page-top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 20px;
+    border-top: solid 1px;
+    transform-origin: left top
+}
+
+
+.tleft {
+    text-align: left;
+}
+
+
+.fonts {
+    font-family: 'Inter', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    letter-spacing: 0.2em;
+}
+
+.fonts2 {
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    letter-spacing: 0.2em;
+    color: #fff;
+    -webkit-text-stroke: 0.5px #131313;
+    text-stroke: 0.5px #131313;
+    font-size: 20px;
+}
+
+.title {
+    /*text-align: left;*/
+    margin: auto;
+
+    line-height: 1.4em;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list li {}
+
+.hamburger-menu {
+    display: none;
+
+}
+
+.drawer {
+    display: none;
+
+}
+.arr {
+  letter-spacing: 0.6px;
+}
+
+
+.text-box {
+    line-height: 1.7em;
+}
+.text-box .kakko {
+    font-weight: 200;
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    color: #3667a6;
+    position: relative;
+  line-height: 1.2;
+  padding:0 1em;
+  display: inline-block;
+  top:0;
+    margin-bottom: 10px;
+
+}
+
+
+.text-box .kakko:before,
+.text-box .kakko:after {
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 7px;
+  height: 100%;
+  display: inline-block;
+}
+.text-box .kakko:before{
+border-left: solid 1px #3667a6;
+  border-top: solid 1px #3667a6;
+  border-bottom: solid 1px #3667a6;
+  left: 0;
+}
+.text-box .kakko:after {
+ content: '';
+  border-top: solid 1px #3667a6;
+  border-right: solid 1px #3667a6;
+  border-bottom: solid 1px #3667a6;
+  right: 0;
+}
+
+
+/*@media screen and (min-width:751px) {
+.nav-wrapper {
+    display: none;
+}
+}
+
+*/
+
+/*.menu {
+  position: sticky;
+  height: 100%;
+  top: 0;
+  z-index: 99999;
+  background-color: #fff;
+}
+*/
+
+
+/*　スマホ適用　*/
+@media screen and (max-width:750px) {
+    .nav-wrapper {
+        display: none;
+    }
+
+    .drawer {
+        display: block;
+
+    }
+
+    .tleft {
+        font-size: 0.8em;
+    }
+
+    #page-top {
+        bottom: 70px;
+    }
+
+    /* 新しいハンバーガーメニュー */
+
+    /* チェックボックスは非表示に */
+    .drawer-hidden {
+        display: none;
+    }
+
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer-open {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+        /* 重なり順を一番上に */
+        cursor: pointer;
+    }
+
+    /* ハンバーガーメニューのアイコン */
+    .drawer-open span,
+    .drawer-open span:before,
+    .drawer-open span:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 35px;
+        border-radius: 3px;
+        background: #333;
+        transition: 0.5s;
+        position: absolute;
+    }
+
+    /* 三本線のうち一番上の棒の位置調整 */
+    .drawer-open span:before {
+        bottom: 8px;
+    }
+
+    /* 三本線のうち一番下の棒の位置調整 */
+    .drawer-open span:after {
+        top: 8px;
+    }
+
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawer-check:checked~.drawer-open span {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawer-check:checked~.drawer-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #drawer-check:checked~.drawer-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* メニューのデザイン*/
+    .drawer-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        /* メニューを画面の外に飛ばす */
+        z-index: 99;
+        background: #fff;
+        transition: .5s;
+
+    }
+
+    .drawer-content ul {
+        padding: 70px 10px 0;
+    }
+
+    .drawer-content ul li {
+        border-bottom: solid 1px #333;
+        list-style: none;
+    }
+
+    .drawer-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        text-decoration: none;
+        padding: 25px 15px 10px 0;
+        position: relative;
+    }
+
+    .drawer-content ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #333;
+        border-right: solid 2px #333;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 34px;
+    }
+
+
+    /* アイコンがクリックされたらメニューを表示 */
+    #drawer-check:checked~.drawer-content {
+        left: 0;
+        /* メニューを画面に入れる */
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

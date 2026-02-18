@@ -1,0 +1,135 @@
+/* 全画面表示CSS */
+
+.hero {
+  height: 100vh; /* 全画面表示 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../images/01.jpg);
+  background-attachment: fixed;
+}
+
+
+.css-selector {
+  clear: both;
+    background-color:hsla(186,52%,51%,1);
+background-image:
+radial-gradient(at 54% 27%, hsla(195,32%,73%,1) 0px, transparent 50%),
+radial-gradient(at 40% 20%, hsla(60,51%,76%,1) 0px, transparent 50%),
+radial-gradient(at 80% 0%, hsla(188,18%,71%,1) 0px, transparent 50%),
+radial-gradient(at 0% 50%, hsla(59,55%,92%,1) 0px, transparent 50%),
+radial-gradient(at 80% 50%, hsla(170,15%,62%,1) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(240,40%,81%,1) 0px, transparent 50%),
+radial-gradient(at 80% 100%, hsla(229,22%,46%,1) 0px, transparent 50%);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+#logop {
+mix-blend-mode: color-burn;
+color: #171717;
+width: 175px;
+}
+
+.logo {
+  margin-left: 50px;
+  float: left;
+}
+.nav-wrapper {
+  float: right;
+}
+
+.onept {
+
+  font-family: NotoSansCJKjp-Light;
+font-size: 18px;
+color: #000000;
+letter-spacing: 0.8px;
+line-height: 33px;
+}
+
+
+
+
+
+
+/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown1{
+    /*描画位置※位置は適宜調整してください*/
+  position:absolute;
+  left:50%;
+  bottom:10px;
+    /*全体の高さ*/
+  height:90px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 .scro{
+    /*描画位置*/
+ position: absolute;
+left: -35px;
+top: -20px;
+color: #fff;
+font-size: 1.0rem;
+letter-spacing: 0.05em;
+font-family: 'Inter', sans-serif;
+letter-spacing: 1.8px;
+font-weight: 400;
+mix-blend-mode: difference;
+
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+  content: "";
+    /*描画位置*/
+  position: absolute;
+  top: 0;
+    /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #eee;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+  0%{
+    height:0;
+    top:0;
+    opacity: 0;
+  }
+  30%{
+    height:45px;
+    opacity: 1;
+  }
+  100%{
+    height:0;
+    top:90px;
+    opacity: 0;
+  }
+}
+
