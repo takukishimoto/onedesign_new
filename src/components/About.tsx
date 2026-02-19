@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
     <section id="about" className="py-32 bg-muted/20">
@@ -17,14 +19,35 @@ const About = () => {
                   ホームページ制作を中心に、ロゴやチラシなどのグラフィックデザイン、写真撮影まで一貫して対応します。
                 </p>
 
-                <div className="text-lg text-muted-foreground leading-relaxed">
-                  <p className="mb-3">【こんな方に最適です】</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>中小企業の経営者で、集客につながるホームページを検討している方</li>
-                    <li>起業・開業にあたり、ブランディングやサイト制作を検討している方</li>
-                    <li>既存サイトをリニューアルして成果を高めたい方</li>
-                  </ul>
-                </div>
+               <div className="text-lg text-muted-foreground leading-relaxed">
+  <p className="mb-3">【こんな方に最適です】</p>
+
+  <ul className="list-disc pl-6 space-y-2">
+    <li>中小企業の経営者で、集客につながるホームページを検討している方</li>
+    <li>起業・開業にあたり、ブランディングやサイト制作を検討している方</li>
+    <li>既存サイトをリニューアルして成果を高めたい方</li>
+  </ul>
+
+  {/* 山梨LPへの導線 */}
+  <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-5">
+    <p className="text-sm text-foreground font-medium">
+      山梨県の個人事業主の方へ
+    </p>
+    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+      「SNSだけでいいのか迷っている」「小さく始めたい」など、個人事業主向けの相談も増えています。
+      山梨県向けの案内ページも用意しました。
+    </p>
+
+    <div className="mt-4">
+      <Link
+        to="/yamanashi-lp"
+        className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:opacity-70 transition"
+      >
+        山梨県｜個人事業主のホームページ制作を見る →
+      </Link>
+    </div>
+  </div>
+</div>
 
                 {/* 無料診断 */}
                 <div className="mt-10 rounded-2xl border border-border bg-muted/20 p-6 md:p-8">

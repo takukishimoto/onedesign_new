@@ -23,6 +23,10 @@ import BlogPost from "./pages/BlogPost";
 import Price from "./pages/Price";
 import Hojyokin from "./pages/Hojyokin";
 import FreeDiagnosis from "./pages/FreeDiagnosis";
+import YamanashiSoloLP from "@/pages/YamanashiSoloLP";
+
+// どこかのRoutes内に追加
+<Route path="/yamanashi" element={<YamanashiSoloLP />} />
 import NotFound from "./pages/NotFound";
 
 // ▼ React Query 初期化
@@ -145,7 +149,14 @@ const AnimatedRoutes = () => {
               <FreeDiagnosis />
             </PageTransition>
           }
+
         />
+
+        <Route 
+        path="/yamanashi-lp" 
+        element={<YamanashiSoloLP />
+
+        } />
 
 
         {/*
