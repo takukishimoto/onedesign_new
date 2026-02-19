@@ -58,18 +58,22 @@ const About = () => {
 
                 <div className="space-y-8">
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    ビジネスの成長を支える、中小企業・個人事業向けデザイン制作ならONE DESIGN。
-                    ホームページ制作を中心に、ロゴやチラシなどのグラフィックデザイン、写真撮影まで一貫して対応します。
+                   東京、京都の中小企業に勤務し7年間WEBデザイン、マーケティング、ブランディングを学びました。
+WEB制作の経験はデザイン、コーディング、ページのコンテンツ制作を含め10年以上になります。
+作成したサイトは40サイト以上。
+独自ドメイン取得からメールアドレス作成、サーバーの保守、サイト制作、パンフレットやチラシ等の紙媒体、写真撮影、WEB集客まで一貫して対応可能です。
+担当した通販サイトの売上を1年で5倍（2年で9倍）にした経験や問い合わせ数を3倍にした経験があります。<br/><br/>
+
+またホームページは制作して終わりではなく、育てるものだと認識しています。<br/>
+GoogleアナリティクスやGoogle Serch Consoleからどんなユーザーがどのページからどんなキーワードで来ているかを分析して、ユーザーが求めるものと会社の強みとを結びつけSEO対策を考えたコンテツを作成することができます。
+<br/><br/>
+WEBマーケティングやWEB集客等についても相談しながら一緒に成果がでるホーページ制作を心がけています。<br/>
+どんなことでもお気軽にお問い合わせください。<br/>
+2018年3月から長野県諏訪郡富士見町に在住し現在は原村へ。<br/>
+趣味は料理、料理、コーヒー焙煎、ランニング、古美術、音楽、古民家を見ることなど。
                   </p>
 
-                  <div className="text-lg text-muted-foreground leading-relaxed">
-                    <p className="mb-3">【こんな方に最適です】</p>
-                    <ul className="list-disc pl-6 space-y-2">
-                      <li>中小企業の経営者で、集客につながるホームページを検討している方</li>
-                      <li>起業・開業にあたり、ブランディングやサイト制作を検討している方</li>
-                      <li>既存サイトをリニューアルして成果を高めたい方</li>
-                    </ul>
-                  </div>
+                 
                 </div>
 
 
@@ -123,16 +127,22 @@ const About = () => {
                   </div>
                 </div>
 
+                 <div className="text-lg text-muted-foreground leading-relaxed">
+                    <p className="mb-3">【こんな方に最適です】</p>
+                    <ul className="list-disc pl-6 space-y-2">
+                      <li>中小企業の経営者で、集客につながるホームページを検討している方</li>
+                      <li>起業・開業にあたり、ブランディングやサイト制作を検討している方</li>
+                      <li>既存サイトをリニューアルして成果を高めたい方</li>
+                    </ul>
+                  </div>
+
                 <div className="pt-8 border-t border-border">
-                  <div className="grid grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 gap-8">
                     <div>
                       <p className="text-minimal text-muted-foreground mb-2">対応領域</p>
-                      <p className="text-xl">Web / Design / Branding / Marketing</p>
+                      <p className="text-lg">ホームページ制作 / グラフィックデザイン / Branding / WEBマーケティング（SEO） / 保守・運用</p>
                     </div>
-                    <div>
-                      <p className="text-minimal text-muted-foreground mb-2">支援範囲</p>
-                      <p className="text-xl">制作〜運用</p>
-                    </div>
+                   
                   </div>
 
                   
