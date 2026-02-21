@@ -327,7 +327,7 @@ const Blog = () => {
 
     {
       id: "matsumoto-mingeikan",
-      title: "松本｜松本民藝館（まつもとみんげいかん）",
+      title: "松本市｜松本民藝館（まつもとみんげいかん）",
       description: (
         <>
           <p>
@@ -384,7 +384,7 @@ const Blog = () => {
         enTitle="JOURNAL"
         jpTitle={
           <>
-            諏訪・茅野・八ヶ岳の
+            諏訪史・茅野市・八ヶ岳の
             <br />
             写真とデザインの記録
           </>
@@ -393,7 +393,7 @@ const Blog = () => {
           <>
             八ヶ岳エリアで出会った風景・建築・場所を、
             <br />
-            デザインの視点でまとめています。
+            写真で紹介します。
           </>
         }
       />
@@ -405,7 +405,7 @@ const Blog = () => {
             {/* INTRO */}
             <section className="max-w-3xl mx-auto space-y-6 text-muted-foreground leading-relaxed">
               <h1 className="text-2xl md:text-3xl font-serif text-foreground">
-                諏訪・茅野・八ヶ岳の風景とデザイン
+                諏訪市・茅野市・八ヶ岳の風景とデザイン
               </h1>
               <p>
                 長野県（諏訪市・茅野市・原村・富士見町）、

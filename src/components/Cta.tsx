@@ -6,12 +6,12 @@ const Cta = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-light text-architectural mb-6">
-            まずは状況を聞かせてください
+            まずはホームページの状況を聞かせてください
           </h2>
 
           <p className="text-muted-foreground leading-relaxed">
             「何から相談していいかわからない」段階でも大丈夫です。<br />
-            目的・現状・優先順位を整理して、最短で成果につながる進め方をご提案します。
+            目的・現状・優先順位を整理して、最短で成果につながるホームページ制作の進め方をご提案します。
           </p>
 
           {/* CTAボタン2つ */}
