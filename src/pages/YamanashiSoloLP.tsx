@@ -86,8 +86,8 @@ export default function YamanashiSoloLP() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Seo
-        title="個人事業主のホームページ制作｜山梨県対応｜ONE DESIGN"
-        description="山梨県の個人事業主・店舗/サービス向けに、ホームページ制作・改善、SEO設計、写真まで一貫対応。無料診断（15分）で現状を整理し、改善ポイントを3つにまとめます（診断のみ／営業なし）。"
+        title="中小企業・個人事業主のホームページ制作｜山梨県対応｜ONE DESIGN"
+        description="山梨県の中小企業・個人事業主・店舗/サービス向けに、ホームページ制作・改善、SEO設計、写真まで一貫対応。無料診断（15分）で現状を整理し、改善ポイントを3つにまとめます（診断のみ／営業なし）。"
       />
 
       <Navigation />
@@ -107,7 +107,7 @@ export default function YamanashiSoloLP() {
                 </p>
 
                 <h1 className="text-3xl md:text-5xl font-light text-white leading-tight">
-                  個人事業主のホームページ制作
+                  中小企業・個人事業主のホームページ制作
                   <span className="block mt-2 text-white/90 text-2xl md:text-3xl">
                     山梨県対応
                   </span>
