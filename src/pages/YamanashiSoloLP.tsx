@@ -18,11 +18,11 @@ export default function YamanashiSoloLP() {
   // 「リニューアル」だけじゃなく「新規」も入るように寄せる
   const pains = [
     "ホームページはあるけど、問い合わせ・予約につながらない",
-  "開業したばかりで、まず何を載せればいいか分からない",
+  "山梨県で開業したばかりで、まず何を載せればいいか分からない",
   "SNSだけでいいのか迷っている（でも不安がある）",
   "紹介だけに頼らず、安定して問い合わせがほしい",
   "スマホで見ると読みづらい／古く見える",
-  "写真や文章の印象を整えて、安心感を出したい",
+  "ブランディングをもう一度見直したい",
   ];
 
   const points = [
@@ -35,7 +35,7 @@ export default function YamanashiSoloLP() {
     body: "強み・ターゲット・導線を整理して「あなたを選ぶ理由」が伝わる構成に整えます。",
   },
   {
-    title: "デザイン＋集客（SEO）まで設計",
+    title: "ホームページデザイン＋集客（SEO）まで設計",
     body: "見た目だけでなく、検索や導線から問い合わせにつながる形を重視します。",
   },
   {
@@ -71,7 +71,7 @@ export default function YamanashiSoloLP() {
   const faqs = [
     {
       q: "山梨県でも対面できますか？",
-      a: "対面も可能です（北杜市・韮崎市・甲斐市周辺は比較的動きやすいです）。オンラインも対応しています。",
+      a: "対面も可能です（北杜市・韮崎市・甲斐市・甲府市周辺は比較的動きやすいです）。オンラインも対応しています。",
     },
     {
       q: "まずは診断・相談だけでも大丈夫？",
@@ -86,7 +86,7 @@ export default function YamanashiSoloLP() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Seo
-        title="中小企業・個人事業主のホームページ制作｜山梨県対応｜ONE DESIGN"
+        title="山梨県の中小企業・個人事業主のホームページ制作｜ONE DESIGN"
         description="山梨県の中小企業・個人事業主・店舗/サービス向けに、ホームページ制作・改善、SEO設計、写真まで一貫対応。無料診断（15分）で現状を整理し、改善ポイントを3つにまとめます（診断のみ／営業なし）。"
       />
 
@@ -322,7 +322,7 @@ export default function YamanashiSoloLP() {
                   <div className="mt-4 rounded-2xl border border-border bg-muted/20 p-4">
                     <p className="text-sm text-foreground font-medium">補足</p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      予算に合わせた最小構成の提案も可能です（内容は相談・無料診断後に共有します）。
+                      ホームページ制作は予算に合わせた最小構成の提案も可能です（内容は相談・無料診断後に共有します）。
                     </p>
                   </div>
                 </div>
