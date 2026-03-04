@@ -106,7 +106,7 @@ export default function YamanashiSoloLP() {
                   YAMANASHI / SOLO BUSINESS
                 </p>
 
-                <h1 className="text-3xl md:text-5xl font-light text-white leading-tight">
+                <h1 className="text-2xl md:text-4xl font-light text-white leading-tight">
                   中小企業・個人事業主のホームページ制作
                   <span className="block mt-2 text-white/90 text-2xl md:text-3xl">
                     山梨県対応
