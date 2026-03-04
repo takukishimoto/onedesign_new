@@ -21,13 +21,13 @@ const Portfolio = () => {
     {
       image: project3,
       title: "韮崎東ケ丘病院",
-      location: "韮崎市",
+      location: "山梨県韮崎市",
       description: "HPリニューアル, 運用管理",
     },
     {
       image: project4,
       title: "ONE DESIGN",
-      location: "富士見町",
+      location: "諏訪郡富士見町",
       description: "HPリニューアル",
     },
   ];
