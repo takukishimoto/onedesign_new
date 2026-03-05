@@ -51,7 +51,7 @@ const Footer = () => {
                 <p className="text-sm text-muted-foreground mb-4">AREA</p>
                 <p className="text-sm leading-relaxed">
                   八ヶ岳・諏訪市・茅野市・富士見町・原村<br />
-                  北杜市・韮崎市 ほか
+                  山梨県（北杜市・韮崎市・甲府市 ほか）
                 </p>
               </div>
             </div>
