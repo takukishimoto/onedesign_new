@@ -50,12 +50,12 @@ const Services = () => {
 
 <PageHero
   label="特徴"
-  enTitle="Design as Thinking"
-  jpTitle={<>思考としてのデザイン</>}
+  enTitle="Design that Works."
+  jpTitle={<>結果を生む、ホームページ。</>}
   lead={
     <>
-      つくることが目的ではない。<br />
-      成果につながる設計を。
+      デザインは手段。 <br />
+      あなたの成果が、ゴールです。
     </>
   }
   bottom="ホームページ制作・グラフィックデザイン・WEBマーケティング・写真撮影"
