@@ -70,7 +70,7 @@ const Services = () => {
                       <h4 className="text-2xl font-light mb-4 text-architectural group-hover:text-muted-foreground transition-colors duration-500">
                         {service.title}
                       </h4>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed ">
                         {service.description}
                       </p>
                     </div>

@@ -53,13 +53,13 @@ const PageHero = ({
           )}
 
           {lead && (
-            <div className="mt-8 text-sm md:text-base leading-relaxed tracking-wide text-muted-foreground">
+            <div className="mt-10 text-lg md:text-lg leading-relaxed tracking-wide font-serif">
               {lead}
             </div>
           )}
 
           {bottom && (
-            <div className="mt-6 text-sm md:text-base leading-relaxed max-w-3xl mx-auto text-muted-foreground">
+            <div className="mt-8 text-sm md:text-base leading-relaxed max-w-3xl mx-auto text-muted-foreground">
               {bottom}
             </div>
           )}

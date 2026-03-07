@@ -115,7 +115,7 @@ const Price = () => {
         }
         lead={
           <>
-            CMS（WordPress / a-blog cms）やHTMLなど、運用方法も含めてご提案します。<br />
+            CMS（WordPress / a-blog cms）やHTMLなど、運用方法も含めてご提案、<br />
             SEO対策・常時SSL・独自ドメイン・スマホ対応は基本的に込みで設計します。
           </>
         }
