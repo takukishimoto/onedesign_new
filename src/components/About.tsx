@@ -135,9 +135,10 @@ const About = () => {
                   </div>
                 </div>
 
-                <p className="text-sm text-muted-foreground mt-6">
-                  まずはお気軽にご相談ください。課題に寄り添い、最適な解決策をご提案します。
-                </p>
+                <div>
+                    <p className="text-minimal text-muted-foreground mb-2 mt-4">対応範囲</p>
+                    <h3 className="text-ls">【長野県】茅野市/原村/富士見町/諏訪市/岡谷市/伊那市/下諏訪町<br />【山梨県】北杜市/甲府市/甲斐市 その他</h3>
+                  </div>
               </div>
             </div>
           </div>
