@@ -28,6 +28,7 @@ import YamanashiSoloLP from "@/pages/YamanashiSoloLP";
 // どこかのRoutes内に追加
 <Route path="/yamanashi" element={<YamanashiSoloLP />} />
 import NotFound from "./pages/NotFound";
+import SuwaSoloLP from "./pages/SuwaHomepage";
 
 // ▼ React Query 初期化
 const queryClient = new QueryClient();
@@ -157,6 +158,14 @@ const AnimatedRoutes = () => {
         element={<YamanashiSoloLP />
 
         } />
+
+         <Route 
+        path="/suwa-homepage" 
+        element={<SuwaSoloLP />
+
+        } />
+
+        
 
 
         {/*

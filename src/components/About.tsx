@@ -31,7 +31,7 @@ const About = () => {
   {/* 山梨LPへの導線 */}
   <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-5">
     <p className="text-sm text-foreground font-medium">
-      山梨県の個人事業主の方へ
+      山梨県の中小企業・個人事業主の方へ
     </p>
     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
       「SNSだけでいいのか迷っている」「小さく始めたい」など、個人事業主向けの相談も増えています。
