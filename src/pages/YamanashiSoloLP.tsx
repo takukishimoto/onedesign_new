@@ -13,13 +13,14 @@ export default function YamanashiSoloLP() {
     "中央市",
     "甲斐市",
     "昭和町",
+    "富士吉田市",
   ];
 
-  // 「リニューアル」だけじゃなく「新規」も入るように寄せる
   const pains = [
     "ホームページはあるけど、問い合わせ・予約につながらない",
-  "山梨県で開業したばかりで、まず何を載せればいいか分からない",
-  "事業規模やサービス内容に対して、現在のホームページが見合っていない",
+    "「問い合わせが来ない」「検索しても出てこない」と感じている",
+    "山梨県で開業・起業したばかりで、まず何から始めればいいか分からない",
+    "事業規模やサービス内容に対して、現在のホームページが見合っていない",
     "「山梨 〇〇（業種）」で検索しても出てこない、または情報が古すぎる",
     "採用力を強化したいが、自社の魅力が求職者にうまく伝わっていない",
     "補助金や助成金を活用して、コストを抑えつつ本格的なサイトを作りたい",
@@ -27,33 +28,32 @@ export default function YamanashiSoloLP() {
   ];
 
   const points = [
-     {
-    title: "中小企業・個人事業主の「独自の強み」を言語化・視覚化",
-    body: "ヒアリングを通じて、当たり当り前すぎて気づかない「選ばれる理由」を抽出。プロの視点でコンテンツへ落とし込みます。",
-  },
-  {
-    title: "山梨県内なら対面での打ち合わせ・取材が可能",
-    body: "甲府市から北杜市までフットワーク軽くお伺いします。現場の熱量やこだわりを直接感じることで、血の通った、温度感のあるサイト制作を実現します。",
-  },
-  {
-    title: "ホームページデザイン＋集客（SEO）まで設計",
-    body: "見た目だけでなく、検索や導線から問い合わせにつながる形を重視します。",
-  },
-  {
-    title: "集客と採用、両面から攻めるサイト設計",
-    body: "地元の顧客に届くSEO（検索対策）はもちろん、求職者が「ここで働きたい」と思えるストーリー構築まで、ビジネスの成長に必要な導線を作ります。",
-  },
-  {
-    title: "写真・文章・保守まで一貫した伴走支援",
-    body: "撮影やライティングの代行、公開後の運用サポートまで対応。Web担当者がいない現場でも、二人三脚でサイトを育てていくことが可能です。",
-  },
-  {
-    title: "予算に合わせて“必要最小限”から提案できます",
-    body: "全部やる前提ではなく、今の状況と予算に合わせて「最小で効果が出る形」を提案します。",
-  },
+    {
+      title: "中小企業・個人事業主・店舗の「独自の強み」を言語化・視覚化",
+      body: "ヒアリングを通じて、当たり前すぎて気づかない「選ばれる理由」を抽出。プロの視点でコンテンツへ落とし込みます。",
+    },
+    {
+      title: "山梨県内なら対面での打ち合わせ・取材が可能",
+      body: "甲府市から北杜市までフットワーク軽くお伺いします。現場の熱量やこだわりを直接感じることで、血の通った、温度感のあるサイト制作を実現します。",
+    },
+    {
+      title: "ホームページデザイン＋集客（SEO）まで設計",
+      body: "見た目だけでなく、検索や導線から問い合わせにつながる形を重視します。",
+    },
+    {
+      title: "集客と採用、両面から攻めるサイト設計",
+      body: "地元の顧客に届くSEO（検索対策）はもちろん、求職者が「ここで働きたい」と思えるストーリー構築まで、ビジネスの成長に必要な導線を作ります。",
+    },
+    {
+      title: "写真・文章・保守まで一貫した伴走支援",
+      body: "撮影やライティングの代行、公開後の運用サポートまで対応。Web担当者がいない現場でも、二人三脚でサイトを育てていくことが可能です。",
+    },
+    {
+      title: "予算に合わせて「必要最小限」から提案できます",
+      body: "全部やる前提ではなく、今の状況と予算に合わせて「最小で効果が出る形」を提案します。",
+    },
   ];
 
-  // 「見せないプラン」前提：無料診断→提案→必要なら制作
   const flow = [
     {
       t: "無料診断（15分）",
@@ -72,14 +72,26 @@ export default function YamanashiSoloLP() {
   const faqs = [
     {
       q: "山梨県でも対面できますか？",
-      a: "山梨県全域に対応しています。（北杜市・韮崎市・甲府市・南アルプス市・笛吹市・中央市・甲斐市・昭和町・富士吉田市・笛吹市）。オンラインも対応しています。",
+      a: "山梨県全域に対応しています（北杜市・韮崎市・甲府市・南アルプス市・笛吹市・中央市・甲斐市・昭和町・富士吉田市）。オンラインも対応しています。",
     },
     {
       q: "まずは診断・相談だけでも大丈夫？",
-      a: "大丈夫です。診断は「診断のみ」ですし相談も無料です。営業はしないのでご安心ください。",
+      a: "大丈夫です。診断は「診断のみ」で完結しますし、相談も無料です。営業はしないのでご安心ください。",
     },
     {
-      q: "ホームページ制作費がどれくらいになるか不安です。予算が限られていても相談できますか？",
+      q: "ホームページ制作の費用はどのくらいですか？",
+      a: "ご状況によって異なりますが、個人事業主・小規模店舗向けの最小構成から、中小企業向けの本格的なサイトまで対応しています。まずは無料診断（15分）で現状を伺ったうえで、予算に合わせた最適な構成をご提案します。",
+    },
+    {
+      q: "補助金を使ってホームページを作れますか？",
+      a: "小規模事業者持続化補助金などを活用できる場合があります。対象かどうかも含めて、無料診断時にご相談ください。",
+    },
+    {
+      q: "リニューアルだけでなく、新規制作も対応していますか？",
+      a: "はい、新規制作・リニューアルどちらも対応しています。開業・起業のタイミングでのご相談も歓迎です。",
+    },
+    {
+      q: "予算が限られていても相談できますか？",
       a: "相談できます。状況を見たうえで「必要最小限で整える案」も含めて、無理のない範囲で提案します（内容は相談・無料診断後に共有します）。",
     },
   ];
@@ -87,8 +99,8 @@ export default function YamanashiSoloLP() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Seo
-        title="山梨県のホームページ制作・Web制作｜個人事業主・中小企業向け｜ONE DESIGN"
-        description="山梨県の中小企業や個人事業主・店舗向けに、戦略的なホームページ制作・改善、SEO設計、写真撮影まで一貫対応。対面打ち合わせで貴社の強みを言語化し、補助金活用も視野に入れた最適なWeb投資をご提案します。無料診断（15分）受付中。"
+        title="山梨県のホームページ制作｜個人事業主・中小企業・店舗向け｜北杜市・甲府市・韮崎市｜ONE DESIGN"
+        description="山梨県（甲府市・北杜市・韮崎市・南アルプス市ほか全域）の個人事業主・中小企業・店舗向けホームページ制作。問い合わせ・集客・採用につながる設計を得意とし、対面打ち合わせ・補助金活用にも対応。まずは無料診断（15分）で現状の課題を整理します。営業なし。"
       />
 
       <Navigation />
@@ -108,21 +120,19 @@ export default function YamanashiSoloLP() {
                 </p>
 
                 <h1 className="text-2xl md:text-4xl font-light text-white leading-tight">
-                  山梨県のビジネスを加速させる
+                  山梨県の個人事業主・中小企業向け
                   <span className="block mt-2 text-white/90 text-2xl md:text-3xl">
                     ホームページ制作・リニューアル
                   </span>
                 </h1>
 
-                {/* ★ここが肝：価格は出さず、見せないプランの“安心”だけ出す */}
                 <p className="mt-6 text-white/85 text-sm md:text-base leading-relaxed">
-                 「事業に見合うサイトがほしい」「求人や集客の反応を良くしたい」「補助金を活用したい」<br className="hidden md:block" />
-        山梨の商圏を理解したクリエイターが、中小企業から個人事業主まで幅広くサポート。<br />
-        まずは無料診断（15分）で、現状の課題整理と「次の一手」を明確にしませんか。
+                  「問い合わせが来ない」「検索しても出てこない」「開業したばかりで何から始めればいいか分からない」<br className="hidden md:block" />
+                  山梨県全域を対応エリアとし、集客・採用・補助金活用まで一貫してサポートします。<br />
+                  まずは無料診断（15分）で、いまの課題と次の一手を整理しませんか。営業はしません。
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  {/* 主ボタン */}
                   <a
                     href="/freediagnosis"
                     className="
@@ -136,7 +146,6 @@ export default function YamanashiSoloLP() {
                     無料診断（15分）を申し込む →
                   </a>
 
-                  {/* サブボタン */}
                   <a
                     href="#why"
                     className="
@@ -188,7 +197,6 @@ export default function YamanashiSoloLP() {
                   ))}
                 </ul>
 
-                {/* ここに導線（見せないプラン運用で安心を出す） */}
                 <div className="mt-7 rounded-2xl border border-border bg-muted/20 p-5">
                   <p className="text-sm text-foreground font-medium">
                     無料診断（15分）で、いまのホームページを整理しませんか
@@ -200,7 +208,6 @@ export default function YamanashiSoloLP() {
                   </p>
 
                   <div className="mt-6 flex flex-wrap items-center gap-3">
-                    {/* 主：無料診断 */}
                     <a
                       href="/freediagnosis"
                       className="
@@ -214,7 +221,6 @@ export default function YamanashiSoloLP() {
                       無料診断（15分）を申し込む →
                     </a>
 
-                    {/* サブ：相談 */}
                     <a
                       href="/contact"
                       className="
@@ -231,7 +237,7 @@ export default function YamanashiSoloLP() {
               </section>
 
               <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">山梨県の中小企業・個人事業主に選ばれる理由</h2>
+                <h2 className="text-xl font-medium text-foreground">山梨県の中小企業・個人事業主・店舗に選ばれる理由</h2>
                 <div className="mt-6 grid grid-cols-3 md:grid-cols-1 gap-4">
                   {points.map((x) => (
                     <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
@@ -313,23 +319,22 @@ export default function YamanashiSoloLP() {
                   </p>
 
                   <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-4">
-                    <p className="text-sm text-foreground font-medium">対応</p>
+                    <p className="text-sm text-foreground font-medium">対応エリア</p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      山梨県全域対応（北杜市・韮崎市・甲府市・南アルプス市・笛吹市・中央市・甲斐市・昭和町・富士吉田市・笛吹市）／オンライン対応
+                      山梨県全域（北杜市・韮崎市・甲府市・南アルプス市・笛吹市・中央市・甲斐市・昭和町・富士吉田市）／オンライン対応
                     </p>
                   </div>
 
                   <div className="mt-4 rounded-2xl border border-border bg-muted/20 p-4">
                     <p className="text-sm text-foreground font-medium">補足</p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      ホームページ制作は予算に合わせた最小構成の提案も可能です（内容は相談・無料診断後に共有します）。
+                      予算に合わせた最小構成の提案も可能です（内容は相談・無料診断後に共有します）。
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
