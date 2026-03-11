@@ -2,22 +2,22 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Seo from "@/components/Seo";
 
-export default function SuwaSoloLP() {
+export default function InaSoloLP() {
 const areas = [
-  "諏訪市",
-  "茅野市",
-  "原村",
-  "富士見町",
-  "岡谷市",
-  "下諏訪町",
-  "北杜市",
+  "伊那市",
+  "駒ヶ根市",
+  "辰野町",
+  "箕輪町",
+  "飯島町",
+  "松川町",
+  "中川村",
 ];
 
 const pains = [
-  "諏訪市でホームページ制作を検討している",
+  "伊那市・駒ヶ根市でホームページ制作を検討している",
   "開業に合わせてホームページを作りたい",
   "ホームページはあるが問い合わせが増えない",
-  "「諏訪市 〇〇」で検索しても出てこない",
+  "「伊那市 〇〇」「駒ヶ根市 〇〇」で検索しても出てこない",
   "古いホームページをリニューアルしたい",
   "スマホで見づらいサイトを改善したい",
 ];
@@ -28,20 +28,20 @@ const pains = [
       body: "ヒアリングを通じて、当たり前すぎて気づかない「選ばれる理由」を抽出。長年培ってきた技術・地域とのつながり・こだわりをプロの視点でコンテンツへ落とし込み、訪問者に伝わる言葉と構成に整えます。",
     },
     {
-      title: "諏訪市周辺なら対面での打ち合わせ・取材が可能",
-      body: "諏訪市・茅野市・原村・富士見町・岡谷市・下諏訪町・北杜市へフットワーク軽くお伺いします。現場の空気感や職人のこだわりを直接感じながら制作することで、よそのテンプレートとは違う、温度感のあるホームページを実現します。",
+      title: "伊那地域なら対面での打ち合わせ・取材が可能",
+      body: "伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村へフットワーク軽くお伺いします。現場の空気感や職人のこだわりを直接感じながら制作することで、よそのテンプレートとは違う、温度感のあるホームページを実現します。",
     },
     {
       title: "ホームページデザイン＋集客（SEO）まで設計",
-      body: "見た目の完成度だけでなく、「諏訪市 〇〇」「茅野市 〇〇」といった地域キーワードで検索上位を狙えるSEO設計と、訪問者を問い合わせへ誘導する導線設計を最初から組み込みます。",
+      body: "見た目の完成度だけでなく、「伊那市 〇〇」「駒ヶ根市 〇〇」といった地域キーワードで検索上位を狙えるSEO設計と、訪問者を問い合わせへ誘導する導線設計を最初から組み込みます。",
     },
     {
       title: "集客と採用、両面から攻めるサイト設計",
-      body: "新規顧客獲得のための地域SEOはもちろん、求職者が「ここで働きたい」と感じるストーリー構築まで対応。人手不足が課題の諏訪地域の事業者にとって、採用強化は集客と同じくらい重要なテーマです。",
+      body: "新規顧客獲得のための地域SEOはもちろん、求職者が「ここで働きたい」と感じるストーリー構築まで対応。人手不足が課題の伊那地域の事業者にとって、採用強化は集客と同じくらい重要なテーマです。",
     },
     {
       title: "写真・文章・保守まで一貫した伴走支援",
-      body: "写真撮影・ライティング代行・公開後の運用サポートまで一括して対応できます。「Web担当者がいない」「更新する時間がない」という諏訪地域の中小企業・個人事業主の現場事情を踏まえ、二人三脚でサイトを育てていけます。",
+      body: "写真撮影・ライティング代行・公開後の運用サポートまで一括して対応できます。「Web担当者がいない」「更新する時間がない」という伊那地域の中小企業・個人事業主の現場事情を踏まえ、二人三脚でサイトを育てていけます。",
     },
     {
       title: "予算に合わせて「必要最小限」から提案できます",
@@ -66,8 +66,8 @@ const pains = [
 
   const faqs = [
     {
-      q: "諏訪市でも対面打ち合わせできますか？",
-      a: "諏訪市・茅野市・原村・富士見町・岡谷市・下諏訪町・北杜市など諏訪地域で対面対応しています。現地取材（写真撮影・ヒアリング）もお伺いして行うことが可能です。オンライン打ち合わせ（ZoomやGoogle Meet）にも対応しています。",
+      q: "伊那市・駒ヶ根市でも対面打ち合わせできますか？",
+      a: "伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村など伊那地域で対面対応しています。現地取材（写真撮影・ヒアリング）もお伺いして行うことが可能です。オンライン打ち合わせ（ZoomやGoogle Meet）にも対応しています。",
     },
     {
       q: "まずは診断・相談だけでも大丈夫？",
@@ -82,8 +82,8 @@ const pains = [
       a: "WordPressでの制作に対応しています。公開後に自分で更新・追記できるよう、操作レクチャーも行います。更新が難しい場合は、代わりに更新作業をお引き受けする運用サポートプランもご用意しています。",
     },
     {
-      q: "SEO対策もやってもらえますか？「諏訪市 〇〇」で上位に出したい。",
-      a: "対応しています。「諏訪市 〇〇」「茅野市 〇〇」など地域キーワードでの検索上位を狙えるよう、ページ構成・テキスト・タイトル・メタ情報・内部リンクまで設計します。ただし、SEOは即効性より継続的な取り組みが重要なため、現状と目標を踏まえた現実的なプランをご提案します。",
+      q: "SEO対策もやってもらえますか？「伊那市 〇〇」で上位に出したい。",
+      a: "対応しています。「伊那市 〇〇」「駒ヶ根市 〇〇」など地域キーワードでの検索上位を狙えるよう、ページ構成・テキスト・タイトル・メタ情報・内部リンクまで設計します。ただし、SEOは即効性より継続的な取り組みが重要なため、現状と目標を踏まえた現実的なプランをご提案します。",
     },
   ];
 
@@ -94,25 +94,25 @@ const pains = [
         "@type": "LocalBusiness",
         "@id": "https://one-design.example.com/#business",
         "name": "ONE DESIGN",
-        "description": "諏訪市・茅野市など諏訪地域の中小企業・個人事業主向けに、集客につながるホームページ制作・リニューアルを提供するWebデザイン事務所。SEO対策・スマホ対応・WordPress対応。",
-        "url": "https://one-design.example.com/suwa",
+        "description": "伊那市・駒ヶ根市など伊那地域の中小企業・個人事業主向けに、集客につながるホームページ制作・リニューアルを提供するWebデザイン事務所。SEO対策・スマホ対応・WordPress対応。",
+        "url": "https://one-design.example.com/ina",
         "telephone": "",
         "priceRange": "¥¥",
         "image": "https://one-design.example.com/og-image.jpg",
         "address": {
           "@type": "PostalAddress",
           "addressRegion": "長野県",
-          "addressLocality": "諏訪市",
+          "addressLocality": "伊那市",
           "addressCountry": "JP"
         },
         "areaServed": [
-          { "@type": "City", "name": "諏訪市" },
-          { "@type": "City", "name": "茅野市" },
-          { "@type": "City", "name": "岡谷市" },
-          { "@type": "Town", "name": "下諏訪町" },
-          { "@type": "Town", "name": "富士見町" },
-          { "@type": "Village", "name": "原村" },
-          { "@type": "City", "name": "北杜市" }
+          { "@type": "City", "name": "伊那市" },
+          { "@type": "City", "name": "駒ヶ根市" },
+          { "@type": "Town", "name": "辰野町" },
+          { "@type": "Town", "name": "箕輪町" },
+          { "@type": "Town", "name": "飯島町" },
+          { "@type": "Town", "name": "松川町" },
+          { "@type": "Village", "name": "中川村" }
         ],
         "knowsAbout": [
           "ホームページ制作",
@@ -132,7 +132,7 @@ const pains = [
               "itemOffered": {
                 "@type": "Service",
                 "name": "ホームページ新規制作",
-                "description": "諏訪地域の中小企業・個人事業主向けに、集客・採用につながるホームページを一から制作します。"
+                "description": "伊那地域の中小企業・個人事業主向けに、集客・採用につながるホームページを一から制作します。"
               }
             },
             {
@@ -159,10 +159,10 @@ const pains = [
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "諏訪市でも対面打ち合わせできますか？",
+            "name": "伊那市・駒ヶ根市でも対面打ち合わせできますか？",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "諏訪市・茅野市・原村・富士見町・岡谷市・下諏訪町・北杜市など諏訪地域で対面対応しています。現地取材（写真撮影・ヒアリング）もお伺いして行うことが可能です。オンライン打ち合わせ（ZoomやGoogle Meet）にも対応しています。"
+              "text": "伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村など伊那地域で対面対応しています。現地取材（写真撮影・ヒアリング）もお伺いして行うことが可能です。オンライン打ち合わせ（ZoomやGoogle Meet）にも対応しています。"
             }
           },
           {
@@ -191,10 +191,10 @@ const pains = [
           },
           {
             "@type": "Question",
-            "name": "SEO対策もやってもらえますか？「諏訪市 〇〇」で上位に出したい。",
+            "name": "SEO対策もやってもらえますか？「伊那市 〇〇」で上位に出したい。",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "対応しています。「諏訪市 〇〇」「茅野市 〇〇」など地域キーワードでの検索上位を狙えるよう、ページ構成・テキスト・タイトル・メタ情報・内部リンクまで設計します。SEOは継続的な取り組みが重要なため、現状と目標を踏まえた現実的なプランをご提案します。"
+              "text": "対応しています。「伊那市 〇〇」「駒ヶ根市 〇〇」など地域キーワードでの検索上位を狙えるよう、ページ構成・テキスト・タイトル・メタ情報・内部リンクまで設計します。SEOは継続的な取り組みが重要なため、現状と目標を踏まえた現実的なプランをご提案します。"
             }
           }
         ]
@@ -211,8 +211,8 @@ const pains = [
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "諏訪市のホームページ制作",
-            "item": "https://one-design.example.com/suwa"
+            "name": "伊那市・駒ヶ根市のホームページ制作",
+            "item": "https://one-design.example.com/ina"
           }
         ]
       }
@@ -222,8 +222,8 @@ const pains = [
   return (
     <div className="min-h-screen bg-background text-foreground">
     <Seo
-  title="諏訪市のホームページ制作｜中小企業・個人事業主向け｜ONE DESIGN"
-  description="諏訪市の中小企業・個人事業主向けに、集客につながるホームページ制作を行っています。SEO対策・スマホ対応・WordPress対応。諏訪市・茅野市・原村・富士見町など諏訪地域対応。"
+  title="伊那市・駒ヶ根市のホームページ制作｜中小企業・個人事業主向け｜ONE DESIGN"
+  description="伊那市・駒ヶ根市など伊那地域の中小企業・個人事業主向けに、集客につながるホームページ制作を行っています。SEO対策・スマホ対応・WordPress対応。伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村対応。"
 />
       {/* JSON-LD 構造化データ */}
       <script
@@ -244,11 +244,11 @@ const pains = [
 
               <div className="relative z-10 mx-auto max-w-4xl">
                 <p className="text-minimal tracking-[0.22em] text-white/80 mb-4">
-SUWA / WEB DESIGN
+INA / WEB DESIGN
 </p>
 
 <h1 className="text-2xl md:text-4xl font-light text-white leading-tight">
-諏訪市のビジネスを加速させる
+伊那市・駒ヶ根市のビジネスを加速させる
 <span className="block mt-2 text-white/90 text-2xl md:text-3xl">
 ホームページ制作・リニューアル
 </span>
@@ -256,7 +256,7 @@ SUWA / WEB DESIGN
 
                 <p className="mt-6 text-white/85 text-sm md:text-base leading-relaxed">
                  「事業に見合うサイトがほしい」「求人や集客の反応を良くしたい」「補助金を活用したい」<br className="hidden md:block" />
-        諏訪市の商圏を理解したクリエイターが、中小企業から個人事業主まで幅広くサポート。<br />
+        伊那地域の商圏を理解したクリエイターが、中小企業から個人事業主まで幅広くサポート。<br />
         まずは無料診断（15分）で、現状の課題整理と「次の一手」を明確にしませんか。
                 </p>
 
@@ -308,22 +308,22 @@ SUWA / WEB DESIGN
         </div>
       </section>
 
-      {/* 導入説明文：諏訪地域×ホームページ制作のコンテキストをGoogleに伝える */}
+      {/* 導入説明文：伊那地域×ホームページ制作のコンテキストをGoogleに伝える */}
       <section className="pb-4">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-10">
             <h2 className="text-xl font-medium text-foreground">
-              諏訪市でホームページ制作をお考えの方へ
+              伊那市・駒ヶ根市でホームページ制作をお考えの方へ
             </h2>
             <div className="mt-4 space-y-4 text-sm text-muted-foreground leading-relaxed">
               <p>
-                諏訪市・茅野市を中心とする諏訪地域は、精密機械・光学・観光・農業・飲食など多様な産業が集積するエリアです。地域内での競合が少ない業種でも、「検索で見つけてもらえない」「問い合わせが来ない」という悩みを抱える事業者が多く、その多くはホームページの内容や設計が原因です。
+                伊那市・駒ヶ根市を中心とする伊那地域は、製造業・農業・観光・飲食・医療など多様な産業が根付くエリアです。地域内での競合が少ない業種でも、「検索で見つけてもらえない」「問い合わせが来ない」という悩みを抱える事業者が多く、その多くはホームページの内容や設計が原因です。
               </p>
               <p>
-                ONE DESIGNは、諏訪地域の商圏・競合・顧客層を理解したうえで、中小企業や個人事業主が「地域で選ばれる」ためのホームページ制作・リニューアルを行っています。単にデザインをきれいにするだけでなく、「諏訪市 〇〇」「茅野市 〇〇」といった地域キーワードで検索上位を狙えるSEO設計、スマートフォン対応、問い合わせにつながる導線設計まで、一貫して対応します。
+                ONE DESIGNは、伊那地域の商圏・競合・顧客層を理解したうえで、中小企業や個人事業主が「地域で選ばれる」ためのホームページ制作・リニューアルを行っています。単にデザインをきれいにするだけでなく、「伊那市 〇〇」「駒ヶ根市 〇〇」といった地域キーワードで検索上位を狙えるSEO設計、スマートフォン対応、問い合わせにつながる導線設計まで、一貫して対応します。
               </p>
               <p>
-                岡谷市・下諏訪町・原村・富士見町・北杜市など諏訪地域全域に対面でお伺いできます。「何から始めればいいかわからない」という段階からでも、まずは無料診断（15分）でお気軽にご相談ください。
+                辰野町・箕輪町・飯島町・松川町・中川村など伊那地域全域に対面でお伺いできます。「何から始めればいいかわからない」という段階からでも、まずは無料診断（15分）でお気軽にご相談ください。
               </p>
             </div>
           </div>
@@ -337,7 +337,7 @@ SUWA / WEB DESIGN
             {/* Left */}
             <div className="col-span-2 md:col-span-1 space-y-10">
               <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">諏訪市でこのような課題をお持ちの企業・個人様へ</h2>
+                <h2 className="text-xl font-medium text-foreground">伊那地域でこのような課題をお持ちの企業・個人様へ</h2>
                 <ul className="mt-5 space-y-3 text-muted-foreground">
                   {pains.map((t) => (
                     <li key={t} className="flex gap-3">
@@ -387,7 +387,7 @@ SUWA / WEB DESIGN
               </section>
 
               <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">諏訪市の中小企業・個人事業主に選ばれる理由</h2>
+                <h2 className="text-xl font-medium text-foreground">伊那地域の中小企業・個人事業主に選ばれる理由</h2>
                 <div className="mt-6 grid grid-cols-3 md:grid-cols-1 gap-4">
                   {points.map((x) => (
                     <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
@@ -471,7 +471,7 @@ SUWA / WEB DESIGN
                   <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-4">
                     <p className="text-sm text-foreground font-medium">対応エリア</p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      諏訪地域全域対応（諏訪市・岡谷市・下諏訪町・茅野市・原村・富士見町・北杜市）／オンライン対応
+                      伊那地域全域対応（伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村）／オンライン対応
                     </p>
                   </div>
 

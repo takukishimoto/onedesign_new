@@ -24,11 +24,13 @@ import Price from "./pages/Price";
 import Hojyokin from "./pages/Hojyokin";
 import FreeDiagnosis from "./pages/FreeDiagnosis";
 import YamanashiSoloLP from "@/pages/YamanashiSoloLP";
+import SuwaSoloLP from "./pages/SuwaHomepage";
+import InaSoloLP from "./pages/InaHomepage";
 
 // どこかのRoutes内に追加
 <Route path="/yamanashi" element={<YamanashiSoloLP />} />
 import NotFound from "./pages/NotFound";
-import SuwaSoloLP from "./pages/SuwaHomepage";
+
 
 // ▼ React Query 初期化
 const queryClient = new QueryClient();
@@ -165,6 +167,11 @@ const AnimatedRoutes = () => {
 
         } />
 
+		<Route 
+        path="/ina-homepage" 
+        element={<InaSoloLP />
+
+        } />
         
 
 
