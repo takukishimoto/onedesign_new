@@ -129,7 +129,7 @@ export default function YamanashiSoloLP() {
                 <p className="mt-6 text-white/85 text-sm md:text-base leading-relaxed">
                   「問い合わせが来ない」「検索しても出てこない」「開業したばかりで何から始めればいいか分からない」<br className="hidden md:block" />
                   山梨県全域を対応エリアとし、集客・採用・補助金活用まで一貫してサポートします。<br />
-                  まずは無料診断（15分）で、いまの課題と次の一手を整理しませんか。営業はしません。
+                  まずは無料診断（15分）で、いまの課題と次の一手を整理しませんか。営業はしませんご安心ください。
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">

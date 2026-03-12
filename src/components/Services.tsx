@@ -79,6 +79,41 @@ const Services = () => {
               ))}
             </div>
 
+            {/* 地域LPリンク（SEO強化） */}
+<div className="mt-24 text-center">
+  <h3 className="text-2xl font-light mb-6">
+    地域ごとのホームページ制作
+  </h3>
+
+  <p className="text-muted-foreground mb-8 leading-relaxed">
+    ONE DESIGNでは、長野県南信・八ヶ岳エリアを中心に
+    地域の中小企業や個人事業主のホームページ制作を行っています。
+  </p>
+
+  <div className="flex flex-wrap justify-center gap-4">
+    <a
+      href="/suwa-homepage"
+      className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition"
+    >
+      諏訪市のホームページ制作
+    </a>
+
+    <a
+      href="/ina-homepage"
+      className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition"
+    >
+      伊那市のホームページ制作
+    </a>
+
+    <a
+      href="/yamanashi-lp"
+      className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition"
+    >
+      山梨県のホームページ制作
+    </a>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
