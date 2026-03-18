@@ -10,25 +10,25 @@ const Portfolio = () => {
       image: project1,
       title: "宮澤悠維教育研究所",
       location: "諏訪郡原村",
-      description: "ランディングページ制作, 運用管理",
+      description: "ランディングページ制作, 運用管理, 写真撮影",
     },
     {
       image: project2,
       title: "風の森建築",
       location: "諏訪郡原村",
-      description: "HPリニューアル, Branding, 運用管理",
+      description: "HPリニューアル, Branding, 運用管理, 写真撮影",
     },
     {
       image: project3,
       title: "韮崎東ケ丘病院",
       location: "山梨県韮崎市",
-      description: "HPリニューアル, 運用管理",
+      description: "HPリニューアル, 運用管理 写真撮影",
     },
     {
       image: project4,
       title: "ONE DESIGN",
-      location: "諏訪郡富士見町",
-      description: "HPリニューアル",
+      location: "諏訪郡原村",
+      description: "ホームページ制作",
     },
   ];
 

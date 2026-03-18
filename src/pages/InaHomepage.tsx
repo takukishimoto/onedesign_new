@@ -256,7 +256,7 @@ INA / WEB DESIGN
 
                 <p className="mt-6 text-white/85 text-sm md:text-base leading-relaxed">
                  「事業に見合うサイトがほしい」「求人や集客の反応を良くしたい」「補助金を活用したい」<br className="hidden md:block" />
-        伊那地域の商圏を理解したクリエイターが、中小企業から個人事業主まで幅広くサポート。<br />
+        伊那地域の商圏を理解したWEBデザインで、中小企業から個人事業主まで幅広くサポート。<br />
         まずは無料診断（15分）で、現状の課題整理と「次の一手」を明確にしませんか。
                 </p>
 
@@ -426,6 +426,120 @@ INA / WEB DESIGN
                 </div>
               </section>
             </div>
+
+
+
+                {/* ===== 制作実績セクション ===== */}
+
+
+              {/* <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+                <div className="flex items-center justify-between flex-wrap gap-3">
+                  <h2 className="text-xl font-medium text-foreground">伊那地域での制作実績</h2>
+                  <a
+                    href="/works"
+                    className="text-sm text-muted-foreground hover:text-foreground transition underline underline-offset-4"
+                  >
+                    実績をすべて見る →
+                  </a>
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  伊那地域・駒ヶ根市の事業者様のホームページ制作・リニューアルを手がけています。
+                </p>
+
+             
+                <div className="mt-6 grid grid-cols-1 gap-5">
+
+                 
+                  <div className="rounded-2xl border border-border bg-muted/20 overflow-hidden">
+             
+                    <div className="aspect-[16/7] bg-muted flex items-center justify-center overflow-hidden">
+                      <img src="/images/inamori2.png" alt="伊那森パークいちご園 ホームページ制作実績" className="w-full h-full object-cover" /> 
+                    </div>
+
+                    <div className="p-5">
+                   
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          駒ヶ根市
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          農業・いちご農園
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          ホームページリニューアル
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          メールアドレス設定
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          サーバー保守運用
+                        </span>
+                        
+                      </div>
+
+                    
+                      <p className="font-medium text-foreground text-base">
+                   
+                        「駒ヶ根市」伊那森パークいちご農園
+                      </p>
+
+               
+                    <div className="mt-3 space-y-2 text-sm text-muted-foreground leading-relaxed">
+                        <p>
+                          <span className="font-medium text-foreground">課題：</span>
+                          [制作前の課題・状況を記載]
+                        </p>
+                        <p>
+                          <span className="font-medium text-foreground">制作内容：</span>
+                          [制作・対応内容を記載]
+                        </p>
+                        <p>
+                          <span className="font-medium text-foreground">制作後の変化：</span>
+                          [問い合わせ増加・検索順位変化などを記載]
+                        </p>
+                      </div> 
+
+           
+                      <div className="mt-4">
+                       
+                        <a
+                          href="https://inamori-ichigo.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="
+                            inline-flex items-center justify-center
+                            rounded-xl px-5 py-2 text-sm font-medium
+                            border border-border bg-background
+                            hover:bg-muted/40 transition
+                          "
+                        >
+                          サイトを見る →
+                        </a>
+                   
+                      </div>
+                    </div>
+                  </div>
+             
+
+                </div>
+
+                <div className="mt-6 text-center">
+                  <a
+                    href="/work"
+                    className="
+                      inline-flex items-center justify-center
+                      rounded-xl px-6 py-3 text-sm font-medium
+                      border border-border bg-background
+                      hover:bg-muted/40 transition
+                    "
+                  >
+                    制作実績をすべて見る →
+                  </a>
+                </div>
+              </section> */}
+
+
+              {/* ===== 制作実績セクションここまで ===== */}
 
             {/* Right (Sticky CTA) */}
             <div className="col-span-1">
