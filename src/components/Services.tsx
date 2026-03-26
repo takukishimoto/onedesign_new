@@ -47,7 +47,7 @@ const Services = () => {
               {/* <p className="text-minimal text-muted-foreground mb-4">SERVICES</p> */}
 
               <h2 className="font-serif text-xl md:text-xl lg:text-xl font-light leading-relaxed ">
-                長野県（諏訪市・茅野市・原村・富士見町・岡谷市）、山梨県（北杜市）を中心に、
+                長野県（諏訪市・茅野市・原村・富士見町・岡谷市・伊那地域）、山梨県（北杜市）を中心に、
                 <br />
                 中小企業や個人事業のホームページ制作・リニューアルをお手伝いしています。
                 <br />
@@ -86,7 +86,7 @@ const Services = () => {
   </h3>
 
   <p className="text-muted-foreground mb-8 leading-relaxed">
-    ONE DESIGNでは、長野県南信・八ヶ岳エリアを中心に
+    ONE DESIGNでは、長野県南信・八ヶ岳エリアや伊那地域、山梨県を中心に
     地域の中小企業や個人事業主のホームページ制作を行っています。
   </p>
 
