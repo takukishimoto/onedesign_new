@@ -92,13 +92,13 @@ const pains = [
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://one-design.xyz/#business",
+        "@id": "https://one-design.example.com/#business",
         "name": "ONE DESIGN",
         "description": "伊那市・駒ヶ根市など伊那地域の中小企業・個人事業主向けに、集客につながるホームページ制作・リニューアルを提供するWebデザイン事務所。SEO対策・スマホ対応・WordPress対応。",
-        "url": "https://one-design.xyz/ina-homepage",
+        "url": "https://one-design.example.com/ina",
         "telephone": "",
         "priceRange": "¥¥",
-        "image": "https://one-design.xyz/og-image.jpg",
+        "image": "https://one-design.example.com/og-image.jpg",
         "address": {
           "@type": "PostalAddress",
           "addressRegion": "長野県",
@@ -206,13 +206,13 @@ const pains = [
             "@type": "ListItem",
             "position": 1,
             "name": "ホーム",
-            "item": "https://one-design.xyz/"
+            "item": "https://one-design.example.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "伊那市・駒ヶ根市のホームページ制作",
-            "item": "https://one-design.xyz/ina-homepage"
+            "item": "https://one-design.example.com/ina"
           }
         ]
       }
@@ -221,10 +221,11 @@ const pains = [
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Seo
-        title="伊那市・駒ヶ根市のホームページ制作｜中小企業・個人事業主向け｜ONE DESIGN"
-        description="伊那市・駒ヶ根市など伊那地域の中小企業・個人事業主向けに、集客につながるホームページ制作を行っています。SEO対策・スマホ対応・WordPress対応。伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村対応。"
-      />
+    <Seo
+  title="伊那市・駒ヶ根市のホームページ制作｜中小企業・個人事業主向け｜ONE DESIGN"
+  description="伊那市・駒ヶ根市など伊那地域の中小企業・個人事業主向けに、集客につながるホームページ制作を行っています。SEO対策・スマホ対応・WordPress対応。伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村対応。"
+/>
+      {/* JSON-LD 構造化データ */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -240,21 +241,25 @@ const pains = [
               <div className="absolute inset-0 animated-gradient" />
               <div className="absolute -inset-24 blob-layer" />
               <div className="absolute inset-0 bg-black/10 dark:bg-black/35" />
+
               <div className="relative z-10 mx-auto max-w-4xl">
                 <p className="text-minimal tracking-[0.22em] text-white/80 mb-4">
-                  INA / WEB DESIGN
-                </p>
-                <h1 className="text-2xl md:text-4xl font-light text-white leading-tight">
-                  伊那市・駒ヶ根市のビジネスを加速させる
-                  <span className="block mt-2 text-white/90 text-2xl md:text-3xl">
-                    ホームページ制作・リニューアル
-                  </span>
-                </h1>
+INA / WEB DESIGN
+</p>
+
+<h1 className="text-2xl md:text-4xl font-light text-white leading-tight">
+伊那市・駒ヶ根市のビジネスを加速させる
+<span className="block mt-2 text-white/90 text-2xl md:text-3xl">
+ホームページ制作・リニューアル
+</span>
+</h1>
+
                 <p className="mt-6 text-white/85 text-sm md:text-base leading-relaxed">
-                  「事業に見合うサイトがほしい」「求人や集客の反応を良くしたい」「補助金を活用したい」<br className="hidden md:block" />
-                  伊那地域の商圏を理解したWEBデザインで、中小企業から個人事業主まで幅広くサポート。<br />
-                  まずは無料診断（15分）で、現状の課題整理と「次の一手」を明確にしませんか。
+                 「事業に見合うサイトがほしい」「求人や集客の反応を良くしたい」「補助金を活用したい」<br className="hidden md:block" />
+        伊那地域の商圏を理解したWEBデザインで、中小企業から個人事業主まで幅広くサポート。<br />
+        まずは無料診断（15分）で、現状の課題整理と「次の一手」を明確にしませんか。
                 </p>
+
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     href="/freediagnosis"
@@ -268,6 +273,7 @@ const pains = [
                   >
                     無料診断（15分）を申し込む →
                   </a>
+
                   <a
                     href="#why"
                     className="
@@ -281,6 +287,7 @@ const pains = [
                     できることを見る
                   </a>
                 </div>
+
                 <div className="mt-7 flex flex-wrap items-center gap-2 text-xs text-white/80">
                   {areas.map((a) => (
                     <span
@@ -291,6 +298,7 @@ const pains = [
                     </span>
                   ))}
                 </div>
+
                 <p className="mt-5 text-xs text-white/75">
                   ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
                 </p>
@@ -300,7 +308,7 @@ const pains = [
         </div>
       </section>
 
-      {/* 導入説明文 */}
+      {/* 導入説明文：伊那地域×ホームページ制作のコンテキストをGoogleに伝える */}
       <section className="pb-4">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-10">
@@ -326,10 +334,8 @@ const pains = [
       <section className="pb-24">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="grid grid-cols-3 md:grid-cols-1 gap-10">
-
             {/* Left */}
             <div className="col-span-2 md:col-span-1 space-y-10">
-
               <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
                 <h2 className="text-xl font-medium text-foreground">伊那地域でこのような課題をお持ちの企業・個人様へ</h2>
                 <ul className="mt-5 space-y-3 text-muted-foreground">
@@ -340,6 +346,7 @@ const pains = [
                     </li>
                   ))}
                 </ul>
+
                 <div className="mt-7 rounded-2xl border border-border bg-muted/20 p-5">
                   <p className="text-sm text-foreground font-medium">
                     無料診断（15分）で、いまのホームページを整理しませんか
@@ -349,6 +356,7 @@ const pains = [
                     診断のみで完結OK。営業はしないのでご安心ください。<br />
                     予算に合わせた最小構成の提案も可能です（診断後に共有）。
                   </p>
+
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     <a
                       href="/freediagnosis"
@@ -356,11 +364,13 @@ const pains = [
                         inline-flex items-center justify-center
                         rounded-xl px-6 py-3 text-sm font-medium
                         bg-foreground text-background
-                        hover:opacity-90 transition shadow-sm
+                        hover:opacity-90 transition
+                        shadow-sm
                       "
                     >
                       無料診断（15分）を申し込む →
                     </a>
+
                     <a
                       href="/contact"
                       className="
@@ -415,9 +425,121 @@ const pains = [
                   ))}
                 </div>
               </section>
-
             </div>
-            {/* Left ここまで */}
+
+
+
+                {/* ===== 制作実績セクション ===== */}
+
+
+              {/* <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+                <div className="flex items-center justify-between flex-wrap gap-3">
+                  <h2 className="text-xl font-medium text-foreground">伊那地域での制作実績</h2>
+                  <a
+                    href="/works"
+                    className="text-sm text-muted-foreground hover:text-foreground transition underline underline-offset-4"
+                  >
+                    実績をすべて見る →
+                  </a>
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  伊那地域・駒ヶ根市の事業者様のホームページ制作・リニューアルを手がけています。
+                </p>
+
+             
+                <div className="mt-6 grid grid-cols-1 gap-5">
+
+                 
+                  <div className="rounded-2xl border border-border bg-muted/20 overflow-hidden">
+             
+                    <div className="aspect-[16/7] bg-muted flex items-center justify-center overflow-hidden">
+                      <img src="/images/inamori2.png" alt="伊那森パークいちご園 ホームページ制作実績" className="w-full h-full object-cover" /> 
+                    </div>
+
+                    <div className="p-5">
+                   
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          駒ヶ根市
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          農業・いちご農園
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          ホームページリニューアル
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          メールアドレス設定
+                        </span>
+                        <span className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+                          サーバー保守運用
+                        </span>
+                        
+                      </div>
+
+                    
+                      <p className="font-medium text-foreground text-base">
+                   
+                        「駒ヶ根市」伊那森パークいちご農園
+                      </p>
+
+               
+                    <div className="mt-3 space-y-2 text-sm text-muted-foreground leading-relaxed">
+                        <p>
+                          <span className="font-medium text-foreground">課題：</span>
+                          [制作前の課題・状況を記載]
+                        </p>
+                        <p>
+                          <span className="font-medium text-foreground">制作内容：</span>
+                          [制作・対応内容を記載]
+                        </p>
+                        <p>
+                          <span className="font-medium text-foreground">制作後の変化：</span>
+                          [問い合わせ増加・検索順位変化などを記載]
+                        </p>
+                      </div> 
+
+           
+                      <div className="mt-4">
+                       
+                        <a
+                          href="https://inamori-ichigo.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="
+                            inline-flex items-center justify-center
+                            rounded-xl px-5 py-2 text-sm font-medium
+                            border border-border bg-background
+                            hover:bg-muted/40 transition
+                          "
+                        >
+                          サイトを見る →
+                        </a>
+                   
+                      </div>
+                    </div>
+                  </div>
+             
+
+                </div>
+
+                <div className="mt-6 text-center">
+                  <a
+                    href="/work"
+                    className="
+                      inline-flex items-center justify-center
+                      rounded-xl px-6 py-3 text-sm font-medium
+                      border border-border bg-background
+                      hover:bg-muted/40 transition
+                    "
+                  >
+                    制作実績をすべて見る →
+                  </a>
+                </div>
+              </section> */}
+
+
+              {/* ===== 制作実績セクションここまで ===== */}
 
             {/* Right (Sticky CTA) */}
             <div className="col-span-1">
@@ -429,6 +551,7 @@ const pains = [
                     いまの状況を整理して、改善ポイントを3つにまとめます。<br />
                     診断のみでOKです。
                   </p>
+
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     <a
                       href="/freediagnosis"
@@ -436,7 +559,8 @@ const pains = [
                         inline-flex items-center justify-center
                         rounded-xl px-6 py-3 text-sm font-medium
                         bg-foreground text-background
-                        hover:opacity-90 transition shadow-sm
+                        hover:opacity-90 transition
+                        shadow-sm
                       "
                     >
                       無料診断（15分）を申し込む →
@@ -453,15 +577,18 @@ const pains = [
                       相談する
                     </a>
                   </div>
+
                   <p className="mt-5 text-xs text-muted-foreground leading-relaxed">
                     ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
                   </p>
+
                   <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-4">
                     <p className="text-sm text-foreground font-medium">対応エリア</p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                       伊那地域全域対応（伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村）／オンライン対応
                     </p>
                   </div>
+
                   <div className="mt-4 rounded-2xl border border-border bg-muted/20 p-4">
                     <p className="text-sm text-foreground font-medium">補足</p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
@@ -471,9 +598,8 @@ const pains = [
                 </div>
               </div>
             </div>
-            {/* Right ここまで */}
-
           </div>
+
         </div>
       </section>
 
