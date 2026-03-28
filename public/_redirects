@@ -1,5 +1,5 @@
 # =========================================================
-# ONE DESIGN - Cloudflare Pages _redirects (FIXED)
+# ONE DESIGN - Cloudflare Pages _redirects
 # =========================================================
 
 # --- 静的ファイル（最優先） ---
@@ -26,5 +26,19 @@
 /portfolio/*                /portfolio/:splat                200
 /photographer/*             /photographer/:splat             200
 
-# --- SPA fallback（最後に1回だけ） ---
-/*                          /index.html              200
+# --- 各ページ（prerenderしたHTML） ---
+/work           /work/index.html           200
+/services       /services/index.html       200
+/about          /about/index.html          200
+/contact        /contact/index.html        200
+/blog           /blog/index.html           200
+/price          /price/index.html          200
+/hojyokin       /hojyokin/index.html       200
+/freediagnosis  /freediagnosis/index.html  200
+/yamanashi-lp   /yamanashi-lp/index.html   200
+/suwa-homepage  /suwa-homepage/index.html  200
+/ina-homepage   /ina-homepage/index.html   200
+/ueda-homepage  /ueda-homepage/index.html  200
+
+# --- SPA fallback（最後） ---
+/*              /index.html                200
