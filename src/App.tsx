@@ -26,9 +26,7 @@ import FreeDiagnosis from "./pages/FreeDiagnosis";
 import YamanashiSoloLP from "@/pages/YamanashiSoloLP";
 import SuwaSoloLP from "./pages/SuwaHomepage";
 import InaSoloLP from "./pages/InaHomepage";
-
-// どこかのRoutes内に追加
-<Route path="/yamanashi" element={<YamanashiSoloLP />} />
+import UedaSoloLP from "./pages/UedaHomepage";
 import NotFound from "./pages/NotFound";
 
 
@@ -155,23 +153,41 @@ const AnimatedRoutes = () => {
 
         />
 
-        <Route 
-        path="/yamanashi-lp" 
-        element={<YamanashiSoloLP />
+      <Route
+  path="/yamanashi-lp"
+  element={
+    <PageTransition>
+      <YamanashiSoloLP />
+    </PageTransition>
+  }
+/>
 
-        } />
+<Route
+  path="/suwa-homepage"
+  element={
+    <PageTransition>
+      <SuwaSoloLP />
+    </PageTransition>
+  }
+/>
 
-         <Route 
-        path="/suwa-homepage" 
-        element={<SuwaSoloLP />
+<Route
+  path="/ina-homepage"
+  element={
+    <PageTransition>
+      <InaSoloLP />
+    </PageTransition>
+  }
+/>
 
-        } />
-
-		<Route 
-        path="/ina-homepage" 
-        element={<InaSoloLP />
-
-        } />
+<Route
+  path="/ueda-homepage"
+  element={
+    <PageTransition>
+      <UedaSoloLP />
+    </PageTransition>
+  }
+/>
         
 
 
