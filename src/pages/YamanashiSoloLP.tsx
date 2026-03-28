@@ -183,9 +183,11 @@ export default function YamanashiSoloLP() {
       {/* CONTENT */}
       <section className="pb-24">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid grid-cols-3 md:grid-cols-1 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
             {/* Left */}
-            <div className="col-span-2 md:col-span-1 space-y-10">
+            <div className="col-span-1 md:col-span-2 space-y-10">
+
               <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
                 <h2 className="text-xl font-medium text-foreground">山梨県でこのような課題をお持ちの企業・個人様へ</h2>
                 <ul className="mt-5 space-y-3 text-muted-foreground">
@@ -214,8 +216,7 @@ export default function YamanashiSoloLP() {
                         inline-flex items-center justify-center
                         rounded-xl px-6 py-3 text-sm font-medium
                         bg-foreground text-background
-                        hover:opacity-90 transition
-                        shadow-sm
+                        hover:opacity-90 transition shadow-sm
                       "
                     >
                       無料診断（15分）を申し込む →
@@ -238,7 +239,7 @@ export default function YamanashiSoloLP() {
 
               <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
                 <h2 className="text-xl font-medium text-foreground">山梨県の中小企業・個人事業主・店舗に選ばれる理由</h2>
-                <div className="mt-6 grid grid-cols-3 md:grid-cols-1 gap-4">
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                   {points.map((x) => (
                     <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
                       <p className="font-medium text-foreground">{x.title}</p>
@@ -275,11 +276,13 @@ export default function YamanashiSoloLP() {
                   ))}
                 </div>
               </section>
+
             </div>
+            {/* Left ここまで */}
 
             {/* Right (Sticky CTA) */}
             <div className="col-span-1">
-              <div className="md:static sticky top-6 rounded-3xl border border-border bg-background shadow-sm">
+              <div className="static md:sticky md:top-6 rounded-3xl border border-border bg-background shadow-sm">
                 <div className="p-6">
                   <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
                   <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断（15分）</h2>
@@ -295,8 +298,7 @@ export default function YamanashiSoloLP() {
                         inline-flex items-center justify-center
                         rounded-xl px-6 py-3 text-sm font-medium
                         bg-foreground text-background
-                        hover:opacity-90 transition
-                        shadow-sm
+                        hover:opacity-90 transition shadow-sm
                       "
                     >
                       無料診断（15分）を申し込む →
@@ -334,6 +336,8 @@ export default function YamanashiSoloLP() {
                 </div>
               </div>
             </div>
+            {/* Right ここまで */}
+
           </div>
         </div>
       </section>

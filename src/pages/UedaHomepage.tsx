@@ -434,10 +434,10 @@ export default function UedaSoloLP() {
       {/* CONTENT */}
       <section className="pb-24">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid grid-cols-3 md:grid-cols-1 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
             {/* Left */}
-            <div className="col-span-2 md:col-span-1 space-y-10">
+            <div className="col-span-1 md:col-span-2 space-y-10">
 
               {/* 課題 */}
               <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
@@ -489,7 +489,7 @@ export default function UedaSoloLP() {
               {/* 選ばれる理由 */}
               <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
                 <h2 className="text-xl font-medium text-foreground">上田エリアの中小企業・個人事業主に選ばれる理由</h2>
-                <div className="mt-6 grid grid-cols-3 md:grid-cols-1 gap-4">
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                   {points.map((x) => (
                     <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
                       <p className="font-medium text-foreground">{x.title}</p>
@@ -503,7 +503,7 @@ export default function UedaSoloLP() {
               <section id="process" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
                 <h2 className="text-xl font-medium text-foreground">制作の流れ</h2>
                 <p className="mt-2 text-sm text-muted-foreground">問い合わせから公開まで、すべてのステップをサポートします。</p>
-                <ol className="mt-6 grid grid-cols-3 md:grid-cols-1 gap-4">
+                <ol className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                   {process.map((x) => (
                     <li key={x.step} className="rounded-2xl border border-border bg-background p-5">
                       <p className="text-minimal tracking-widest text-muted-foreground/60">{x.step}</p>
@@ -525,7 +525,7 @@ export default function UedaSoloLP() {
                         <p className="text-minimal tracking-widest text-muted-foreground/60">{cat.tag}</p>
                         <p className="font-medium text-foreground">{cat.category}</p>
                       </div>
-                      <div className="grid grid-cols-3 md:grid-cols-1 gap-4">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {cat.items.map((item) => (
                           <div key={item.name} className="rounded-2xl border border-border bg-muted/20 p-5">
                             <p className="font-medium text-foreground text-sm">{item.name}</p>
@@ -547,7 +547,7 @@ export default function UedaSoloLP() {
                 <p className="mt-2 text-sm text-muted-foreground">
                   状況と予算に合わせて、必要最小限から提案します。下記は目安です。
                 </p>
-                <div className="mt-6 grid grid-cols-3 md:grid-cols-1 gap-4">
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                   {plans.map((plan) => (
                     <div
                       key={plan.name}
@@ -611,7 +611,7 @@ export default function UedaSoloLP() {
 
             {/* Right (Sticky CTA) */}
             <div className="col-span-1">
-              <div className="md:static sticky top-6 space-y-4">
+              <div className="static md:sticky md:top-6 space-y-4">
                 <div className="rounded-3xl border border-border bg-background shadow-sm">
                   <div className="p-6">
                     <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>

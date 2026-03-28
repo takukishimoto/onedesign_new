@@ -92,13 +92,13 @@ const pains = [
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "@id": "https://one-design.example.com/#business",
+        "@id": "https://one-design.xyz/#business",
         "name": "ONE DESIGN",
         "description": "諏訪市・茅野市など諏訪地域の中小企業・個人事業主向けに、集客につながるホームページ制作・リニューアルを提供するWebデザイン事務所。SEO対策・スマホ対応・WordPress対応。",
-        "url": "https://one-design.example.com/suwa",
+        "url": "https://one-design.xyz/suwa-homepage",
         "telephone": "",
         "priceRange": "¥¥",
-        "image": "https://one-design.example.com/og-image.jpg",
+        "image": "https://one-design.xyz/og-image.jpg",
         "address": {
           "@type": "PostalAddress",
           "addressRegion": "長野県",
@@ -206,13 +206,13 @@ const pains = [
             "@type": "ListItem",
             "position": 1,
             "name": "ホーム",
-            "item": "https://one-design.example.com/"
+            "item": "https://one-design.xyz/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "諏訪市のホームページ制作",
-            "item": "https://one-design.example.com/suwa"
+            "item": "https://one-design.xyz/suwa-homepage"
           }
         ]
       }
@@ -221,10 +221,10 @@ const pains = [
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-    <Seo
-  title="諏訪市のホームページ制作｜中小企業・個人事業主向け｜ONE DESIGN"
-  description="諏訪市の中小企業・個人事業主向けに、集客につながるホームページ制作を行っています。SEO対策・スマホ対応・WordPress対応。諏訪市・茅野市・原村・富士見町など諏訪地域対応。"
-/>
+      <Seo
+        title="諏訪市のホームページ制作｜中小企業・個人事業主向け｜ONE DESIGN"
+        description="諏訪市の中小企業・個人事業主向けに、集客につながるホームページ制作を行っています。SEO対策・スマホ対応・WordPress対応。諏訪市・茅野市・原村・富士見町など諏訪地域対応。"
+      />
       {/* JSON-LD 構造化データ */}
       <script
         type="application/ld+json"
@@ -241,25 +241,21 @@ const pains = [
               <div className="absolute inset-0 animated-gradient" />
               <div className="absolute -inset-24 blob-layer" />
               <div className="absolute inset-0 bg-black/10 dark:bg-black/35" />
-
               <div className="relative z-10 mx-auto max-w-4xl">
                 <p className="text-minimal tracking-[0.22em] text-white/80 mb-4">
-SUWA / WEB DESIGN
-</p>
-
-<h1 className="text-2xl md:text-4xl font-light text-white leading-tight">
-諏訪市のビジネスを加速させる
-<span className="block mt-2 text-white/90 text-2xl md:text-3xl">
-ホームページ制作・リニューアル
-</span>
-</h1>
-
-                <p className="mt-6 text-white/85 text-sm md:text-base leading-relaxed">
-                 「事業に見合うサイトがほしい」「求人や集客の反応を良くしたい」「補助金を活用したい」<br className="hidden md:block" />
-        諏訪市の商圏を理解したクリエイターが、中小企業から個人事業主まで幅広くサポート。<br />
-        まずは無料診断（15分）で、現状の課題整理と「次の一手」を明確にしませんか。
+                  SUWA / WEB DESIGN
                 </p>
-
+                <h1 className="text-2xl md:text-4xl font-light text-white leading-tight">
+                  諏訪市のビジネスを加速させる
+                  <span className="block mt-2 text-white/90 text-2xl md:text-3xl">
+                    ホームページ制作・リニューアル
+                  </span>
+                </h1>
+                <p className="mt-6 text-white/85 text-sm md:text-base leading-relaxed">
+                  「事業に見合うサイトがほしい」「求人や集客の反応を良くしたい」「補助金を活用したい」<br className="hidden md:block" />
+                  諏訪市の商圏を理解したクリエイターが、中小企業から個人事業主まで幅広くサポート。<br />
+                  まずは無料診断（15分）で、現状の課題整理と「次の一手」を明確にしませんか。
+                </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a
                     href="/freediagnosis"
@@ -273,7 +269,6 @@ SUWA / WEB DESIGN
                   >
                     無料診断（15分）を申し込む →
                   </a>
-
                   <a
                     href="#why"
                     className="
@@ -287,7 +282,6 @@ SUWA / WEB DESIGN
                     できることを見る
                   </a>
                 </div>
-
                 <div className="mt-7 flex flex-wrap items-center gap-2 text-xs text-white/80">
                   {areas.map((a) => (
                     <span
@@ -298,7 +292,6 @@ SUWA / WEB DESIGN
                     </span>
                   ))}
                 </div>
-
                 <p className="mt-5 text-xs text-white/75">
                   ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
                 </p>
@@ -308,7 +301,7 @@ SUWA / WEB DESIGN
         </div>
       </section>
 
-      {/* 導入説明文：諏訪地域×ホームページ制作のコンテキストをGoogleに伝える */}
+      {/* 導入説明文 */}
       <section className="pb-4">
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-10">
@@ -333,9 +326,11 @@ SUWA / WEB DESIGN
       {/* CONTENT */}
       <section className="pb-24">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid grid-cols-3 md:grid-cols-1 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
             {/* Left */}
-            <div className="col-span-2 md:col-span-1 space-y-10">
+            <div className="col-span-1 md:col-span-2 space-y-10">
+
               <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
                 <h2 className="text-xl font-medium text-foreground">諏訪市でこのような課題をお持ちの企業・個人様へ</h2>
                 <ul className="mt-5 space-y-3 text-muted-foreground">
@@ -346,7 +341,6 @@ SUWA / WEB DESIGN
                     </li>
                   ))}
                 </ul>
-
                 <div className="mt-7 rounded-2xl border border-border bg-muted/20 p-5">
                   <p className="text-sm text-foreground font-medium">
                     無料診断（15分）で、いまのホームページを整理しませんか
@@ -356,7 +350,6 @@ SUWA / WEB DESIGN
                     診断のみで完結OK。営業はしないのでご安心ください。<br />
                     予算に合わせた最小構成の提案も可能です（診断後に共有）。
                   </p>
-
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     <a
                       href="/freediagnosis"
@@ -364,13 +357,11 @@ SUWA / WEB DESIGN
                         inline-flex items-center justify-center
                         rounded-xl px-6 py-3 text-sm font-medium
                         bg-foreground text-background
-                        hover:opacity-90 transition
-                        shadow-sm
+                        hover:opacity-90 transition shadow-sm
                       "
                     >
                       無料診断（15分）を申し込む →
                     </a>
-
                     <a
                       href="/contact"
                       className="
@@ -388,7 +379,7 @@ SUWA / WEB DESIGN
 
               <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
                 <h2 className="text-xl font-medium text-foreground">諏訪市の中小企業・個人事業主に選ばれる理由</h2>
-                <div className="mt-6 grid grid-cols-3 md:grid-cols-1 gap-4">
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                   {points.map((x) => (
                     <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
                       <p className="font-medium text-foreground">{x.title}</p>
@@ -425,11 +416,13 @@ SUWA / WEB DESIGN
                   ))}
                 </div>
               </section>
+
             </div>
+            {/* Left ここまで */}
 
             {/* Right (Sticky CTA) */}
             <div className="col-span-1">
-              <div className="md:static sticky top-6 rounded-3xl border border-border bg-background shadow-sm">
+              <div className="static md:sticky md:top-6 rounded-3xl border border-border bg-background shadow-sm">
                 <div className="p-6">
                   <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
                   <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断（15分）</h2>
@@ -437,7 +430,6 @@ SUWA / WEB DESIGN
                     いまの状況を整理して、改善ポイントを3つにまとめます。<br />
                     診断のみでOKです。
                   </p>
-
                   <div className="mt-6 flex flex-wrap items-center gap-3">
                     <a
                       href="/freediagnosis"
@@ -445,8 +437,7 @@ SUWA / WEB DESIGN
                         inline-flex items-center justify-center
                         rounded-xl px-6 py-3 text-sm font-medium
                         bg-foreground text-background
-                        hover:opacity-90 transition
-                        shadow-sm
+                        hover:opacity-90 transition shadow-sm
                       "
                     >
                       無料診断（15分）を申し込む →
@@ -463,18 +454,15 @@ SUWA / WEB DESIGN
                       相談する
                     </a>
                   </div>
-
                   <p className="mt-5 text-xs text-muted-foreground leading-relaxed">
                     ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
                   </p>
-
                   <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-4">
                     <p className="text-sm text-foreground font-medium">対応エリア</p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                       諏訪地域全域対応（諏訪市・岡谷市・下諏訪町・茅野市・原村・富士見町・北杜市）／オンライン対応
                     </p>
                   </div>
-
                   <div className="mt-4 rounded-2xl border border-border bg-muted/20 p-4">
                     <p className="text-sm text-foreground font-medium">補足</p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
@@ -484,8 +472,9 @@ SUWA / WEB DESIGN
                 </div>
               </div>
             </div>
-          </div>
+            {/* Right ここまで */}
 
+          </div>
         </div>
       </section>
 
