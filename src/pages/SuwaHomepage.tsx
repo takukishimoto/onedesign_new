@@ -49,18 +49,146 @@ const pains = [
     },
   ];
 
-  const flow = [
+  const process = [
     {
-      t: "無料診断（15分）",
-      d: "いまの状況を伺いながら、改善ポイントを3つに整理します（画面を見ながらOK）。",
+      step: "01",
+      title: "無料診断・ヒアリング",
+      body: "現状のサイト・事業課題・ターゲット・予算をお聞きします。15分の無料診断から始められます。",
     },
     {
-      t: "優先順位と次の一手を提案",
-      d: "「どこから手を付けるべきか」を明確にします（診断のみで終了もOK）。",
+      step: "02",
+      title: "提案・お見積もり",
+      body: "ヒアリング内容をもとに、必要な構成とコストを整理。複数のプラン案でご提案します。",
     },
     {
-      t: "必要な範囲だけ制作・改善",
-      d: "新規／リニューアルどちらも、状況と予算に合わせて必要最小限から組めます。",
+      step: "03",
+      title: "設計・ライティング",
+      body: "ページ構成・SEOキーワード・文章を設計。テキストはヒアリングをもとに代行します（希望の場合）。",
+    },
+    {
+      step: "04",
+      title: "デザイン・制作",
+      body: "デザインカンプを確認いただきながら制作を進めます。修正は2回まで無料で対応。",
+    },
+    {
+      step: "05",
+      title: "公開・SEO設定",
+      body: "ドメイン・サーバー設定から公開まで対応。Googleへの送信・構造化データの設定も行います。",
+    },
+    {
+      step: "06",
+      title: "保守・運用サポート",
+      body: "公開後の更新代行・アクセス解析・改善提案まで伴走。必要な範囲でサポートします。",
+    },
+  ];
+
+  const works = [
+    {
+      category: "製造業・精密機器",
+      tag: "MANUFACTURING",
+      items: [
+        {
+          name: "精密部品メーカーのコーポレートサイト",
+          desc: "技術力と品質へのこだわりを伝えるサイト設計。採用・取引先獲得の両面を意識した構成。",
+        },
+        {
+          name: "光学機器関連企業のリニューアル",
+          desc: "古いデザインをスマホ対応でリニューアル。「諏訪市 〇〇」の地域キーワードで流入改善。",
+        },
+      ],
+    },
+    {
+      category: "観光・飲食・宿泊",
+      tag: "TOURISM",
+      items: [
+        {
+          name: "諏訪湖周辺の宿泊施設",
+          desc: "予約導線と諏訪湖の魅力を前面に出したLP。シーズン別コンテンツで通年集客を設計。",
+        },
+        {
+          name: "地元食材を使う飲食店",
+          desc: "食材のこだわりと店主の想いを伝えるサイト。Googleマップとの連携でMEO対策も実施。",
+        },
+      ],
+    },
+    {
+      category: "建築・リフォーム",
+      tag: "ARCHITECTURE",
+      items: [
+        {
+          name: "諏訪市内の工務店",
+          desc: "施工事例・職人の技術・採用情報を整理したサイト。「茅野市 工務店」などで検索流入増加。",
+        },
+      ],
+    },
+    {
+      category: "その他",
+      tag: "OTHERS",
+      items: [
+        {
+          name: "士業・コンサルティング",
+          desc: "信頼感と専門性を伝えるシンプルなサイト設計。問い合わせフォームへの導線を最適化。",
+        },
+        {
+          name: "小売・専門店",
+          desc: "商品の魅力と店舗情報を整理。スマホ対応とGoogleビジネスプロフィールとの連携を強化。",
+        },
+      ],
+    },
+  ];
+
+  const plans = [
+    {
+      name: "スモールスタート",
+      price: "150,000",
+      unit: "円〜",
+      tag: "個人事業主・開業向け",
+      features: [
+        "ページ数：5ページ程度",
+        "レスポンシブ対応（スマホ）",
+        "SEO基本設定",
+        "お問い合わせフォーム",
+        "Google Analytics設置",
+        "公開後レクチャー",
+      ],
+      note: "まず「ある状態」を作りたい方に。",
+      highlight: false,
+    },
+    {
+      name: "スタンダード",
+      price: "300,000",
+      unit: "円〜",
+      tag: "中小企業・リニューアル向け",
+      features: [
+        "ページ数：10ページ程度",
+        "レスポンシブ対応（スマホ）",
+        "SEO設計・地域キーワード対策",
+        "ライティング代行（主要ページ）",
+        "お問い合わせフォーム",
+        "Google Analytics・Search Console設置",
+        "構造化データ（JSON-LD）設定",
+        "公開後サポート（1ヶ月）",
+      ],
+      note: "集客・採用の両方を強化したい方に。",
+      highlight: true,
+    },
+    {
+      name: "フルサポート",
+      price: "500,000",
+      unit: "円〜",
+      tag: "本格的なブランディング向け",
+      features: [
+        "ページ数：15ページ以上",
+        "レスポンシブ対応（スマホ）",
+        "SEO戦略設計・コンテンツ計画",
+        "ライティング全ページ代行",
+        "写真撮影（現地取材）",
+        "WordPress / CMS構築",
+        "構造化データ（JSON-LD）設定",
+        "公開後サポート（3ヶ月）",
+      ],
+      note: "世界観からつくりたい方、製造業・観光業に。",
+      highlight: false,
     },
   ];
 
@@ -84,6 +212,10 @@ const pains = [
     {
       q: "SEO対策もやってもらえますか？「諏訪市 〇〇」で上位に出したい。",
       a: "対応しています。「諏訪市 〇〇」「茅野市 〇〇」など地域キーワードでの検索上位を狙えるよう、ページ構成・テキスト・タイトル・メタ情報・内部リンクまで設計します。ただし、SEOは即効性より継続的な取り組みが重要なため、現状と目標を踏まえた現実的なプランをご提案します。",
+    },
+    {
+      q: "製造業・精密機器など専門性の高い業種でも対応できますか？",
+      a: "対応できます。諏訪地域は精密機械・光学・電子部品など製造業が多く、業界特有の用語や訴求ポイントを理解したうえで制作しています。技術力や品質へのこだわりを、発注担当者や採用候補者に伝わる言葉で表現します。",
     },
   ];
 
@@ -121,7 +253,9 @@ const pains = [
           "WordPress制作",
           "ホームページリニューアル",
           "中小企業向けWeb制作",
-          "個人事業主向けWeb制作"
+          "個人事業主向けWeb制作",
+          "製造業ホームページ制作",
+          "観光業ホームページ制作"
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -156,48 +290,14 @@ const pains = [
       },
       {
         "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "諏訪市でも対面打ち合わせできますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "諏訪市・茅野市・原村・富士見町・岡谷市・下諏訪町・北杜市など諏訪地域で対面対応しています。現地取材（写真撮影・ヒアリング）もお伺いして行うことが可能です。オンライン打ち合わせ（ZoomやGoogle Meet）にも対応しています。"
-            }
+        "mainEntity": faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a,
           },
-          {
-            "@type": "Question",
-            "name": "まずは診断・相談だけでも大丈夫？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "大丈夫です。無料診断（15分）は「現状を整理するだけ」でも構いません。その後の制作をお断りいただいても問題なく、営業もしません。「何が課題かわからない」という段階のご相談が最も多いです。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ホームページ制作費が不安です。予算が限られていても相談できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "相談できます。状況を見たうえで「必要最小限で整える案」も含めて、無理のない範囲で提案します。小規模事業者持続化補助金などを活用してホームページ制作費用を補助できる場合もありますので、ご希望の方はお気軽にお申し付けください。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "WordPressで作ってもらえますか？自分で更新できるようにしたいです。",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "WordPressでの制作に対応しています。公開後に自分で更新・追記できるよう、操作レクチャーも行います。更新が難しい場合は、代わりに更新作業をお引き受けする運用サポートプランもご用意しています。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "SEO対策もやってもらえますか？「諏訪市 〇〇」で上位に出したい。",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "対応しています。「諏訪市 〇〇」「茅野市 〇〇」など地域キーワードでの検索上位を狙えるよう、ページ構成・テキスト・タイトル・メタ情報・内部リンクまで設計します。SEOは継続的な取り組みが重要なため、現状と目標を踏まえた現実的なプランをご提案します。"
-            }
-          }
-        ]
+        })),
       },
       {
         "@type": "BreadcrumbList",
@@ -225,7 +325,6 @@ const pains = [
         title="諏訪市のホームページ制作｜中小企業・個人事業主向け｜ONE DESIGN"
         description="諏訪市の中小企業・個人事業主向けに、集客につながるホームページ制作を行っています。SEO対策・スマホ対応・WordPress対応。諏訪市・茅野市・原村・富士見町など諏訪地域対応。"
       />
-      {/* JSON-LD 構造化データ */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -310,10 +409,13 @@ const pains = [
             </h2>
             <div className="mt-4 space-y-4 text-sm text-muted-foreground leading-relaxed">
               <p>
-                諏訪市・茅野市を中心とする諏訪地域は、精密機械・光学・観光・農業・飲食など多様な産業が集積するエリアです。地域内での競合が少ない業種でも、「検索で見つけてもらえない」「問い合わせが来ない」という悩みを抱える事業者が多く、その多くはホームページの内容や設計が原因です。
+                諏訪市・茅野市を中心とする諏訪地域は、精密機械・光学・電子部品などの製造業に加え、観光・農業・飲食・建設など多様な産業が集積するエリアです。全国有数の製造業の集積地でありながら、「検索で見つけてもらえない」「問い合わせが来ない」という悩みを抱える事業者は少なくなく、その多くはホームページの内容や設計に原因があります。
               </p>
               <p>
-                ONE DESIGNは、諏訪地域の商圏・競合・顧客層を理解したうえで、中小企業や個人事業主が「地域で選ばれる」ためのホームページ制作・リニューアルを行っています。単にデザインをきれいにするだけでなく、「諏訪市 〇〇」「茅野市 〇〇」といった地域キーワードで検索上位を狙えるSEO設計、スマートフォン対応、問い合わせにつながる導線設計まで、一貫して対応します。
+                ONE DESIGNは、諏訪地域の商圏・競合・顧客層を理解したうえで、中小企業や個人事業主が「地域で選ばれる」ためのホームページ制作・リニューアルを行っています。単にデザインをきれいにするだけでなく、「諏訪市 〇〇」「茅野市 〇〇」「岡谷市 〇〇」といった地域キーワードで検索上位を狙えるSEO設計、スマートフォン対応、問い合わせにつながる導線設計まで、一貫して対応します。
+              </p>
+              <p>
+                製造業では技術力・品質・採用、観光・飲食では予約・集客、工務店では施工事例・地域信頼性など、業種ごとに「何を伝えるか」が異なります。ONE DESIGNは諏訪地域の産業事情を踏まえ、業種に合った設計と言葉でホームページを作ります。
               </p>
               <p>
                 岡谷市・下諏訪町・原村・富士見町・北杜市など諏訪地域全域に対面でお伺いできます。「何から始めればいいかわからない」という段階からでも、まずは無料診断（15分）でお気軽にご相談ください。
@@ -389,16 +491,94 @@ const pains = [
                 </div>
               </section>
 
-              <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">無料診断の流れ（15分）</h2>
-                <ol className="mt-6 space-y-3">
-                  {flow.map((x) => (
-                    <li key={x.t} className="rounded-2xl border border-border bg-background p-5">
-                      <p className="font-medium text-foreground">{x.t}</p>
-                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.d}</p>
+              {/* 制作の流れ */}
+              <section id="process" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+                <h2 className="text-xl font-medium text-foreground">制作の流れ</h2>
+                <p className="mt-2 text-sm text-muted-foreground">問い合わせから公開まで、すべてのステップをサポートします。</p>
+                <ol className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {process.map((x) => (
+                    <li key={x.step} className="rounded-2xl border border-border bg-background p-5">
+                      <p className="text-minimal tracking-widest text-muted-foreground/60">{x.step}</p>
+                      <p className="mt-2 font-medium text-foreground">{x.title}</p>
+                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.body}</p>
                     </li>
                   ))}
                 </ol>
+              </section>
+
+              {/* 制作実績 */}
+              <section id="works" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+                <h2 className="text-xl font-medium text-foreground">制作実績</h2>
+                <p className="mt-2 text-sm text-muted-foreground">製造業・観光・飲食・建築など、諏訪地域の幅広い業種での制作実績があります。</p>
+                <div className="mt-6 space-y-8">
+                  {works.map((cat) => (
+                    <div key={cat.category}>
+                      <div className="flex items-center gap-3 mb-4">
+                        <p className="text-minimal tracking-widest text-muted-foreground/60">{cat.tag}</p>
+                        <p className="font-medium text-foreground">{cat.category}</p>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        {cat.items.map((item) => (
+                          <div key={item.name} className="rounded-2xl border border-border bg-muted/20 p-5">
+                            <p className="font-medium text-foreground text-sm">{item.name}</p>
+                            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-6 text-xs text-muted-foreground">
+                  ※ 掲載にあたりクライアント名は伏せています。詳細は無料診断・相談時にご紹介します。
+                </p>
+              </section>
+
+              {/* 料金・プラン */}
+              <section id="plans" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+                <h2 className="text-xl font-medium text-foreground">料金・プラン</h2>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  状況と予算に合わせて、必要最小限から提案します。下記は目安です。
+                </p>
+                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {plans.map((plan) => (
+                    <div
+                      key={plan.name}
+                      className={`rounded-2xl border p-5 flex flex-col ${
+                        plan.highlight
+                          ? "border-foreground bg-foreground/5"
+                          : "border-border bg-muted/20"
+                      }`}
+                    >
+                      {plan.highlight && (
+                        <p className="text-minimal tracking-widest text-muted-foreground/60 mb-2">POPULAR</p>
+                      )}
+                      <p className="text-xs text-muted-foreground">{plan.tag}</p>
+                      <p className="mt-1 font-medium text-foreground text-lg">{plan.name}</p>
+                      <p className="mt-2 text-2xl font-light text-foreground">
+                        {plan.price}
+                        <span className="text-sm text-muted-foreground">{plan.unit}</span>
+                      </p>
+                      <ul className="mt-4 space-y-2 flex-1">
+                        {plan.features.map((f) => (
+                          <li key={f} className="flex gap-2 text-sm text-muted-foreground">
+                            <span className="mt-[0.4em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="mt-4 text-xs text-muted-foreground border-t border-border pt-3">
+                        {plan.note}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-5">
+                  <p className="text-sm text-foreground font-medium">補助金の活用について</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    小規模事業者持続化補助金などを活用することで、制作費用の一部を補助できる場合があります。
+                    諏訪商工会議所・諏訪市商工会への申請サポートもご相談ください。
+                  </p>
+                </div>
               </section>
 
               <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
@@ -422,54 +602,83 @@ const pains = [
 
             {/* Right (Sticky CTA) */}
             <div className="col-span-1">
-              <div className="static md:sticky md:top-6 rounded-3xl border border-border bg-background shadow-sm">
-                <div className="p-6">
-                  <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
-                  <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断（15分）</h2>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                    いまの状況を整理して、改善ポイントを3つにまとめます。<br />
-                    診断のみでOKです。
-                  </p>
-                  <div className="mt-6 flex flex-wrap items-center gap-3">
-                    <a
-                      href="/freediagnosis"
-                      className="
-                        inline-flex items-center justify-center
-                        rounded-xl px-6 py-3 text-sm font-medium
-                        bg-foreground text-background
-                        hover:opacity-90 transition shadow-sm
-                      "
-                    >
-                      無料診断（15分）を申し込む →
-                    </a>
-                    <a
-                      href="/contact"
-                      className="
-                        inline-flex items-center justify-center
-                        rounded-xl px-6 py-3 text-sm font-medium
-                        border border-border bg-background
-                        hover:bg-muted/40 transition
-                      "
-                    >
-                      相談する
-                    </a>
-                  </div>
-                  <p className="mt-5 text-xs text-muted-foreground leading-relaxed">
-                    ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
-                  </p>
-                  <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-4">
-                    <p className="text-sm text-foreground font-medium">対応エリア</p>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      諏訪地域全域対応（諏訪市・岡谷市・下諏訪町・茅野市・原村・富士見町・北杜市）／オンライン対応
+              <div className="static md:sticky md:top-6 space-y-4">
+                <div className="rounded-3xl border border-border bg-background shadow-sm">
+                  <div className="p-6">
+                    <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
+                    <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断（15分）</h2>
+                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                      いまの状況を整理して、改善ポイントを3つにまとめます。<br />
+                      診断のみでOKです。
                     </p>
-                  </div>
-                  <div className="mt-4 rounded-2xl border border-border bg-muted/20 p-4">
-                    <p className="text-sm text-foreground font-medium">補足</p>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      ホームページ制作は予算に合わせた最小構成の提案も可能です（内容は相談・無料診断後に共有します）。
+                    <div className="mt-6 flex flex-wrap items-center gap-3">
+                      <a
+                        href="/freediagnosis"
+                        className="
+                          inline-flex items-center justify-center
+                          rounded-xl px-6 py-3 text-sm font-medium
+                          bg-foreground text-background
+                          hover:opacity-90 transition shadow-sm
+                        "
+                      >
+                        無料診断（15分）を申し込む →
+                      </a>
+                      <a
+                        href="/contact"
+                        className="
+                          inline-flex items-center justify-center
+                          rounded-xl px-6 py-3 text-sm font-medium
+                          border border-border bg-background
+                          hover:bg-muted/40 transition
+                        "
+                      >
+                        相談する
+                      </a>
+                    </div>
+                    <p className="mt-5 text-xs text-muted-foreground leading-relaxed">
+                      ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
                     </p>
+                    <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-4">
+                      <p className="text-sm text-foreground font-medium">対応エリア</p>
+                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                        諏訪地域全域対応（諏訪市・岡谷市・下諏訪町・茅野市・原村・富士見町・北杜市）／オンライン対応
+                      </p>
+                    </div>
+                    <div className="mt-4 rounded-2xl border border-border bg-muted/20 p-4">
+                      <p className="text-sm text-foreground font-medium">補足</p>
+                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                        ホームページ制作は予算に合わせた最小構成の提案も可能です（内容は相談・無料診断後に共有します）。
+                      </p>
+                    </div>
                   </div>
                 </div>
+
+                {/* 対応業種サマリー */}
+                <div className="rounded-3xl border border-border bg-background shadow-sm p-6">
+                  <p className="text-minimal tracking-[0.22em] text-muted-foreground">TRACK RECORD</p>
+                  <p className="mt-2 font-medium text-foreground">対応業種</p>
+                  <ul className="mt-3 space-y-2">
+                    {["製造業・精密機器", "観光・宿泊・飲食", "建築・工務店・リフォーム", "農業・直売", "士業・コンサルティング", "その他中小企業・個人事業主"].map((item) => (
+                      <li key={item} className="flex gap-2 text-sm text-muted-foreground">
+                        <span className="mt-[0.4em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 料金サマリー */}
+                <div className="rounded-3xl border border-border bg-background shadow-sm p-6">
+                  <p className="text-minimal tracking-[0.22em] text-muted-foreground">PRICING</p>
+                  <p className="mt-2 font-medium text-foreground">料金の目安</p>
+                  <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+                    <li>スモールスタート：150,000円〜</li>
+                    <li>スタンダード：300,000円〜</li>
+                    <li>フルサポート：500,000円〜</li>
+                  </ul>
+                  <p className="mt-3 text-xs text-muted-foreground">補助金活用の相談も可</p>
+                </div>
+
               </div>
             </div>
             {/* Right ここまで */}
