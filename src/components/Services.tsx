@@ -46,8 +46,8 @@ const Services = () => {
             <div className="mb-32 text-center">
               {/* <p className="text-minimal text-muted-foreground mb-4">SERVICES</p> */}
 
-              <h2 className="font-serif text-xl md:text-xl lg:text-xl font-light leading-relaxed ">
-                長野県（諏訪市・茅野市・原村・富士見町・岡谷市・伊那地域）、山梨県（北杜市）を中心に、
+              <h2 className="font-serif text-xl md:text-xl lg:text-xl font-light leading-[2.2rem] ">
+                長野県（諏訪市・茅野市・岡谷市・伊那地域）、八ヶ岳エリア（原村・富士見町・北杜市）山梨県を中心に、
                 <br />
                 中小企業や個人事業のホームページ制作・リニューアルをお手伝いしています。
                 <br />
