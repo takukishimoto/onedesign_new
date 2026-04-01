@@ -105,6 +105,13 @@ const Services = () => {
       伊那市のホームページ制作
     </a>
 
+     <a
+      href="/ueda-homepage"
+      className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition"
+    >
+      上田市のホームページ制作
+    </a>
+
     <a
       href="/yamanashi-lp"
       className="px-6 py-3 border border-border rounded-lg hover:bg-muted transition"
