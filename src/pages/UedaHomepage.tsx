@@ -247,6 +247,8 @@ export default function UedaSoloLP() {
         "image": "https://one-design.xyz/og-image.jpg",
         "address": {
           "@type": "PostalAddress",
+          "postalCode": "386-2201",
+          "streetAddress": "真田町長7513-1",
           "addressRegion": "長野県",
           "addressLocality": "上田市",
           "addressCountry": "JP"
@@ -440,263 +442,260 @@ export default function UedaSoloLP() {
       {/* CONTENT */}
       <section className="pb-24">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="space-y-10">
 
-            {/* Left */}
-            <div className="col-span-1 md:col-span-2 space-y-10">
+            {/* 課題 */}
+            <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">上田エリアでこのような課題をお持ちの企業・個人様へ</h2>
+              <ul className="mt-5 space-y-3 text-muted-foreground">
+                {pains.map((t) => (
+                  <li key={t} className="flex gap-3">
+                    <span className="mt-[0.6em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
+                    <span className="leading-relaxed">{t}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-7 rounded-2xl border border-border bg-muted/20 p-5">
+                <p className="text-sm text-foreground font-medium">
+                  無料診断（15分）で、いまのホームページを整理しませんか
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  画面を見ながら改善ポイントを3つに整理します。<br />
+                  診断のみで完結OK。営業はしないのでご安心ください。<br />
+                  予算に合わせた最小構成の提案も可能です（診断後に共有）。
+                </p>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <a
+                    href="/freediagnosis"
+                    className="
+                      inline-flex items-center justify-center
+                      rounded-xl px-6 py-3 text-sm font-medium
+                      bg-foreground text-background
+                      hover:opacity-90 transition shadow-sm
+                    "
+                  >
+                    無料診断（15分）を申し込む →
+                  </a>
+                  <a
+                    href="/contact"
+                    className="
+                      inline-flex items-center justify-center
+                      rounded-xl px-6 py-3 text-sm font-medium
+                      border border-border bg-background
+                      hover:bg-muted/40 transition
+                    "
+                  >
+                    相談する
+                  </a>
+                </div>
+              </div>
+            </section>
 
-              {/* 課題 */}
-              <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">上田エリアでこのような課題をお持ちの企業・個人様へ</h2>
-                <ul className="mt-5 space-y-3 text-muted-foreground">
-                  {pains.map((t) => (
-                    <li key={t} className="flex gap-3">
-                      <span className="mt-[0.6em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
-                      <span className="leading-relaxed">{t}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-7 rounded-2xl border border-border bg-muted/20 p-5">
-                  <p className="text-sm text-foreground font-medium">
-                    無料診断（15分）で、いまのホームページを整理しませんか
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    画面を見ながら改善ポイントを3つに整理します。<br />
-                    診断のみで完結OK。営業はしないのでご安心ください。<br />
-                    予算に合わせた最小構成の提案も可能です（診断後に共有）。
-                  </p>
-                  <div className="mt-6 flex flex-wrap items-center gap-3">
-                    <a
-                      href="/freediagnosis"
-                      className="
-                        inline-flex items-center justify-center
-                        rounded-xl px-6 py-3 text-sm font-medium
-                        bg-foreground text-background
-                        hover:opacity-90 transition shadow-sm
-                      "
-                    >
-                      無料診断（15分）を申し込む →
-                    </a>
-                    <a
-                      href="/contact"
-                      className="
-                        inline-flex items-center justify-center
-                        rounded-xl px-6 py-3 text-sm font-medium
-                        border border-border bg-background
-                        hover:bg-muted/40 transition
-                      "
-                    >
-                      相談する
-                    </a>
+            {/* 選ばれる理由 */}
+            <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">上田エリアの中小企業・個人事業主に選ばれる理由</h2>
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                {points.map((x) => (
+                  <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
+                    <p className="font-medium text-foreground">{x.title}</p>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.body}</p>
                   </div>
-                </div>
-              </section>
+                ))}
+              </div>
+            </section>
 
-              {/* 選ばれる理由 */}
-              <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">上田エリアの中小企業・個人事業主に選ばれる理由</h2>
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {points.map((x) => (
-                    <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
-                      <p className="font-medium text-foreground">{x.title}</p>
-                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.body}</p>
+            {/* 制作プロセス */}
+            <section id="process" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">制作の流れ</h2>
+              <p className="mt-2 text-sm text-muted-foreground">問い合わせから公開まで、すべてのステップをサポートします。</p>
+              <ol className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                {process.map((x) => (
+                  <li key={x.step} className="rounded-2xl border border-border bg-background p-5">
+                    <p className="text-minimal tracking-widest text-muted-foreground/60">{x.step}</p>
+                    <p className="mt-2 font-medium text-foreground">{x.title}</p>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.body}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            {/* 制作実績 */}
+            <section id="works" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">制作実績</h2>
+              <p className="mt-2 text-sm text-muted-foreground">工務店・農業・医療など、幅広い業種での制作実績があります。</p>
+              <div className="mt-6 space-y-8">
+                {works.map((cat) => (
+                  <div key={cat.category}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <p className="text-minimal tracking-widest text-muted-foreground/60">{cat.tag}</p>
+                      <p className="font-medium text-foreground">{cat.category}</p>
                     </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* 制作プロセス */}
-              <section id="process" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">制作の流れ</h2>
-                <p className="mt-2 text-sm text-muted-foreground">問い合わせから公開まで、すべてのステップをサポートします。</p>
-                <ol className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {process.map((x) => (
-                    <li key={x.step} className="rounded-2xl border border-border bg-background p-5">
-                      <p className="text-minimal tracking-widest text-muted-foreground/60">{x.step}</p>
-                      <p className="mt-2 font-medium text-foreground">{x.title}</p>
-                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.body}</p>
-                    </li>
-                  ))}
-                </ol>
-              </section>
-
-              {/* 制作実績 */}
-              <section id="works" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">制作実績</h2>
-                <p className="mt-2 text-sm text-muted-foreground">工務店・農業・医療など、幅広い業種での制作実績があります。</p>
-                <div className="mt-6 space-y-8">
-                  {works.map((cat) => (
-                    <div key={cat.category}>
-                      <div className="flex items-center gap-3 mb-4">
-                        <p className="text-minimal tracking-widest text-muted-foreground/60">{cat.tag}</p>
-                        <p className="font-medium text-foreground">{cat.category}</p>
-                      </div>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {cat.items.map((item) => (
-                          <div key={item.name} className="rounded-2xl border border-border bg-muted/20 p-5">
-                            <p className="font-medium text-foreground text-sm">{item.name}</p>
-                            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                          </div>
-                        ))}
-                      </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      {cat.items.map((item) => (
+                        <div key={item.name} className="rounded-2xl border border-border bg-muted/20 p-5">
+                          <p className="font-medium text-foreground text-sm">{item.name}</p>
+                          <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <p className="mt-6 text-xs text-muted-foreground">
-                  ※ 掲載にあたりクライアント名は伏せています。詳細は無料診断・相談時にご紹介します。
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-xs text-muted-foreground">
+                ※ 掲載にあたりクライアント名は伏せています。詳細は無料診断・相談時にご紹介します。
+              </p>
+            </section>
+
+            {/* 料金・プラン */}
+            <section id="plans" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">料金・プラン</h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                状況と予算に合わせて、必要最小限から提案します。下記は目安です。
+              </p>
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                {plans.map((plan) => (
+                  <div
+                    key={plan.name}
+                    className={`rounded-2xl border p-5 flex flex-col ${
+                      plan.highlight
+                        ? "border-foreground bg-foreground/5"
+                        : "border-border bg-muted/20"
+                    }`}
+                  >
+                    {plan.highlight && (
+                      <p className="text-minimal tracking-widest text-muted-foreground/60 mb-2">POPULAR</p>
+                    )}
+                    <p className="text-xs text-muted-foreground">{plan.tag}</p>
+                    <p className="mt-1 font-medium text-foreground text-lg">{plan.name}</p>
+                    <p className="mt-2 text-2xl font-light text-foreground">
+                      {plan.price}
+                      <span className="text-sm text-muted-foreground">{plan.unit}</span>
+                    </p>
+                    <ul className="mt-4 space-y-2 flex-1">
+                      {plan.features.map((f) => (
+                        <li key={f} className="flex gap-2 text-sm text-muted-foreground">
+                          <span className="mt-[0.4em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-4 text-xs text-muted-foreground border-t border-border pt-3">
+                      {plan.note}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-5">
+                <p className="text-sm text-foreground font-medium">補助金の活用について</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  小規模事業者持続化補助金などを活用することで、制作費用の一部を補助できる場合があります。
+                  上田商工会議所・上田市商工会への申請サポートもご相談ください。
                 </p>
-              </section>
+              </div>
+            </section>
 
-              {/* 料金・プラン */}
-              <section id="plans" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">料金・プラン</h2>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  状況と予算に合わせて、必要最小限から提案します。下記は目安です。
-                </p>
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {plans.map((plan) => (
-                    <div
-                      key={plan.name}
-                      className={`rounded-2xl border p-5 flex flex-col ${
-                        plan.highlight
-                          ? "border-foreground bg-foreground/5"
-                          : "border-border bg-muted/20"
-                      }`}
-                    >
-                      {plan.highlight && (
-                        <p className="text-minimal tracking-widest text-muted-foreground/60 mb-2">POPULAR</p>
-                      )}
-                      <p className="text-xs text-muted-foreground">{plan.tag}</p>
-                      <p className="mt-1 font-medium text-foreground text-lg">{plan.name}</p>
-                      <p className="mt-2 text-2xl font-light text-foreground">
-                        {plan.price}
-                        <span className="text-sm text-muted-foreground">{plan.unit}</span>
-                      </p>
-                      <ul className="mt-4 space-y-2 flex-1">
-                        {plan.features.map((f) => (
-                          <li key={f} className="flex gap-2 text-sm text-muted-foreground">
-                            <span className="mt-[0.4em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
-                            {f}
-                          </li>
-                        ))}
-                      </ul>
-                      <p className="mt-4 text-xs text-muted-foreground border-t border-border pt-3">
-                        {plan.note}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-5">
-                  <p className="text-sm text-foreground font-medium">補助金の活用について</p>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    小規模事業者持続化補助金などを活用することで、制作費用の一部を補助できる場合があります。
-                    上田商工会議所・上田市商工会への申請サポートもご相談ください。
-                  </p>
-                </div>
-              </section>
-
-              {/* FAQ */}
-              <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">よくある質問</h2>
-                <div className="mt-6 space-y-4">
-                  {faqs.map((x) => (
-                    <details key={x.q} className="rounded-2xl border border-border bg-muted/20 p-5">
-                      <summary className="cursor-pointer text-foreground font-medium">
-                        {x.q}
-                      </summary>
-                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                        {x.a}
-                      </p>
-                    </details>
-                  ))}
-                </div>
-              </section>
-
-            </div>
-            {/* Left ここまで */}
-
-            {/* Right (Sticky CTA) */}
-            <div className="col-span-1">
-              <div className="static md:sticky md:top-6 space-y-4">
-                <div className="rounded-3xl border border-border bg-background shadow-sm">
-                  <div className="p-6">
-                    <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
-                    <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断（15分）</h2>
+            {/* FAQ */}
+            <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">よくある質問</h2>
+              <div className="mt-6 space-y-4">
+                {faqs.map((x) => (
+                  <details key={x.q} className="rounded-2xl border border-border bg-muted/20 p-5">
+                    <summary className="cursor-pointer text-foreground font-medium">
+                      {x.q}
+                    </summary>
                     <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                      いまの状況を整理して、改善ポイントを3つにまとめます。<br />
-                      診断のみでOKです。
+                      {x.a}
                     </p>
-                    <div className="mt-6 flex flex-wrap items-center gap-3">
-                      <a
-                        href="/freediagnosis"
-                        className="
-                          inline-flex items-center justify-center
-                          rounded-xl px-6 py-3 text-sm font-medium
-                          bg-foreground text-background
-                          hover:opacity-90 transition shadow-sm
-                        "
-                      >
-                        無料診断（15分）を申し込む →
-                      </a>
-                      <a
-                        href="/contact"
-                        className="
-                          inline-flex items-center justify-center
-                          rounded-xl px-6 py-3 text-sm font-medium
-                          border border-border bg-background
-                          hover:bg-muted/40 transition
-                        "
-                      >
-                        相談する
-                      </a>
-                    </div>
-                    <p className="mt-5 text-xs text-muted-foreground leading-relaxed">
-                      ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
-                    </p>
-                    <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-4">
-                      <p className="text-sm text-foreground font-medium">対応エリア</p>
-                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                        東信エリア全域対応（上田市・東御市・小諸市・佐久市・千曲市・長和町・青木村）／オンライン対応
-                      </p>
-                    </div>
-                    <div className="mt-4 rounded-2xl border border-border bg-muted/20 p-4">
-                      <p className="text-sm text-foreground font-medium">上田オフィス</p>
-                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                        上田市内に拠点があるため、対面での打ち合わせ・現地取材が可能です。
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                  </details>
+                ))}
+              </div>
+            </section>
 
-                {/* 実績サマリー */}
-                <div className="rounded-3xl border border-border bg-background shadow-sm p-6">
-                  <p className="text-minimal tracking-[0.22em] text-muted-foreground">TRACK RECORD</p>
-                  <p className="mt-2 font-medium text-foreground">対応業種</p>
-                  <ul className="mt-3 space-y-2">
-                    {["工務店・建築", "農業・直売", "医療・福祉", "不動産", "解体・不用品回収", "その他中小企業・個人事業主"].map((item) => (
-                      <li key={item} className="flex gap-2 text-sm text-muted-foreground">
-                        <span className="mt-[0.4em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {/* 上田オフィス */}
+            <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">上田オフィス</h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                〒386-2201 長野県上田市真田町長7513-1
+              </p>
+              <div className="mt-4 overflow-hidden rounded-2xl border border-border">
+                {/* GoogleマップはGoogleマップで「長野県上田市真田町長7513-1」を開き、共有→地図を埋め込む からsrcを差し替えてください */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d802.3468292928128!2d138.3155534951025!3d36.44819508578462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1776635778855!5m2!1sja!2sjp"                  width="100%"
+                  height="280"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="ONE DESIGN 上田オフィス"
+                />
+              </div>
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                上田市真田地域に拠点があるため、上田市・東御市・小諸市・佐久市・千曲市など東信エリアへ対面でお伺いできます。現地取材（写真撮影・ヒアリング）も対応しています。
+              </p>
+            </section>
 
-                {/* プランサマリー */}
-                <div className="rounded-3xl border border-border bg-background shadow-sm p-6">
-                  <p className="text-minimal tracking-[0.22em] text-muted-foreground">PRICING</p>
-                  <p className="mt-2 font-medium text-foreground">料金の目安</p>
-                  <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+
+            {/* 最下部CTA */}
+            <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-10">
+              <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
+              <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断（15分）</h2>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                いまの状況を整理して、改善ポイントを3つにまとめます。診断のみでOKです。<br />
+                予算に合わせた最小構成の提案も可能です（診断後に共有）。
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a
+                  href="/freediagnosis"
+                  className="
+                    inline-flex items-center justify-center
+                    rounded-xl px-6 py-3 text-sm font-medium
+                    bg-foreground text-background
+                    hover:opacity-90 transition shadow-sm
+                  "
+                >
+                  無料診断（15分）を申し込む →
+                </a>
+                <a
+                  href="/contact"
+                  className="
+                    inline-flex items-center justify-center
+                    rounded-xl px-6 py-3 text-sm font-medium
+                    border border-border bg-background
+                    hover:bg-muted/40 transition
+                  "
+                >
+                  相談する
+                </a>
+              </div>
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="rounded-2xl border border-border bg-muted/20 p-4">
+                  <p className="text-sm font-medium text-foreground">対応エリア</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    東信エリア全域（上田市・東御市・小諸市・佐久市・千曲市・長和町・青木村）／オンライン対応
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-muted/20 p-4">
+                  <p className="text-sm font-medium text-foreground">料金の目安</p>
+                  <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
                     <li>スモールスタート：150,000円〜</li>
                     <li>スタンダード：300,000円〜</li>
                     <li>フルサポート：500,000円〜</li>
                   </ul>
-                  <p className="mt-3 text-xs text-muted-foreground">補助金活用の相談も可</p>
+                  <p className="mt-2 text-xs text-muted-foreground">補助金活用の相談も可</p>
                 </div>
-
+                <div className="rounded-2xl border border-border bg-muted/20 p-4">
+                  <p className="text-sm font-medium text-foreground">対応業種</p>
+                  <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                    {["工務店・建築", "農業・直売", "医療・福祉", "不動産", "解体・不用品回収", "その他中小企業・個人事業主"].map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-            {/* Right ここまで */}
+              <p className="mt-5 text-xs text-muted-foreground">
+                ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
+              </p>
+            </section>
 
           </div>
         </div>
