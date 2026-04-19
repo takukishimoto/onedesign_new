@@ -156,48 +156,14 @@ const pains = [
       },
       {
         "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "伊那市・駒ヶ根市でも対面打ち合わせできますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村など伊那地域で対面対応しています。現地取材（写真撮影・ヒアリング）もお伺いして行うことが可能です。オンライン打ち合わせ（ZoomやGoogle Meet）にも対応しています。"
-            }
+        "mainEntity": faqs.map((f) => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a,
           },
-          {
-            "@type": "Question",
-            "name": "まずは診断・相談だけでも大丈夫？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "大丈夫です。無料診断（15分）は「現状を整理するだけ」でも構いません。その後の制作をお断りいただいても問題なく、営業もしません。「何が課題かわからない」という段階のご相談が最も多いです。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "ホームページ制作費が不安です。予算が限られていても相談できますか？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "相談できます。状況を見たうえで「必要最小限で整える案」も含めて、無理のない範囲で提案します。小規模事業者持続化補助金などを活用してホームページ制作費用を補助できる場合もありますので、ご希望の方はお気軽にお申し付けください。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "WordPressで作ってもらえますか？自分で更新できるようにしたいです。",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "WordPressでの制作に対応しています。公開後に自分で更新・追記できるよう、操作レクチャーも行います。更新が難しい場合は、代わりに更新作業をお引き受けする運用サポートプランもご用意しています。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "SEO対策もやってもらえますか？「伊那市 〇〇」で上位に出したい。",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "対応しています。「伊那市 〇〇」「駒ヶ根市 〇〇」など地域キーワードでの検索上位を狙えるよう、ページ構成・テキスト・タイトル・メタ情報・内部リンクまで設計します。SEOは継続的な取り組みが重要なため、現状と目標を踏まえた現実的なプランをご提案します。"
-            }
-          }
-        ]
+        })),
       },
       {
         "@type": "BreadcrumbList",
@@ -325,153 +291,148 @@ const pains = [
       {/* CONTENT */}
       <section className="pb-24">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="space-y-10">
 
-            {/* Left */}
-            <div className="col-span-1 md:col-span-2 space-y-10">
-
-              <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">伊那地域でこのような課題をお持ちの企業・個人様へ</h2>
-                <ul className="mt-5 space-y-3 text-muted-foreground">
-                  {pains.map((t) => (
-                    <li key={t} className="flex gap-3">
-                      <span className="mt-[0.6em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
-                      <span className="leading-relaxed">{t}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-7 rounded-2xl border border-border bg-muted/20 p-5">
-                  <p className="text-sm text-foreground font-medium">
-                    無料診断（15分）で、いまのホームページを整理しませんか
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                    画面を見ながら改善ポイントを3つに整理します。<br />
-                    診断のみで完結OK。営業はしないのでご安心ください。<br />
-                    予算に合わせた最小構成の提案も可能です（診断後に共有）。
-                  </p>
-                  <div className="mt-6 flex flex-wrap items-center gap-3">
-                    <a
-                      href="/freediagnosis"
-                      className="
-                        inline-flex items-center justify-center
-                        rounded-xl px-6 py-3 text-sm font-medium
-                        bg-foreground text-background
-                        hover:opacity-90 transition shadow-sm
-                      "
-                    >
-                      無料診断を申し込む →
-                    </a>
-                    <a
-                      href="/contact"
-                      className="
-                        inline-flex items-center justify-center
-                        rounded-xl px-6 py-3 text-sm font-medium
-                        border border-border bg-background
-                        hover:bg-muted/40 transition
-                      "
-                    >
-                      相談する
-                    </a>
-                  </div>
-                </div>
-              </section>
-
-              <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">伊那地域の中小企業・個人事業主に選ばれる理由</h2>
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {points.map((x) => (
-                    <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
-                      <p className="font-medium text-foreground">{x.title}</p>
-                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.body}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">無料診断の流れ（15分）</h2>
-                <ol className="mt-6 space-y-3">
-                  {flow.map((x) => (
-                    <li key={x.t} className="rounded-2xl border border-border bg-background p-5">
-                      <p className="font-medium text-foreground">{x.t}</p>
-                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.d}</p>
-                    </li>
-                  ))}
-                </ol>
-              </section>
-
-              <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
-                <h2 className="text-xl font-medium text-foreground">よくある質問</h2>
-                <div className="mt-6 space-y-4">
-                  {faqs.map((x) => (
-                    <details key={x.q} className="rounded-2xl border border-border bg-muted/20 p-5">
-                      <summary className="cursor-pointer text-foreground font-medium">
-                        {x.q}
-                      </summary>
-                      <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                        {x.a}
-                      </p>
-                    </details>
-                  ))}
-                </div>
-              </section>
-
-            </div>
-            {/* Left ここまで */}
-
-            {/* Right (Sticky CTA) */}
-            <div className="col-span-1">
-              <div className="static md:sticky md:top-6 rounded-3xl border border-border bg-background shadow-sm">
-                <div className="p-6">
-                  <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
-                  <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断（15分）</h2>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                    いまの状況を整理して、改善ポイントを3つにまとめます。<br />
-                    診断のみでOKです。
-                  </p>
-                  <div className="mt-6 flex flex-wrap items-center gap-3">
-                    <a
-                      href="/freediagnosis"
-                      className="
-                        inline-flex items-center justify-center
-                        rounded-xl px-6 py-3 text-sm font-medium
-                        bg-foreground text-background
-                        hover:opacity-90 transition shadow-sm
-                      "
-                    >
-                      無料診断を申し込む →
-                    </a>
-                    <a
-                      href="/contact"
-                      className="
-                        inline-flex items-center justify-center
-                        rounded-xl px-6 py-3 text-sm font-medium
-                        border border-border bg-background
-                        hover:bg-muted/40 transition
-                      "
-                    >
-                      相談する
-                    </a>
-                  </div>
-                  <p className="mt-5 text-xs text-muted-foreground leading-relaxed">
-                    ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
-                  </p>
-                  <div className="mt-6 rounded-2xl border border-border bg-muted/20 p-4">
-                    <p className="text-sm text-foreground font-medium">対応エリア</p>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      伊那地域全域対応（伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村）／オンライン対応
-                    </p>
-                  </div>
-                  <div className="mt-4 rounded-2xl border border-border bg-muted/20 p-4">
-                    <p className="text-sm text-foreground font-medium">補足</p>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      ホームページ制作は予算に合わせた最小構成の提案も可能です（内容は相談・無料診断後に共有します）。
-                    </p>
-                  </div>
+            {/* 課題 */}
+            <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">伊那地域でこのような課題をお持ちの企業・個人様へ</h2>
+              <ul className="mt-5 space-y-3 text-muted-foreground">
+                {pains.map((t) => (
+                  <li key={t} className="flex gap-3">
+                    <span className="mt-[0.6em] h-1 w-1 rounded-full bg-foreground/40 flex-none" />
+                    <span className="leading-relaxed">{t}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-7 rounded-2xl border border-border bg-muted/20 p-5">
+                <p className="text-sm text-foreground font-medium">
+                  無料診断（15分）で、いまのホームページを整理しませんか
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  画面を見ながら改善ポイントを3つに整理します。<br />
+                  診断のみで完結OK。営業はしないのでご安心ください。<br />
+                  予算に合わせた最小構成の提案も可能です（診断後に共有）。
+                </p>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <a
+                    href="/freediagnosis"
+                    className="
+                      inline-flex items-center justify-center
+                      rounded-xl px-6 py-3 text-sm font-medium
+                      bg-foreground text-background
+                      hover:opacity-90 transition shadow-sm
+                    "
+                  >
+                    無料診断を申し込む →
+                  </a>
+                  <a
+                    href="/contact"
+                    className="
+                      inline-flex items-center justify-center
+                      rounded-xl px-6 py-3 text-sm font-medium
+                      border border-border bg-background
+                      hover:bg-muted/40 transition
+                    "
+                  >
+                    相談する
+                  </a>
                 </div>
               </div>
-            </div>
-            {/* Right ここまで */}
+            </section>
+
+            {/* 選ばれる理由 */}
+            <section id="why" className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">伊那地域の中小企業・個人事業主に選ばれる理由</h2>
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                {points.map((x) => (
+                  <div key={x.title} className="rounded-2xl border border-border bg-muted/20 p-5">
+                    <p className="font-medium text-foreground">{x.title}</p>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.body}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* 無料診断の流れ */}
+            <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">無料診断の流れ（15分）</h2>
+              <ol className="mt-6 space-y-3">
+                {flow.map((x) => (
+                  <li key={x.t} className="rounded-2xl border border-border bg-background p-5">
+                    <p className="font-medium text-foreground">{x.t}</p>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{x.d}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+
+            {/* FAQ */}
+            <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-8">
+              <h2 className="text-xl font-medium text-foreground">よくある質問</h2>
+              <div className="mt-6 space-y-4">
+                {faqs.map((x) => (
+                  <details key={x.q} className="rounded-2xl border border-border bg-muted/20 p-5">
+                    <summary className="cursor-pointer text-foreground font-medium">
+                      {x.q}
+                    </summary>
+                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                      {x.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </section>
+
+            {/* 最下部CTA */}
+            <section className="rounded-3xl border border-border bg-background shadow-sm p-7 md:p-10">
+              <p className="text-minimal tracking-[0.22em] text-muted-foreground">FREE DIAGNOSIS</p>
+              <h2 className="mt-2 text-2xl font-medium text-foreground">無料診断（15分）</h2>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                いまの状況を整理して、改善ポイントを3つにまとめます。診断のみでOKです。<br />
+                予算に合わせた最小構成の提案も可能です（診断後に共有）。
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a
+                  href="/freediagnosis"
+                  className="
+                    inline-flex items-center justify-center
+                    rounded-xl px-6 py-3 text-sm font-medium
+                    bg-foreground text-background
+                    hover:opacity-90 transition shadow-sm
+                  "
+                >
+                  無料診断を申し込む →
+                </a>
+                <a
+                  href="/contact"
+                  className="
+                    inline-flex items-center justify-center
+                    rounded-xl px-6 py-3 text-sm font-medium
+                    border border-border bg-background
+                    hover:bg-muted/40 transition
+                  "
+                >
+                  相談する
+                </a>
+              </div>
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="rounded-2xl border border-border bg-muted/20 p-4">
+                  <p className="text-sm font-medium text-foreground">対応エリア</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    伊那地域全域（伊那市・駒ヶ根市・辰野町・箕輪町・飯島町・松川町・中川村）／オンライン対応
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-muted/20 p-4">
+                  <p className="text-sm font-medium text-foreground">補足</p>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    予算に合わせた最小構成の提案も可能です（内容は相談・無料診断後に共有します）。
+                  </p>
+                </div>
+              </div>
+              <p className="mt-5 text-xs text-muted-foreground">
+                ※ 無料診断は「診断のみ」です。営業はしないのでご安心ください。
+              </p>
+            </section>
 
           </div>
         </div>
